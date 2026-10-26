@@ -2,4 +2,4 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { defineConfig } from 'vite';
-export default defineConfig({plugins:[sveltekit({adapter:adapter(),preprocess:vitePreprocess(),prerender:{entries:['*'],concurrency:8}})]});
+export default defineConfig({plugins:[sveltekit({adapter:adapter({pages:'build',assets:'build'}),preprocess:vitePreprocess(),prerender:{entries:['*'],concurrency:8}})]});
