@@ -230,10 +230,11 @@ export function entries(category: string) {
 
 export function legacyEntries() {
  return [{legacy:'all'},{legacy:'design'},...[...Object.keys(categories),'transmit','chapter','copy'].flatMap(legacy => [
-  {legacy},...tables[legacy].flatMap((row,i) => [{legacy,entry:`row-${i}`},...(row.id === undefined ? [] : [{legacy,entry:String(row.id)}])]),
-  ...Array.from({length:Math.max(0,Math.ceil(tables[legacy].length/50)-1)},(_,i) => ({legacy,entry:`page-${i+2}`}))
+  {legacy},...tables[legacy].flatMap((row,i) => (legacy==='item'&&!publishedRow(legacy,row))||(legacy==='title'&&row.type!==2)?[]:[{legacy,entry:`row-${i}`},...(row.id === undefined ? [] : [{legacy,entry:String(row.id)}])]),
+  ...Array.from({length:Math.max(0,Math.ceil((Object.hasOwn(categories,legacy)?catalogCount(legacy):tables[legacy].length)/50)-1)},(_,i) => ({legacy,entry:`page-${i+2}`}))
  ]),...regions.filter(r=>r.copyType === 5).map(r=>({legacy:'abyss',entry:String(r.copyIds[0])}))];
 }
+function catalogCount(category:string){return tables[category].filter(row=>publishedRow(category,row)&&(category!=='make'||!makeOperation(row))).length;}
 export function legacyTarget(category: string,entry?: string) {
  if(category==='copy'){
   if(!entry||entry.startsWith('page-'))return '/regions/';
@@ -257,7 +258,11 @@ export function legacyTarget(category: string,entry?: string) {
  if (!Object.hasOwn(categories,category)) return null;
  if (!entry) return `/data/${category}/`;
  const page = /^page-([1-9]\d*)$/.exec(entry);
- if (page) return Number(page[1]) <= Math.ceil(tables[category].length/50) ? `/data/${category}/page/${page[1]}/` : null;
+ if (page) {
+  if(Number(page[1])>Math.ceil(tables[category].length/50))return null;
+  const current=Math.min(Number(page[1]),Math.ceil(catalogCount(category)/50));
+  return current>1?`/data/${category}/page/${current}/`:`/data/${category}/`;
+ }
  const record = entry.startsWith('row-') ? detail(category,entry)?.record : reference(category,entry);
  return record?.href ?? null;
 }

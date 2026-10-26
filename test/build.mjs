@@ -1,6 +1,7 @@
 ﻿import assert from 'node:assert/strict';
 import {readFileSync,readdirSync,existsSync} from 'node:fs';
 import {resolve,join} from 'node:path';
+import {categories,entries} from '../src/lib/server/data.ts';
 const root=resolve('build');
 const files=readdirSync(root,{recursive:true,withFileTypes:true}).filter(f=>f.isFile()&&f.name.endsWith('.html'));
 const targets=new Set();let indexed=0;
@@ -18,7 +19,7 @@ for(const target of targets){
  assert(path.startsWith(root),target);
  assert(existsSync(path)&&(target.endsWith('/')?existsSync(join(path,'index.html')):true),`Missing built asset/page: ${target}`);
 }
-assert.equal(indexed,3171);
+assert.equal(indexed,Object.keys(categories).reduce((count,category)=>count+entries(category).length,0));
 const clientFiles=readdirSync(join(root,'_app'),{recursive:true,withFileTypes:true}).filter(f=>f.isFile()&&f.name.endsWith('.js'));
 for(const file of clientFiles){const text=readFileSync(join(file.parentPath,file.name),'utf8');assert(!text.includes('assets/data/enemy.json'),`Raw dataset leaked into ${file.name}`);}
 console.log(`${files.length} HTML files, ${targets.size} internal link/asset targets, ${indexed} searchable records: valid.`);

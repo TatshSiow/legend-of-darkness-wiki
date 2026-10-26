@@ -419,3 +419,11 @@ test('title acquisition resolves every prerequisite and reciprocal achievement l
  assert(detail('title',entryFor('title',101)).titleUnlock.condition.includes('10'));
  assert(detail('title',entryFor('title',193)).titleUnlock.condition.includes('14'));
 });
+
+test('legacy pagination stays within filtered catalogs and excludes archived gem redirects',()=>{
+ assert.equal(legacyTarget('make','page-4'),'/data/make/page/3/');
+ assert.equal(legacyTarget('title','page-6'),'/data/title/page/3/');
+ for(const route of legacyEntries()){
+  if(route.legacy==='item'&&'entry' in route&&route.entry.startsWith('row-'))assert(entries('item').some(row=>row.entry===route.entry));
+ }
+});
