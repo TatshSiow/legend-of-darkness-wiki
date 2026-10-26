@@ -34,6 +34,12 @@ npm run test:build
 
 在建置環境設定 `SITE_URL` 為正式網站根網址，即可產生 canonical URL 與 sitemap；未設定時不假定網域。
 
+### Vercel
+
+匯入此 GitHub repo，Root Directory 使用根目錄。已附 `vercel.json`，使用靜態輸出 `build/`，保留網址尾斜線；不需更換 SvelteKit adapter。
+
+Vercel 建置會自動使用 `VERCEL_PROJECT_PRODUCTION_URL` 產生正式網址的 canonical 及 sitemap；如有設定 `SITE_URL`，則以它為優先。連接 GitHub 後，推送 `main` 可觸發正式部署，其他分支提供預覽部署。
+
 ## 結構
 
 | 目錄 | 用途 |

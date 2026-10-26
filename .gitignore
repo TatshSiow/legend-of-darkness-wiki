@@ -3,6 +3,7 @@
 build/
 build-log.txt
 artifacts/
+.vercel/
 *.tmp
 *.log
 .env

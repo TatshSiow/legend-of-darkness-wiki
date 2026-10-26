@@ -207,7 +207,8 @@ export function portalGroups() {
  });
 }
 export function layoutData() {
- const url = process.env.SITE_URL ? new URL(process.env.SITE_URL) : null;
+ const site=process.env.SITE_URL||(process.env.VERCEL_PROJECT_PRODUCTION_URL?`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`:null);
+ const url = site ? new URL(site) : null;
  if (url && (!['http:','https:'].includes(url.protocol) || url.pathname !== '/' || url.username || url.password || url.search || url.hash)) throw new Error('SITE_URL must be an HTTP(S) origin, e.g. https://wiki.example.com');
  return {siteUrl:url?.origin ?? null,version:metadata.version,categories:Object.keys(categories).map(key =>
   ({key,name:categories[key],count:tables[key].filter(row=>publishedRow(key,row)).length,icon:summary(key,0).icon}))};
