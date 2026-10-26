@@ -28,7 +28,6 @@
   {/each}
   <div class="navgroup">查詢工具</div>
   <a href="/formulas/" class:active={page.url.pathname==='/formulas/'}><span>公式與計算</span><small>TOOLS</small></a>
-  <a href="/search/" class:active={page.url.pathname.startsWith('/search/')}><span>全站搜尋</span><small>SEARCH</small></a>
   <a href="/sources/" class:active={page.url.pathname==='/sources/'}><span>來源與驗證</span><small>{data.categories.length}</small></a>
  </nav><div class="sidefoot">原版遊戲圖示 · 遊戲 {data.version}<br>黑暗世界的資料典藏</div>
 </aside>
