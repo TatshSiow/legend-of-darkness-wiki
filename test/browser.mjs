@@ -170,7 +170,7 @@ try {
  await page.screenshot({path:'artifacts/treasure-catalog.png',fullPage:true});
  await page.locator('tbody .entry-identity').first().click();await page.waitForSelector('.item-pool');assert.equal(await page.locator('.item-pool tbody tr').count(),30);assert((await page.locator('.item-pool thead').innerText()).includes('開出機率'));assert((await page.locator('.treasure-usage').innerText()).includes('幸運寶箱'));
  await page.locator('nav a[href="/data/treasure/"]').click();await page.waitForSelector('.category-search');await page.getByRole('searchbox',{name:'搜尋此分類'}).fill('活動抽獎');await page.locator('tbody .entry-identity').first().click();await page.waitForSelector('.item-pool a[href^="/data/pet/"]');assert.equal(await page.locator('.item-pool a[href^="/data/pet/"]').count(),2);assert((await page.locator('.item-pool thead').innerText()).includes('不是 %'));
- await page.locator('nav a[href="/home/"]').click();await page.waitForSelector('.cards .card');assert.equal(await page.locator('.cards .card').count(),15);
+ await page.locator('nav a[href="/home/"]').click();await page.waitForSelector('.cards .card');assert.equal(await page.locator('.cards .card').count(),18);
  assert.equal(await page.locator('aside a[href="/data/transmit/"]').count(),0);assert.equal(await page.locator('.cards a[href="/data/transmit/"]').count(),0);
  for(const cat of ['teach','warenemys','god','level','chapter'])assert.equal(await page.locator(`a[href="/data/${cat}/"]`).count(),0);
  const oldPortal=await (await page.request.get('http://127.0.0.1:4174/data/transmit/row-0/')).text();assert(oldPortal.includes('/regions/browse/portal/#portal-1'));

@@ -10,14 +10,19 @@
 {#each navigationGroups as group}
  <section class="overview-group" aria-label={group.name}>
   <h2>{group.name}</h2><p class="group-description">{group.description}</p>
-  {#if group.links}<div class="map-links">{#each group.links as link}<a class="btn" href={link.href}>{link.name} <small>{link.hint}</small> →</a>{/each}</div>{/if}
-  <div class="cards">{#each group.categories as key}
+  <div class="cards">
+  {#each group.links??[] as link}<a class="card" href={link.href}><Icon src={data.routeIcons[link.href]}/><span class="card-copy"><h3>{link.name}</h3><small>{link.hint}</small></span><span class="card-arrow" aria-hidden="true">↗</span></a>{/each}
+  {#each group.categories as key}
    {@const category=data.categories.find(category=>category.key===key)}
-   {#if category}<a class="card" href={`/data/${category.key}/`}><small>{category.count} 筆 →</small><Icon src={category.icon}/><h3>{category.name}</h3></a>{/if}
+   {#if category}<a class="card" href={`/data/${category.key}/`}><Icon src={category.icon}/><span class="card-copy"><h3>{category.name}</h3><small>{category.count} 筆資料</small></span><span class="card-arrow" aria-hidden="true">↗</span></a>{/if}
   {/each}</div>
  </section>
 {/each}
 <div class="notice">遊戲 {data.version} 的原始資料。品質、強化、難度及戰鬥效果可能改變最終數值；未驗證的代碼保留原名。</div>
 <style>
- .overview-group{margin:32px 0}.overview-group h2{margin-bottom:4px}.group-description{color:var(--muted);margin:0 0 16px;font-size:13px}.map-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}.map-links small{margin-left:8px;color:var(--muted)}.cards{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}.card{padding:16px}.card h3{margin:10px 0 0}
+ .overview-group{margin:26px 0}.overview-group h2{margin-bottom:4px}.group-description{color:var(--muted);margin:0 0 12px;font-size:13px}
+ .cards{grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+ .cards .card{min-height:88px;padding:16px;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:14px;background:radial-gradient(ellipse at 0 50%,#b88b3320,transparent 75%),linear-gradient(135deg,#241c14,#17130f);transition:border-color .15s,background .15s}
+ .card:hover,.card:focus-visible{border-color:var(--gold);background:#302417}.card-copy{flex:1;min-width:0}.card h3{font-size:16px;margin:0 0 5px}.card-copy small{color:var(--muted);font-size:11px}.card-arrow{color:var(--gold);opacity:.65}.card:hover .card-arrow{opacity:1}
+ @media(max-width:550px){.cards{grid-template-columns:1fr}}
 </style>

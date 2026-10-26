@@ -1,4 +1,5 @@
 <script lang="ts">
+ import TrialRewards from './TrialRewards.svelte';
  import Currency from './Currency.svelte';
  import {imageSource} from '#lib/core/image-source.ts';
  import ExchangeCatalog from './ExchangeCatalog.svelte';
@@ -29,7 +30,7 @@
   (event.currentTarget as HTMLElement).parentElement?.querySelectorAll<HTMLButtonElement>('[role=tab]')[next]?.focus();
  }
 </script>
-{#if data.exchangeGroups}<ExchangeCatalog groups={data.exchangeGroups}/>{:else}
+{#if data.exchangeGroups}<ExchangeCatalog groups={data.exchangeGroups}/>{:else if data.trialRewards}<div data-pagefind-ignore="all"><Hero title={data.name} eyebrow="THE TRIAL" description="比較三個難度的分數獎勵與抽選候選。"/><a class="region-entry" href="/trial/">查看試煉關卡與怪物 →</a><TrialRewards rewards={data.trialRewards}/></div>{:else}
 <div data-pagefind-ignore="all"><Hero title={data.name} eyebrow="THE DATABASE" description={data.categoryDescription??`收錄 ${data.records.length} 筆條目，點擊名稱查看詳細資料。`}/>
 {#if ['make','item'].includes(data.category)}<div class="recipe-tabs" role="group" aria-label={`${data.name}分類`}>{#each ['',...recipeGroups] as group}<button type="button" class:active={recipeGroup===group} aria-pressed={recipeGroup===group} onclick={()=>{recipeGroup=group;current=0}}>{group||'全部'}<small>{data.records.filter(r=>!group||(r.recipeGroup??r.itemGroup)===group).length}</small></button>{/each}</div>{#if recipeGroup==='成品待核對'}<p class="data-note">這些配方的成品 ID 在目前物品資料中沒有對應記錄，暫不推定分類或可用性。</p>{/if}{/if}
 <div class="toolbar"><span class="count">找到 <b>{rows.length}</b> 筆</span>

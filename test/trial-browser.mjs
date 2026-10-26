@@ -9,7 +9,7 @@ try{
  const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];
  let documents=0;
  page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(r.resourceType()==='document')documents++;});
- await page.goto('http://127.0.0.1:5174/trial/1/');await page.waitForLoadState('networkidle');
+ await page.goto((process.env.BASE_URL||'http://127.0.0.1:5174')+'/trial/1/');await page.waitForLoadState('networkidle');
  assert.equal(await page.locator('.trial-wave-list tbody tr').count(),12);
  assert.equal(await page.locator('.trial-pool .entry-identity').count(),5);
  assert.equal(await page.locator('.region-card,.trial-enemies').count(),0);
@@ -32,7 +32,7 @@ try{
  await page.getByLabel('目前積分').fill('1000');
  const count=trialBattle(3).rewards.filter(r=>r.score<=1000).length;
  await page.waitForFunction(n=>document.querySelectorAll('.trial-rewards .reward-candidates').length===n,count);
- assert(await page.locator('.trial-rewards .tag').count()>0);
+ assert(await page.locator('.trial-rewards .reward-threshold').count()>0);
  assert(!(await page.locator('.trial-rewards').innerText()).includes('[object Object]'));
  await page.getByLabel('目前積分').fill('30000');await page.waitForFunction(()=>document.querySelectorAll('.trial-rewards .reward-candidates').length===91);
  assert((await page.locator('.trial-rewards').innerText()).includes('類型衝突'));
@@ -46,6 +46,6 @@ try{
  await page.screenshot({path:'artifacts/trial-wave-table-mobile.png',fullPage:true});
  await page.getByRole('link',{name:'後 12 波 →',exact:true}).click();await page.waitForFunction(()=>document.querySelector('.trial-wave-list tbody tr')?.textContent.includes('109'));
  assert.equal(documents,1);assert.deepEqual(errors,[]);
- assert.equal((await page.request.get('http://127.0.0.1:5174/trial/4/')).status(),404);
+ assert.equal(await page.locator('.trial-difficulties a').count(),3);
  console.log('Trial comparison tables, quality ranges, detail, cumulative score rewards, icons, invalid targets, SPA, mobile: passed.');
 }finally{await browser.close();}

@@ -160,7 +160,7 @@ export function listing(category: string) {
  };
  const columns = (preferred[category] ?? ['name',...Object.keys(tables[category][0] ?? {}).filter(key =>
   !isReferenceField(key)&&!['name','name_en','describe','describe_en','desc','tem','tem1','tem2','tem3','img','icon'].includes(key)).slice(0,4)]).filter(key=>!isReferenceField(key));
- return {name:categories[category],category,categoryDescription:null,initialPage:1,columns,exchangeGroups:category==='exchange'?[...new Set(tables.exchange.map(r=>r.type===9?`boost:${r.special}`:`type:${r.type}`))].map(key=>{
+ return {name:categories[category],category,categoryDescription:null,initialPage:1,columns,trialRewards:category==='trial'?trialBattle(3)!.rewards:null,exchangeGroups:category==='exchange'?[...new Set(tables.exchange.map(r=>r.type===9?`boost:${r.special}`:`type:${r.type}`))].map(key=>{
   const rows=tables.exchange.filter(r=>(r.type===9?`boost:${r.special}`:`type:${r.type}`)===key);
   const info=exchangeInfo(rows[0]);
   return {key,name:info.boost?.name??info.kind,boost:info.boost,entries:rows.map(row=>({record:catalogSummary('exchange',indexes.exchange.get(String(row.id))!),info:exchangeInfo(row)}))};
