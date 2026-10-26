@@ -17,6 +17,12 @@ npm run dev
 
 開啟 <http://127.0.0.1:5174>。開發模式即時更新；Pagefind 全文搜尋索引於正式建置時產生。
 
+### 圖片優化
+
+`npm run dev` 與 `npm run build` 會先產生無損 WebP 及 96px 列表縮圖；轉檔較大的圖片保留 PNG。原圖留在 `static/icons/`，產物位於不納入 Git 的 `static/optimized/`。新增或更換原圖後執行 `npm run images`，會同步更新 `src/lib/core/image-assets.json`。
+
+圖片網址含來源內容版本，Vercel 設定一年快取。詳情、地圖及肖像使用完整圖片，小型圖示使用縮圖；畫面下方保留延遲載入。
+
 ## 驗證與建置
 
 ```sh

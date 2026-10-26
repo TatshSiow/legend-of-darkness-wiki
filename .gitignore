@@ -3,6 +3,7 @@
 build/
 build-log.txt
 artifacts/
+static/optimized/
 .vercel/
 *.tmp
 *.log
