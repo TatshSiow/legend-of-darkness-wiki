@@ -12,7 +12,7 @@ assert.equal(await page.locator('.trial-rewards tbody tr').count(),91);
 assert.equal(await page.locator('.trial-rewards tbody td:nth-child(2) .reward-threshold').count(),30);
 assert.equal(await page.locator('.trial-rewards tbody td:nth-child(3) .reward-threshold').count(),61);
 assert.equal(await page.locator('.trial-rewards tbody td:nth-child(4) .reward-threshold').count(),91);
-assert(await page.locator('.trial-rewards .stack-count').count()>0);
+assert.equal(await page.locator('.trial-rewards .stack-count').count(),await page.locator('.trial-rewards .entry-identity').count());
 await page.screenshot({path:'artifacts/trial-matrix.png',fullPage:true});
 await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
 await page.screenshot({path:'artifacts/trial-matrix-mobile.png',fullPage:true});
