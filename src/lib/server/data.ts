@@ -14,7 +14,7 @@ const tables:WikiData['tables']={...sourceTables,title:sourceTables.achievement}
 export const categories: Record<string,string> = {
  enemy:'敵人圖鑑',item:'物品與裝備',skill:'技能',skillte:'技能效果',pet:'寵物',skin:'幻化',
  achievement:'成就',title:'稱號',drop:'掉落表',
- droptip:'掉落提示',explored:'探索',trial:'試煉獎勵',task:'任務',
+ droptip:'掉落提示',explored:'寵物探索',trial:'試煉獎勵',task:'任務',
  treasure:'寶箱與寶藏獎勵池',
  make:'合成配方',shop:'商店',exchange:'積分兌換'
 };
