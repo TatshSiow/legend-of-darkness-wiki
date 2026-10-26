@@ -1,0 +1,12 @@
+node_modules/
+.svelte-kit/
+build/
+artifacts/
+.git/
+.vercel/
+.env*
+*.tmp
+*.log
+build-log.txt
+scripts/export-item-mechanics.py
+scripts/export-trial-native.py
