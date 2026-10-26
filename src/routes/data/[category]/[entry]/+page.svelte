@@ -4,6 +4,7 @@
  import Icon from '#lib/components/Icon.svelte';
  import EntryLink from '#lib/components/EntryLink.svelte';
  import Rewards from '#lib/components/Rewards.svelte';
+ import DropHints from '#lib/components/DropHints.svelte';
  import DifficultyTable from '#lib/components/DifficultyTable.svelte';
  import ItemProgression from '#lib/components/ItemProgression.svelte';
  import SkinProgression from '#lib/components/SkinProgression.svelte';
@@ -18,12 +19,6 @@
 <article data-pagefind-body data-pagefind-filter={`category:${data.categoryName}`}>
  <div class="detailhead"><Icon src={data.record.icon} large quantity={data.record.stackable?data.record.quantity:undefined}/><span class="tag">{data.categoryName}</span>{#if data.record.category==='enemy'}<span class="tag monster-level" data-pagefind-meta="level">{data.record.level!==null&&data.record.level>0?`Lv. ${data.record.level}`:'等級待核對'}</span>{/if}<h1 data-pagefind-meta="title">{data.record.name}</h1><p>{data.record.english}</p></div>
  {#if data.categoryDescription}<p class="notice">{data.categoryDescription}</p>{/if}
- {#if data.dropInfo}
-  {#if data.record.category==='droptip'}
-   <h3>全部提示道具</h3><div class="tablewrap"><table class="drop-hints"><thead><tr><th>道具</th><th>數量與機率</th></tr></thead><tbody>{#each data.dropInfo.hints as hint}<tr><td>{#if hint.item}<EntryLink record={hint.item}/>{:else}{isValue(hint.name)?hint.name:"未命名道具"}（資料待核對）{/if}</td><td>提示未提供；不等於保證掉落</td></tr>{/each}</tbody></table></div>
-   <h3>使用此提示的戰鬥與怪物</h3><div class="tablewrap"><table class="drop-hint-sources"><thead><tr><th>戰鬥</th><th>怪物（等級）</th></tr></thead><tbody>{#each data.dropInfo.sources as source}<tr><td><EntryLink record={source.copy}/></td><td>{#each source.enemies as enemy}<EntryLink record={enemy}/>{:else}未配置固定怪物{/each}</td></tr>{:else}<tr><td colspan="2">沒有現行關卡引用此提示。</td></tr>{/each}</tbody></table></div>
-  {:else}<p class="notice">尚未找到此掉落表對應的現行怪物或關卡。下列機率僅描述這份表的抽選參數，不代表目前打怪的實際掉率。</p>{/if}
- {/if}
  {#each [data.row.describe,data.row.describe_en,data.row.desc].filter(isValue) as text}<p>{String(text)}</p>{/each}
  {#if data.titleUnlock}
   <h3>稱號取得方式</h3>
@@ -66,6 +61,7 @@
  {#if data.progression}<ItemProgression row={data.row} progression={data.progression}/>{/if}
  {#if data.skinProgression}<SkinProgression data={data.skinProgression}/>{/if}
  <Rewards rewards={data.rewards}/>
+ <DropHints hints={data.dropHints}/>
  <h3>相關條目</h3><div class="relations">{#each data.relations as relation}<span><EntryLink record={relation}/><small>· {relation.why}</small></span>{:else}<p>尚無可確認的相關條目。</p>{/each}</div>
  
  <details class="technical-info"><summary>資料來源與技術資訊</summary><p class="entry-id" data-pagefind-weight="0.1">資料 ID：{data.record.id}</p><p class="source" data-pagefind-ignore>來源：{data.source} · 遊戲 {data.version} · <a href="/sources/">來源與驗證</a></p><h3 data-pagefind-ignore>全部原始欄位（含未解讀代碼）</h3><pre data-pagefind-ignore>{JSON.stringify(data.row,null,2)}</pre></details>

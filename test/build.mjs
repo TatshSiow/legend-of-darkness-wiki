@@ -3,6 +3,7 @@ import {readFileSync,readdirSync,existsSync} from 'node:fs';
 import {resolve,join} from 'node:path';
 import {categories,entries} from '../src/lib/server/data.ts';
 const root=resolve('build');
+for(const category of ['drop','droptip'])assert(!existsSync(join(root,'data',category,'index.html')),`Archived catalog is still published: ${category}`);
 const files=readdirSync(root,{recursive:true,withFileTypes:true}).filter(f=>f.isFile()&&f.name.endsWith('.html'));
 const targets=new Set();let indexed=0;
 for(const file of files){

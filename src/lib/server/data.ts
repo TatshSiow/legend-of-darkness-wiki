@@ -7,14 +7,14 @@ import type { WikiData, GameRecord, JsonValue } from '#lib/core/types.ts';
 import { isValue,isReferenceField } from '#lib/core/fields.ts';
 import {mapCategories,mapCategoryHref,otherMapTabs} from '#lib/core/region-navigation.ts';
 import { buildRegions, enemyIdsInCopies } from '#lib/core/regions.ts';
-import { copyDrops, dropQuantityProbabilities, dropTableRate, skinUnlockRate } from '#lib/core/drops.ts';
+import { copyDrops, dropQuantityProbabilities, skinUnlockRate } from '#lib/core/drops.ts';
 
 const { tables:sourceTables, metadata } = raw as unknown as WikiData;
 const tables:WikiData['tables']={...sourceTables,title:sourceTables.achievement};
 export const categories: Record<string,string> = {
  enemy:'敵人圖鑑',item:'物品與裝備',skill:'技能',skillte:'技能效果',pet:'寵物',skin:'幻化',
- achievement:'成就',title:'稱號',drop:'掉落表',
- droptip:'掉落提示',explored:'寵物探索',trial:'試煉獎勵',task:'任務',
+ achievement:'成就',title:'稱號',
+ explored:'寵物探索',trial:'試煉獎勵',task:'任務',
  treasure:'寶箱與寶藏獎勵池',
  make:'合成配方',shop:'商店',exchange:'積分兌換'
 };
@@ -22,7 +22,6 @@ export const categories: Record<string,string> = {
 const archivedGemIds=new Set([...Array.from({length:25},(_,i)=>5013+i),5154]);
 const publishedRow=(category:string,row:GameRecord)=>(category!=='item'||!archivedGemIds.has(Number(row.id)))&&(category!=='achievement'||row.type===1)&&(category!=='title'||row.type===2);
 const mappings = images.records as Record<string,{url:string}>;
-const categoryDescriptions:Record<string,string>={drop:'列出掉落表內全部道具、數量與倍率 1 倍的表內機率。這套舊掉落管理器尚未找到現行戰鬥入口，也沒有資料表直接引用其 ID；不能當成目前怪物掉落率。現行怪物掉落請由地區圖鑑或道具詳情查詢。',droptip:'遊戲介面顯示的掉落提示，包含全部提示道具、對應戰鬥與怪物等級。提示本身沒有數量或機率設定，也不保證實際掉落；已核對的機率請到怪物或道具詳情查看。'};
 const rowId = (row: GameRecord) => row.id ?? row.dropid ?? row.itemid;
 const indexes = Object.fromEntries(Object.entries(tables).map(([key,rows]) =>
  [key,new Map(rows.flatMap((row,index) => rowId(row) === undefined ? [] : [[String(rowId(row)),index]]))]));
@@ -161,7 +160,7 @@ export function listing(category: string) {
  };
  const columns = (preferred[category] ?? ['name',...Object.keys(tables[category][0] ?? {}).filter(key =>
   !isReferenceField(key)&&!['name','name_en','describe','describe_en','desc','tem','tem1','tem2','tem3','img','icon'].includes(key)).slice(0,4)]).filter(key=>!isReferenceField(key));
- return {name:categories[category],category,categoryDescription:categoryDescriptions[category]??null,initialPage:1,columns,exchangeGroups:category==='exchange'?[...new Set(tables.exchange.map(r=>r.type===9?`boost:${r.special}`:`type:${r.type}`))].map(key=>{
+ return {name:categories[category],category,categoryDescription:null,initialPage:1,columns,exchangeGroups:category==='exchange'?[...new Set(tables.exchange.map(r=>r.type===9?`boost:${r.special}`:`type:${r.type}`))].map(key=>{
   const rows=tables.exchange.filter(r=>(r.type===9?`boost:${r.special}`:`type:${r.type}`)===key);
   const info=exchangeInfo(rows[0]);
   return {key,name:info.boost?.name??info.kind,boost:info.boost,entries:rows.map(row=>({record:catalogSummary('exchange',indexes.exchange.get(String(row.id))!),info:exchangeInfo(row)}))};
@@ -195,7 +194,7 @@ export function regionDetails(key: string) {
  const region = regions.find(r => r.key === key);
  if (!region) return null;
  const ids = enemyIdsInCopies(tables.copy.filter(c => region.copyIds.includes(Number(c.id))));
- return {region:regionSummary(region),
+ return {region:regionSummary(region),dropHints:dropHints(tables.copy.filter(copy=>region.copyIds.includes(Number(copy.id)))),
   enemies:tables.enemy.flatMap((row,index) => ids.has(Number(row.id)) ? [{...summary('enemy',index),
    minDifficulty:region.hiddenCopyId && enemyIdsInCopies(tables.copy.filter(c=>c.id===region.hiddenCopyId)).has(Number(row.id)) ? 5 : 1}] : []),
   randomFive:region.copyIds.length === 1 && region.copyIds[0] >= 2060 && region.copyIds[0] <= 2070};
@@ -322,6 +321,14 @@ function rewardDetails(category: string,row: GameRecord) {
 }
 export type Reward = ReturnType<typeof rewardDetails>[number];
 
+export function dropHints(copies:GameRecord[]){
+ return tables.droptip.flatMap(tip=>{
+  const sources=copies.filter(copy=>copy.droptipid===tip.id);
+  return sources.length?[{id:Number(tip.id),sources:sources.map(copy=>reference('copy',copy.id)!),items:Object.entries(tip).filter(([key,id])=>/^itemid\d+$/.test(key)&&Number(id)>0).map(([,id])=>reference('item',id)!)}]:[];
+ });
+}
+export type DropHint=ReturnType<typeof dropHints>[number];
+
 function itemProgression(row:GameRecord){
  if(row.type!==2)return null;
  const subtype=Number(row.subtype);
@@ -364,21 +371,14 @@ export function detail(category: string,entry: string) {
  const materials = category === 'make' ? Array.from({length:6},(_,i) => ({id:row[`matid${i+1}`],quantity:row[`matnum${i+1}`]}))
   .filter(mat => typeof mat.id === 'number' && mat.id > 0).map(mat => ({...mat,item:reference('item',mat.id)})) : [];
  const pool: {id:JsonValue|undefined;item:Summary|null;quantity:string;rate:number|null;weight:JsonValue|undefined}[] = [];
- if (category === 'drop') for (let i=1;i<=6;i++) if (Number(row[`id${i}`]) > 0) pool.push({
-  id:row[`id${i}`],item:reference('item',row[`id${i}`]),quantity:`${row[`min${i}`]}～${row[`max${i}`]}`,
-  rate:dropTableRate(Number(row[`pro${i}`])),weight:undefined});
  const isChest=(category==='item'&&row.useid===1&&row.id===5012)||(category==='treasure'&&row.id===1);
  if (!isChest&&Array.isArray(row.items)) for (const item of row.items) pool.push({id:item.itemid,item:reference(item.itemtype===3?'pet':'item',item.itemid),
   quantity:String(item.itemnum ?? '—'),rate:null,weight:item.itemweight});
  if(isChest)for(const item of chestRates(tables.treasure.find(r=>r.id===1)!.items!))pool.push({id:item.itemid,item:reference('item',item.itemid),quantity:String(item.itemnum),rate:item.rate,weight:item.itemweight});
- const dropInfo=['drop','droptip'].includes(category)?{
-  hints:category==='droptip'?Object.entries(row).filter(([key,id])=>/^itemid\d+$/.test(key)&&Number(id)>0).map(([key,id])=>({id,item:reference('item',id),name:String(row[`itemname${key.slice(6)}`]??'')})):[],
-  sources:category==='droptip'?tables.copy.filter(c=>c.droptipid===row.id).map(c=>({copy:reference('copy',c.id)!,enemies:[...enemyIdsInCopies([c])].flatMap(id=>{const e=reference('enemy',id);return e?[e]:[];})})):[]
- }:null;
- return {record:summary(category,index),row,categoryName:categories[category==='achievement'&&row.type===2?'title':category],source:metadata.sources[category==='title'?'achievement':category].path,dropInfo,
+ return {record:summary(category,index),row,categoryName:categories[category==='achievement'&&row.type===2?'title':category],source:metadata.sources[category==='title'?'achievement':category].path,
   titleUnlock:['title','achievement'].includes(category)&&row.type===2?titleUnlock(row):null,
   unlockedTitles:category==='achievement'&&row.type===1?tables.title.flatMap((title,i)=>title.type===2&&[title.require1,title.require2,title.require3].includes(row.id)?[{record:summary('title',i),automatic:title.subtype===52,requirements:titleUnlock(title).requirements}]:[]):[],
-  version:metadata.version,categoryDescription:categoryDescriptions[category]??null,supported,minDifficulty,abyssOnly,skills,rewards:rewardDetails(category,row),
+  version:metadata.version,categoryDescription:null,supported,minDifficulty,abyssOnly,skills,rewards:rewardDetails(category,row).filter(reward=>category!=='enemy'||!reward.draws.every(draw=>draw.field==='droptip')),dropHints:category==='enemy'?dropHints(origins):[],
   availability:category==='item'?itemAvailability(row):null,materials,makeOperation:category==='make'?makeOperation(row):null,treasure:category==='treasure'?{...treasureContext(Number(row.id)),source:reference('item',treasureContext(Number(row.id)).sourceItem)}:null,exchange:category==='exchange'?exchangeInfo(row):null,product:category === 'make' ? reference('item',row.itemid) : null,pool,isChest,progression:category==='item'?itemProgression(row):null,
   skinProgression:category==='skin'?{stats:(mechanics.skinStats as Record<string,{type:number;value:number}[][]>)[String(row.id)],costs:mechanics.skinCosts,materials:[5121,5201,5211].map(id=>({id,record:reference('item',id)}))}:null,relations:related(category,row)};
 }

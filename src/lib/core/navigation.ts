@@ -6,6 +6,5 @@ export const navigationGroups = [
   {name:'地區圖鑑',href:'/regions/',hint:'冒險與副本'},
   {name:'深淵',href:'/abyss/',hint:'144 層'},
   {name:'試煉關卡',href:'/trial/',hint:'3 難度'}
- ]},
- {name:'掉落資料',description:'掉落表與遊戲內提示，實際來源以條目說明為準。',categories:['drop','droptip']}
+ ]}
 ];

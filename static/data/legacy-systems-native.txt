@@ -36,3 +36,10 @@ SHA256：da5374a1b889a301c54a03acabf6a411cbae0db7e391c4ff4a8a556ceed25de8
 - DropManeger::getDrops 0x773898 在 0x7738a8、0x7738b2 呼叫 getGoodsDrops 0x773914、getEquipDrops 0x773a08；.text 直接 Thumb BL 掃描沒有找到 getDrops 的外部呼叫。這不能排除間接呼叫，因此只標記現行用途未確認，不宣稱所有舊掉落程式必定不可達。
 - 現行 Copy 掉落使用 percent300 等陣列，不能把舊 drop 表的 pro/1001 機率套過去。
 - droptip 由 copy.droptipid 明確引用，頁面列出全部引用戰鬥及依精確 enemy ID 解析的怪物與等級。提示本身沒有掉率及數量欄位，不能臆造機率。
+
+2026-10-26 補充查核與公開頁面調整：
+- 31 組 droptip 全部有引用，共 187 個關卡；提示 101 由野獸巢穴及 144 層深淵共用。共用提示不代表共用實際掉率。
+- GameData::getDropItemsById 0x77b614 由 MainBossLayer::refreshView 0x7d5352、SubMapEventLayer::showLevelEvent 0x7d8226 呼叫。兩者先讀 Copy 虛擬表 +0x58（getDroptipid 0x76ee40），再建立 itemid1～itemid8 的預覽物品，並非發獎。
+- 實際 Copy::getDrops 呼叫來源包含 MainAbyssLayer::getQuickwarGoods 0x7c79e0 與 WarFinishLayer::initUi 0x83e15a、0x83e36a、0x83e534、0x83e9da、0x83fb90。
+- 擴大掃描至全部可執行區段的半字對齊 Thumb BL/B.W、已配置區段的對齊絕對位址及符號重定位，仍未找到 DropManeger::getDrops 外部入口；不能排除計算式/PIC/間接呼叫、其他 ABI 或版本。
+- 掉落表與掉落提示已移除獨立公開分類及搜尋條目。原始 JSON 封存在「來源與驗證」供研究，提示則完整併入相應關卡／怪物詳情，與已確認的掉率分開呈現。

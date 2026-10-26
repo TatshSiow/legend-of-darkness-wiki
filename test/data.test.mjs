@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {categories,entries,detail,listing,regions,regionDetails,portalGroups,legacyEntries,legacyTarget,sourceData,regionBrowser,recordName} from '../src/lib/server/data.ts';
+import {categories,entries,detail,listing,regions,regionDetails,portalGroups,legacyEntries,legacyTarget,sourceData,regionBrowser,recordName,dropHints} from '../src/lib/server/data.ts';
 import {enemyDifficultyStats,enemyPlayerStats} from '../src/lib/core/enemy-stats.ts';
 import {criticalChance} from '../src/lib/core/combat.ts';
 import {skinUnlockRate} from '../src/lib/core/drops.ts';
@@ -218,7 +218,7 @@ test('adventure hidden bosses belong to their chapters and start at paragon 300'
  assert.equal(detail('enemy',entryFor('enemy',4001)).minDifficulty,1);
 });
 
-test('all 17 published categories, 2692 records and downloadable source hashes are retained',()=>{
+test('all 15 published categories, 2636 records and downloadable source hashes are retained',()=>{
  assert.equal(categories.exchange,'積分兌換');
  assert.equal(categories.exchange2,undefined);
  assert.equal(listing('exchange2'),null);
@@ -238,8 +238,8 @@ test('all 17 published categories, 2692 records and downloadable source hashes a
   assert.equal(sourceData().sources[cat],undefined);assert(!existsSync(new URL(`../static/data/${cat}.json`,import.meta.url)));
  }
  assert.equal(fieldLabel('level','level'),'關卡等級（設定值）');assert.equal(fieldLabel('from','god'),'資料記載來源（未核實取得）');
- assert.equal(Object.keys(categories).length,17);
- assert.equal(Object.keys(categories).reduce((n,cat)=>n+entries(cat).length,0),2692);
+ assert.equal(Object.keys(categories).length,15);
+ assert.equal(Object.keys(categories).reduce((n,cat)=>n+entries(cat).length,0),2636);
  for(const cat of Object.keys(categories)){
   if(cat==='title')continue;
   const data=detail(cat,'row-0');assert(data,cat);assert(!['null','undefined',''].includes(data.record.name),cat);
@@ -249,20 +249,27 @@ test('all 17 published categories, 2692 records and downloadable source hashes a
   assert.equal(createHash('sha256').update(bytes).digest('hex'),sourceData().sources[cat].jsonSha256,cat);
  }
 });
-test('drop tables and hints expose every populated slot and exact source monsters',()=>{
- for(const row of tables.drop){
-  const entry=`row-${tables.drop.indexOf(row)}`,page=detail('drop',entry);
-  assert.equal(page.pool.length,Object.keys(row).filter(k=>/^id\d+$/.test(k)&&row[k]>0).length);
-  assert(page.pool.every(r=>r.item&&Number.isFinite(r.rate)));
-  assert(listing('drop').records.find(r=>r.id===row.dropid).values.rewardCount===page.pool.length);
+test('internal drop catalogs are archived and hints retain exact copy membership',()=>{
+ for(const category of ['drop','droptip']){
+  assert.equal(categories[category],undefined);assert.equal(listing(category),null);
+  assert.equal(detail(category,'row-0'),null);assert.deepEqual(entries(category),[]);
+  assert(existsSync(new URL(`../static/data/${category}.json`,import.meta.url)));
  }
- for(const row of tables.droptip){
-  const page=detail('droptip',entryFor('droptip',row.id));
-  assert.equal(page.dropInfo.hints.length,Object.keys(row).filter(k=>/^itemid\d+$/.test(k)&&row[k]>0).length);
-  assert(page.dropInfo.hints.every(h=>h.item||h.name));
-  assert.equal(page.dropInfo.sources.length,tables.copy.filter(c=>c.droptipid===row.id).length);
-  assert(page.dropInfo.sources.every(s=>s.enemies.every(e=>e.level>0)));
+ let copies=0;
+ for(const copy of tables.copy.filter(copy=>Number(copy.droptipid)>0)){
+  const tip=tables.droptip.find(tip=>tip.id===copy.droptipid),hints=dropHints([copy]);
+  assert.equal(hints.length,1);assert.equal(hints[0].id,tip.id);
+  assert.deepEqual(hints[0].sources.map(source=>source.id),[copy.id]);
+  assert.deepEqual(hints[0].items.map(item=>item.id),Object.entries(tip).filter(([key,id])=>/^itemid\d+$/.test(key)&&id>0).map(([,id])=>id));
+  for(const enemy of tables.enemy.filter(enemy=>Object.entries(copy).some(([key,id])=>/^enemyid\d*$/.test(key)&&id===enemy.id))){
+   const page=detail('enemy',entryFor('enemy',enemy.id));
+   assert(page.dropHints.some(hint=>hint.id===tip.id&&hint.sources.some(source=>source.id===copy.id)));
+   assert(!page.rewards.some(reward=>reward.draws.every(draw=>draw.field==='droptip')));
+  }
+  copies++;
  }
+ assert.equal(copies,187);assert.equal(dropHints(tables.copy).length,31);
+ assert(regionDetails('copy-5001').dropHints.length);
  assert.equal(legacyTarget('chapter'),'/regions/');
  assert.equal(legacyTarget('chapter','row-0'),'/regions/chapter-1/');
  assert.equal(legacyTarget('chapter','100'),'/regions/rift/');
@@ -294,7 +301,7 @@ test('item and skin pages retain reverse drop sources and recipe links',()=>{
  assert(recipe.product);assert(recipe.materials.length);assert(recipe.relations.some(r=>r.category==='item'));
  const bone=detail('item',entryFor('item',5046));assert(bone.rewards.some(r=>r.copy?.id===1001));
  const skin=detail('skin',entryFor('skin',8010));assert(skin.rewards.some(r=>r.unlock&&r.copy?.id===1001));
- assert(detail('drop','row-0').pool.length);
+ assert.equal(detail('drop','row-0'),null);
  assert(detail('treasure','row-0').pool.every(r=>r.rate>0));
  assert(detail('treasure','row-1').pool.every(r=>r.rate===null));
 });

@@ -7,7 +7,8 @@
  let {rewards}:{rewards:Reward[]}=$props();
  let drops=$derived(rewards.filter(r=>r.rates.length));
  let unlocks=$derived(rewards.filter(r=>r.unlock));
- let pending=$derived(rewards.filter(r=>!r.unlock&&!r.rates.length));
+ let hints=$derived(rewards.filter(r=>r.draws.every(draw=>draw.field==='droptip')));
+ let pending=$derived(rewards.filter(r=>!r.unlock&&!r.rates.length&&!r.draws.every(draw=>draw.field==='droptip')));
 </script>
 {#if drops.length}
  <h3>可掉落道具</h3>
@@ -38,5 +39,9 @@
 {#if pending.length}
  <h3>其他取得線索（尚未確認掉落）</h3><p class="data-note">以下來自特殊欄位或遊戲提示，不代表打倒敵人就會掉落。</p>
  <div class="tablewrap"><table class="pending-drops"><thead><tr><th>項目</th><th>戰鬥來源</th><th>確認狀態</th></tr></thead><tbody>{#each pending as drop}<tr><td><EntryLink record={drop.item} id={drop.itemId}/></td><td><DropSource reward={drop}/></td><td class="drop-condition">待核對：{drop.condition}</td></tr>{/each}</tbody></table></div>
+{/if}
+{#if hints.length}
+ <h3>遊戲內掉落提示（未確認取得）</h3><p class="data-note">以下來源僅在遊戲預覽提示中列出此物品，沒有數量或機率設定，不保證實際掉落。</p>
+ <div class="tablewrap"><table class="hint-drops"><thead><tr><th>項目</th><th>提示來源</th></tr></thead><tbody>{#each hints as hint}<tr><td><EntryLink record={hint.item} id={hint.itemId}/></td><td><DropSource reward={hint}/></td></tr>{/each}</tbody></table></div>
 {/if}
 {#if rewards.length}<details data-pagefind-ignore><summary>掉落資料來源與計算方式</summary><p class="source">Copy::getDrops 0x76e468：rand()%10001，roll &lt; 門檻；Copy::getDropSpecial 0x76eaec。參考值尚未合併角色加成或整場戰鬥的多次掉落流程。</p><pre>{rewards.flatMap(r=>r.draws.map(d=>`${d.copyId} / ${d.itemId}: ${d.field}`)).join('\n')}</pre></details>{/if}
