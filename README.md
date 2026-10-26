@@ -34,6 +34,8 @@ npm run test:build
 
 瀏覽器測試：先執行 `npx playwright install chromium`，另開終端啟動 `npm run preview`，再執行 `npm run test:browser`。其他 `test/*-browser.mjs` 為 dev server 的個別介面測試。
 
+`node test/navigation-browser.mjs` 驗證滑鼠移入時預載資料、點擊不重複下載及不重載 HTML；設定 `BASE_URL` 可測試部署版本。導覽列僅提前載入可見連結的程式，資料在滑鼠移入或觸控按下時才載入。
+
 ## 部署
 
 將 **`build/` 整個目錄**部署到支援目錄 `index.html` 的靜態主機。不需常駐 Node.js 服務，不需將所有網址改寫成首頁。不存在的網址應以 `404.html` 回應 HTTP 404。

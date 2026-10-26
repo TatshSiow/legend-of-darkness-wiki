@@ -1,5 +1,5 @@
 <script lang="ts">
- import {page} from '$app/state';
+ import {page,navigating} from '$app/state';
  import {goto} from '$app/navigation';
  import {sortableTables} from '#lib/core/table-sort.ts';
  import {navigationGroups} from '#lib/core/navigation.ts';
@@ -16,7 +16,7 @@
  <a class="brand" href="/home/"><span class="sigil">◈</span><span>黑暗傳說<small>LEGEND OF DARKNESS</small></span></a>
  <div class="edition">遊戲資料典藏 <b>{data.version}</b></div>
  <form class="search" action="/search/" onsubmit={search}><span aria-hidden="true">⌕</span><input name="q" type="search" bind:value={query} placeholder="搜尋怪物、裝備、技能…" aria-label="全站搜尋"><button type="submit" aria-label="搜尋">↵</button></form>
- <nav id="nav" aria-label="資料分類">
+ <nav id="nav" aria-label="資料分類" data-sveltekit-preload-code="viewport">
   <a href="/home/" class:active={page.url.pathname==='/home/'}><span>資料總覽</span><small>INDEX</small></a>
   {#each navigationGroups as group}
    <div class="navgroup">{group.name}</div>
@@ -32,10 +32,11 @@
   <a href="/sources/" class:active={page.url.pathname==='/sources/'}><span>來源與驗證</span><small>{data.categories.length}</small></a>
  </nav><div class="sidefoot">原版遊戲圖示 · 遊戲 {data.version}<br>黑暗世界的資料典藏</div>
 </aside>
-<main>
+<main aria-busy={!!navigating.to}>
+ {#if navigating.to}<div class="navigation-status" role="status">載入頁面中…</div>{/if}
  <div id="view" use:sortableTables>{@render children()}</div>
  <footer data-pagefind-ignore>Legend Of Darkness · 非官方資料庫 <span>原始資料 ≠ 戰鬥最終數值</span></footer>
 </main>
 
 
-<style>aside .search{width:100%;gap:8px;margin:0 0 18px;padding:8px 10px}aside .search input{font-size:11px}@media(max-width:800px){aside .search{margin:14px 0 0}}</style>
+<style>aside .search{width:100%;gap:8px;margin:0 0 18px;padding:8px 10px}aside .search input{font-size:11px}.navigation-status{position:fixed;right:20px;top:12px;z-index:20;padding:6px 12px;background:var(--panel);border:1px solid var(--line);color:var(--gold);font-size:12px;pointer-events:none}@media(max-width:800px){aside .search{margin:14px 0 0}}</style>
