@@ -1,0 +1,35 @@
+{
+  "nativeLibrarySha256": "ebf6eefcc42d9294e0544fd7a824b7d2b6303c5c2556785de1235dca3912d92f",
+  "scope": "Reference per-array-entry checks at multiplier1; not per-battle aggregate probability. Residue-uniform nominal rates; rand modulo may be biased. Caller-dependent multiplier/eligibility can change rates.",
+  "copy": {
+    "function": "Copy::getDrops 0x76e468",
+    "inputMultiplier": "min(argument / 100, 8)",
+    "randomResidues": 10001,
+    "comparison": "roll < threshold",
+    "fields": {
+      "percent300": 2400,
+      "percent100": 750,
+      "percent10": 75,
+      "percent2": 15,
+      "percent1": 7
+    },
+    "exceptions": [
+      "percent1 item6865: type1 denominator500001; type2 denominator20001",
+      "item5100 in first three pools: additional special game flag",
+      "paragondrop10: hard>=4, threshold trunc(30*M); type1 special item scaling .15/.02/.1/.03",
+      "paragondrop8001: hard>=7, threshold trunc(M)",
+      "specialdrop: Copy::getDropSpecial 0x76eaec type5/progress/tag restrictions",
+      "specialdrop2: Copy+0xd8 read by WarFinishLayer::initUi; IDs8001..8999 use random getSkin unlock branch. See specialdrop2-skin-verified.json for mode gates and conditional rate."
+    ]
+  },
+  "dropTable": {
+    "functions": [
+      "DropManeger::getGoodsDrops 0x773914",
+      "getEquipDrops 0x773a08"
+    ],
+    "randomResidues": 1001,
+    "comparison": "roll < float32(pro*multiplier)"
+  },
+  "mappingEvidence": "GameData::getBaseCopyById 0x779d14: percent300+84,percent100+90,percent10+9c,specialdrop+a8,percent2+b4,percent1+c0,paragondrop10+cc,specialdrop2+d8,paragondrop8001+e4",
+  "nativeBoundaryTests": "drop-rate-native-boundaries.json"
+}

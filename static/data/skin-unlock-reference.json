@@ -1,0 +1,5270 @@
+{
+  "scope": "Mode0 inner skin branch, initialized base30; outer eligibility required. Ordinary references and Copy1163 equipment/resource gate verified in original instructions; stop before award. Not a claim all copies reachable in mode0.",
+  "rows": [
+    {
+      "copyId": 1001,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1001,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1001,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1001,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1001,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1001,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1015,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1015,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1015,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1015,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1015,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1015,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1018,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1018,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1018,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1018,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1018,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1018,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1055,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1055,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1055,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1055,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1055,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1055,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1058,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1058,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1058,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1058,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1058,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1058,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1072,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1072,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1072,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1072,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1072,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1072,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1082,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1082,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1082,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1082,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1082,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1082,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1085,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1085,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1085,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1085,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1085,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1085,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1089,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1089,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1089,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1089,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1089,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1089,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1090,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1090,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1090,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1090,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1090,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1090,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1093,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1093,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1093,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1093,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1093,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1093,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1101,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1101,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1101,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1101,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1101,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1101,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1133,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1133,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1133,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1133,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1133,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1133,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1142,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1142,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1142,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1142,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1142,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1142,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1149,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1149,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1149,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1149,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1149,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1149,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1154,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1154,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1154,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1154,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1154,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1154,
+      "skinId": 8010,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1160,
+      "skinId": 8015,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1160,
+      "skinId": 8015,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1160,
+      "skinId": 8015,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1160,
+      "skinId": 8015,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1160,
+      "skinId": 8015,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1160,
+      "skinId": 8015,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1168,
+      "skinId": 8020,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1168,
+      "skinId": 8020,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1168,
+      "skinId": 8020,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1168,
+      "skinId": 8020,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1168,
+      "skinId": 8020,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1168,
+      "skinId": 8020,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 1203,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 1203,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 1203,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 1203,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 1203,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 1203,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2001,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2001,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2001,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2001,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2001,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2001,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2002,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2002,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2002,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2002,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2002,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2002,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2003,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2004,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2004,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2004,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2004,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2004,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2004,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2005,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2005,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2005,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2005,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2005,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2005,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2006,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2006,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2006,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2006,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2006,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2006,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2007,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2007,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2007,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2007,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2007,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2007,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2008,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2008,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2008,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2008,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2008,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2008,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2009,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2009,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2009,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2009,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2009,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2009,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2010,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2010,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2010,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2010,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2010,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2010,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2011,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2011,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2011,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2011,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2011,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2011,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2012,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2012,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2012,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2012,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2012,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2012,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2013,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2013,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2013,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2013,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2013,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2013,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2014,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2014,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2014,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2014,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2014,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2014,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2015,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2015,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2015,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2015,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2015,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2015,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2016,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2016,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2016,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2016,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2016,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2016,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2017,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2017,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2017,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2017,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2017,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2017,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2018,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2018,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2018,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2018,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2018,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2018,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2050,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2050,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2050,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2050,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2050,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2050,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2051,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2051,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2051,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2051,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2051,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2051,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2052,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2052,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2052,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2052,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2052,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2052,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2053,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2053,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2053,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2053,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2053,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2053,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2054,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2054,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2054,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2054,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2054,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2054,
+      "skinId": 8003,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2101,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2101,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2101,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2101,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2101,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2101,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2102,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2102,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2102,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2102,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2102,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2102,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2103,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2103,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2103,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2103,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2103,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2103,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2104,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2104,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2104,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2104,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2104,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2104,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2105,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2105,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2105,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2105,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2105,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2105,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2106,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2106,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2106,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2106,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2106,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2106,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2107,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2107,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2107,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2107,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2107,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2107,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2108,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2108,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2108,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2108,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2108,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2108,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2109,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2109,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2109,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2109,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2109,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2109,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2110,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2110,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2110,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2110,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2110,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2110,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2111,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2111,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2111,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2111,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2111,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2111,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2112,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2112,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2112,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2112,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2112,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2112,
+      "skinId": 8004,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2238,
+      "skinId": 8017,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2238,
+      "skinId": 8017,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2238,
+      "skinId": 8017,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2238,
+      "skinId": 8017,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2238,
+      "skinId": 8017,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2238,
+      "skinId": 8017,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 2253,
+      "skinId": 8023,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 2253,
+      "skinId": 8023,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 2253,
+      "skinId": 8023,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 2253,
+      "skinId": 8023,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 2253,
+      "skinId": 8023,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 2253,
+      "skinId": 8023,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3004,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3004,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3004,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3004,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3004,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3004,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3021,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3021,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3021,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3021,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3021,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3021,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3022,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3022,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3022,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3022,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3022,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3022,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3023,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3023,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3023,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3023,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3023,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3023,
+      "skinId": 8009,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3031,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3031,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3031,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3031,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3031,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3031,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3032,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3032,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3032,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3032,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3032,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3032,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3033,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3033,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3033,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3033,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3033,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3033,
+      "skinId": 8007,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3041,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3041,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3041,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3041,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3041,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3041,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3042,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3042,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3042,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3042,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3042,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3042,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3043,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3043,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3043,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3043,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3043,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3043,
+      "skinId": 8008,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3051,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3051,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3051,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3051,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3051,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3051,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3052,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3052,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3052,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3052,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3052,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3052,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 3053,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 3053,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 3053,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 3053,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 3053,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 3053,
+      "skinId": 8011,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 4001,
+      "skinId": 8012,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 4001,
+      "skinId": 8012,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 4001,
+      "skinId": 8012,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 4001,
+      "skinId": 8012,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 4001,
+      "skinId": 8012,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 4001,
+      "skinId": 8012,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 4022,
+      "skinId": 8018,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 4022,
+      "skinId": 8018,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 4022,
+      "skinId": 8018,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 4022,
+      "skinId": 8018,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 4022,
+      "skinId": 8018,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 4022,
+      "skinId": 8018,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 4023,
+      "skinId": 8022,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 4023,
+      "skinId": 8022,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 4023,
+      "skinId": 8022,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 4023,
+      "skinId": 8022,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 4023,
+      "skinId": 8022,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 4023,
+      "skinId": 8022,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5001,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5001,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5001,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5001,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5001,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5001,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5010,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5010,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5010,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5010,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5010,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5010,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5020,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5020,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5020,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5020,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5020,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5020,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5030,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5030,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5030,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5030,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5030,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5030,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5040,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5040,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5040,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5040,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5040,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5040,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5050,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5050,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5050,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5050,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5050,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5050,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5060,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5060,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5060,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5060,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5060,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5060,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5070,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5070,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5070,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5070,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5070,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5070,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5080,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5080,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5080,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5080,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5080,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5080,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5091,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5091,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5091,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5091,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5091,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5091,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5097,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5097,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5097,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5097,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5097,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5097,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5100,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5100,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5100,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5100,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5100,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5100,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5101,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5101,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5101,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5101,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5101,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5101,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5103,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5103,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5103,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5103,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5103,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5103,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5104,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5104,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5104,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5104,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5104,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5104,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5106,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5106,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5106,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5106,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5106,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5106,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5107,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5107,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5107,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5107,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5107,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5107,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5109,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5109,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5109,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5109,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5109,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5109,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5110,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5110,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5110,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5110,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5110,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5110,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5112,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5112,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5112,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5112,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5112,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5112,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5113,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5113,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5113,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5113,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5113,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5113,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5115,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5115,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5115,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5115,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5115,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5115,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5116,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5116,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5116,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5116,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5116,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5116,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5118,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5118,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5118,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5118,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5118,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5118,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5119,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5119,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5119,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5119,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5119,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5119,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5121,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5121,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5121,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5121,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5121,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5121,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5122,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5122,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5122,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5122,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5122,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5122,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5124,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5124,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5124,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5124,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5124,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5124,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5125,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5125,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5125,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5125,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5125,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5125,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5127,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5127,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5127,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5127,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5127,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5127,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5128,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5128,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5128,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5128,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5128,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5128,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5130,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5130,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5130,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5130,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5130,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5130,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5131,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5131,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5131,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5131,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5131,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5131,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5133,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5133,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5133,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5133,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5133,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5133,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5134,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5134,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5134,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5134,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5134,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5134,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5136,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5136,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5136,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5136,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5136,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5136,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5137,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5137,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5137,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5137,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5137,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5137,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5139,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5139,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5139,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5139,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5139,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5139,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5140,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5140,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5140,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5140,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5140,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5140,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5142,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5142,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5142,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5142,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5142,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5142,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    },
+    {
+      "copyId": 5143,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.029
+    },
+    {
+      "copyId": 5143,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.02
+    },
+    {
+      "copyId": 5143,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.014
+    },
+    {
+      "copyId": 5143,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.008
+    },
+    {
+      "copyId": 5143,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.005
+    },
+    {
+      "copyId": 5143,
+      "skinId": 8006,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.004
+    }
+  ],
+  "specialCopy1163": [
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1079,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1079,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1079,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1079,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1079,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1079,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1080,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1080,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1080,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1080,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1080,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 0,
+      "resource": 1080,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1079,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1079,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1079,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1079,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1079,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1079,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1080,
+      "rewardMultiplier": 1,
+      "nominalPercent": 11.999
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1080,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 8.399
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1080,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 5.999
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1080,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 3.6
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1080,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 2.399
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6814,
+      "resource": 1080,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 1.8
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1079,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1079,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1079,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1079,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1079,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1079,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1080,
+      "rewardMultiplier": 1,
+      "nominalPercent": 11.999
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1080,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 8.399
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1080,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 5.999
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1080,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 3.6
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1080,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 2.399
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6857,
+      "resource": 1080,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 1.8
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1079,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1079,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1079,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1079,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1079,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1079,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1080,
+      "rewardMultiplier": 1,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1080,
+      "rewardMultiplier": 0.7,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1080,
+      "rewardMultiplier": 0.5,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1080,
+      "rewardMultiplier": 0.3,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1080,
+      "rewardMultiplier": 0.2,
+      "nominalPercent": 0.0
+    },
+    {
+      "copyId": 1163,
+      "skinId": 8013,
+      "mode": 0,
+      "equipmentId": 6001,
+      "resource": 1080,
+      "rewardMultiplier": 0.15,
+      "nominalPercent": 0.0
+    }
+  ],
+  "nativeLibrarySha256": "ebf6eefcc42d9294e0544fd7a824b7d2b6303c5c2556785de1235dca3912d92f"
+}

@@ -1,0 +1,5 @@
+import {categories,entries as entryList,detail,portalGroups,regions,legacyTarget,legacyEntries} from '#lib/server/data.ts';
+import {error,redirect} from '@sveltejs/kit';
+export const entries=()=>[...Object.keys(categories).flatMap(category=>entryList(category).map(entry=>({category,...entry}))),...entryList('title').map(entry=>({category:'achievement',...entry})),...legacyEntries().flatMap(e=>e.legacy==='copy'&&'entry' in e&&e.entry.startsWith('row-')?[{category:'copy',entry:e.entry}]:[]),...portalGroups().map((_,i)=>({category:'transmit',entry:`row-${i}`})),...regions.filter(r=>r.chapterIndex!==undefined).map(r=>({category:'chapter',entry:`row-${r.chapterIndex}`}))];
+export const load=({params}:{params:{category:string;entry:string}})=>{if(['transmit','chapter','copy'].includes(params.category)){const target=legacyTarget(params.category,params.entry);if(target)redirect(308,target);}const data=detail(params.category,params.entry);if(!data)error(404,'找不到條目');if(params.category==='achievement'&&data.row.type===2)redirect(308,data.record.href);return data;};
+

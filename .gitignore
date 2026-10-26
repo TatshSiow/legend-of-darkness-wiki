@@ -1,0 +1,13 @@
+﻿node_modules/
+.svelte-kit/
+build/
+build-log.txt
+artifacts/
+*.tmp
+*.log
+.env
+.env.*
+!.env.example
+# Local APK research helpers depend on files outside this repository.
+scripts/export-item-mechanics.py
+scripts/export-trial-native.py

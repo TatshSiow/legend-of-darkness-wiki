@@ -1,0 +1,61 @@
+{
+  "version": "11.01",
+  "source": "Original APK lib/armeabi/libcocos2dcpp.so and assets/data/achievement.json",
+  "rules": {
+    "51": {
+      "meaning": "achievement points >= needcount",
+      "address": "0x7bae50..0x7bae64"
+    },
+    "52": {
+      "meaning": "all configured require IDs completed; completed count equals prerequisite vector size and is positive",
+      "address": "0x7bae66..0x7baef6"
+    },
+    "55": {
+      "meaning": "VIP level >= needcount",
+      "address": "0x7bad5c..0x7bad88"
+    }
+  },
+  "specialSources": {
+    "166": {
+      "event": "Blacksmith make/smelt",
+      "calls": [
+        "0x75c02c",
+        "0x75c9f8",
+        "0x75d194",
+        "0x75f716"
+      ],
+      "limits": "Exact eligible recipe and probability not validated"
+    },
+    "152": {
+      "event": "Pet fusion or ancient feeding",
+      "calls": [
+        "0x802a9a",
+        "0x80abe8"
+      ],
+      "limits": "Probability not validated"
+    },
+    "174": {
+      "event": "WarFinish pet/equipment sale dialog",
+      "calls": [
+        "0x843fb4",
+        "0x8443f4"
+      ],
+      "limits": "Eligible sale targets and probability not validated"
+    }
+  },
+  "exchange": {
+    "rule": "exchange.type == 6; itemid in title namespace",
+    "ids": [
+      28,
+      29,
+      30,
+      34,
+      115
+    ]
+  },
+  "limits": [
+    "Subtype63 prerequisites alone do not prove automatic grant; subtype52 automatic rule must not be applied to all special titles.",
+    "No source inferred from title name or isspecial flag.",
+    "Unresolved titles remain explicitly unverified, not labeled unavailable."
+  ]
+}

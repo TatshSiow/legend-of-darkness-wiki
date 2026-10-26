@@ -1,0 +1,6 @@
+{
+ "source":"Original ARM32 MainSwingLayer::touchEvent 0x81a498 and refreshView 0x81a784",
+ "purchaseBranch":"0x81a52a..0x81a69c: checks required field against getPlayerVip 0x81a550, checks money, calls changeMoney(-cost) at0x81a632, appends selected wing to GameLogic wing vector+0x34 at0x81a68e, saves at0x81a69c.",
+ "meaning":"The wing page has a purchase/acquisition path, separate from battle drops. Purchase has VIP and premium-currency conditions.",
+ "limits":"Specific per-wing VIP/currency values and current server availability were not newly validated. No live purchase performed."
+}

@@ -1,0 +1,146 @@
+{
+  "game": "Legend Of Darkness",
+  "package": "com.zn.monster",
+  "version": "11.01",
+  "extracted": "2026-10-23",
+  "apkSha256": "da5374a1b889a301c54a03acabf6a411cbae0db7e391c4ff4a8a556ceed25de8",
+  "sources": {
+    "achievement": {
+      "textEncoding": "utf8",
+      "path": "assets/data/achievement.json",
+      "count": 284,
+      "encryptedSha256": "aa7660353e629ec1300a5b0b71df403bfa096da278556158f13ae68d9b59c60d",
+      "jsonSha256": "8fb4c969172e277de471c8f7831c85380d903ab5beb8fdc4c914728c281ed5d8",
+      "replacementCharacters": 0
+    },
+    "copy": {
+      "textEncoding": "utf8",
+      "path": "assets/data/copy.json",
+      "count": 453,
+      "encryptedSha256": "c8672ace647f65dbee3ff97a11e9ff161e71936e25928af7b7ea17a0e29d3ff9",
+      "jsonSha256": "146177a09726b5bde8d619b10deb30aa7cd07273d768a981da0b0e7bb7cdb6a4",
+      "replacementCharacters": 0
+    },
+    "drop": {
+      "textEncoding": "utf8",
+      "path": "assets/data/drop.json",
+      "count": 25,
+      "encryptedSha256": "036cbbd120bc7b094772fcd5d572d8fea586042c7ecd80f93d31af734f7ae5e6",
+      "jsonSha256": "ba2993943b656ef441eab5daed530dfe8f61a71f00effdf1bb5f7439b49dfd89",
+      "replacementCharacters": 0
+    },
+    "droptip": {
+      "textEncoding": "utf8",
+      "path": "assets/data/droptip.json",
+      "count": 31,
+      "encryptedSha256": "e78e24737cee6949595813ac2aadf0f2dbb55dee01e1be1abf140f38de184bc3",
+      "jsonSha256": "adfb9eafcf345b02eb3f468e3af71b8c450132f89f61ebe6159086861511f80b",
+      "replacementCharacters": 0
+    },
+    "enemy": {
+      "textEncoding": "utf8",
+      "path": "assets/data/enemy.json",
+      "count": 1107,
+      "encryptedSha256": "0103a8f4643eaf58973668ac8534b5c567e75a2da3c18df2de60dc353fb4313a",
+      "jsonSha256": "17520c23c968eca3f2db98b4fad436204a7b17060ffdc550f686c3a83cf8ddbf",
+      "replacementCharacters": 0
+    },
+    "exchange": {
+      "textEncoding": "utf8",
+      "path": "assets/data/exchange.json",
+      "count": 97,
+      "encryptedSha256": "e0ce8d2f35a50ca7f338c2b98dae8dccbf2a6cf7388c95ae6b6138917a14158a",
+      "jsonSha256": "ef88b36298ba3fb0d2b99a2009ced00c4d0418d872cc67de6442f5b9de32329d",
+      "replacementCharacters": 0
+    },
+    "explored": {
+      "textEncoding": "utf8",
+      "path": "assets/data/explored.json",
+      "count": 13,
+      "encryptedSha256": "3ab69b15cbaea257251fcd4abb8fb240c565d45228547b9da469f42ef823bd7e",
+      "jsonSha256": "d34ea3f2c98be443bfd2a85688038ac28a44920e829f23669201871778ed26cf",
+      "replacementCharacters": 0
+    },
+    "item": {
+      "textEncoding": "utf8",
+      "path": "assets/data/item.json",
+      "count": 587,
+      "encryptedSha256": "b95968f05d182751d49f366b9f611f11be666e442115c35407f6475a12e02f05",
+      "jsonSha256": "497e4665558cbbbfa0612cecbdbe111de94ab1c43fd465e3a7304bc578a40e8c",
+      "replacementCharacters": 0
+    },
+    "make": {
+      "textEncoding": "utf8",
+      "path": "assets/data/make.json",
+      "count": 164,
+      "encryptedSha256": "556dd1273f1c88c51a77df8ce4417bcd089f1c6e1889a5ebad242dd7600a82cf",
+      "jsonSha256": "2c30acef9f93e792e1ec14b5199e1d8556d3d4c23abfe0261dde6bb88fc57d83",
+      "replacementCharacters": 0
+    },
+    "pet": {
+      "textEncoding": "utf8",
+      "path": "assets/data/pet.json",
+      "count": 35,
+      "encryptedSha256": "52e101c3e54879c441363dacb2e8825eeb78c426a8ae2b137ce00e044c29001c",
+      "jsonSha256": "9411bf6dd5b1825f303a2f2601a619df6352fe835daa83b968189dd11d7df6f2",
+      "replacementCharacters": 0
+    },
+    "shop": {
+      "textEncoding": "utf8",
+      "path": "assets/data/shop.json",
+      "count": 36,
+      "encryptedSha256": "90ced60e8f5e0f7b7709a6562e5d0c54f210738434de5710e32fa27c5124bb31",
+      "jsonSha256": "f84ec9219a88b751de338c11d78a19244fe3f9912040eca4db26595537537910",
+      "replacementCharacters": 0
+    },
+    "skill": {
+      "textEncoding": "utf8",
+      "path": "assets/data/skill.json",
+      "count": 40,
+      "encryptedSha256": "313724da4e9e46b36402f2e2c96daa3e9933ec3e45bbd88df14e857b6917fece",
+      "jsonSha256": "40f39dc23e1cf1dbe32daf45b8729b353f5c6e858331a4e7b661102db688d139",
+      "replacementCharacters": 0
+    },
+    "skillte": {
+      "textEncoding": "utf8",
+      "path": "assets/data/skillte.json",
+      "count": 10,
+      "encryptedSha256": "7d62c00ea9368de0eb1dc213d305a15cc1c7d7039d98fe780f39603939f6c54c",
+      "jsonSha256": "5bcc63a704ea56c042ee6a0b77bd578c1d9e2bc2be2d48a8acf0d65d5a919025",
+      "replacementCharacters": 0
+    },
+    "skin": {
+      "textEncoding": "utf8",
+      "path": "assets/data/skin.json",
+      "count": 23,
+      "encryptedSha256": "769caae47a284c5393b2b7170f088dfa2d5d542cbb902d191a59d4624dcf8ca9",
+      "jsonSha256": "63a2ba06151860a33d68f974ee844fde7c9e7665abfdd2bb1ed2b51de1d64ec2",
+      "replacementCharacters": 0
+    },
+    "task": {
+      "textEncoding": "utf8",
+      "path": "assets/data/task.json",
+      "count": 161,
+      "encryptedSha256": "b8329e85bbfef41bc43f1bac9b00f23e7696aec6009f27d861f553449567351b",
+      "jsonSha256": "792ff94c2983dd5187cd607bf4d2ab1ad430e6a6fecae26a5e11fcafffabeaed",
+      "replacementCharacters": 0
+    },
+    "treasure": {
+      "textEncoding": "gb18030",
+      "path": "assets/data/treasure.json",
+      "count": 14,
+      "encryptedSha256": "837dae8e702cbbfa7673030995d282534e3d94d01e026a5622d3c8f301395417",
+      "jsonSha256": "299328e6bb7adcfe2e4d8cfb73b8d823c118c73c61bc24228bfa92a620a87fe0",
+      "replacementCharacters": 0
+    },
+    "trial": {
+      "textEncoding": "utf8",
+      "path": "assets/data/trial.json",
+      "count": 91,
+      "encryptedSha256": "e3c681482edf53028a04ef6417928e483bc254f8241404aab9328ae35aab47fe",
+      "jsonSha256": "6cc5d1a66a2475359b7ebf173933a77d1c587adac8cbc365cfc35cb249e3507c",
+      "replacementCharacters": 0
+    }
+  },
+  "scope": "APK static tables only; runtime overrides are not included in base stats."
+}

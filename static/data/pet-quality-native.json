@@ -1,0 +1,19 @@
+{
+  "originalLibrarySha256": "ebf6eefcc42d9294e0544fd7a824b7d2b6303c5c2556785de1235dca3912d92f",
+  "languageFile": "assets/language/cn.xml",
+  "nameFormatter": "GameUtils::setPetNameText(Text*, string, int) at0x7afbf4; score key literal at0x7afc18; language lookup at0x7afc6a",
+  "labels": {
+    "1": "\u666e\u901a",
+    "2": "\u6807\u51c6",
+    "3": "\u4f18\u79c0",
+    "4": "\u6781\u54c1",
+    "5": "\u795e\u517d",
+    "6": "\u8fdc\u53e4\u795e\u517d"
+  },
+  "baseSpeciesCounts": {
+    "2": 6,
+    "3": 6,
+    "4": 23
+  },
+  "scope": "Base pet catalog uses qualities2/3/4. Quality5/6 are evolved states, not additional species records."
+}

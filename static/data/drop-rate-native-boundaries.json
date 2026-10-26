@@ -1,0 +1,147 @@
+{
+  "scope": "Copy getDrops numeric random threshold branch only; multiplier1; not final per battle probability",
+  "denominator": 10001,
+  "comparison": "strict less than",
+  "results": [
+    {
+      "threshold": 2400,
+      "roll": 0,
+      "drops": true
+    },
+    {
+      "threshold": 2400,
+      "roll": 2399,
+      "drops": true
+    },
+    {
+      "threshold": 2400,
+      "roll": 2400,
+      "drops": false
+    },
+    {
+      "threshold": 2400,
+      "roll": 10000,
+      "drops": false
+    },
+    {
+      "threshold": 750,
+      "roll": 0,
+      "drops": true
+    },
+    {
+      "threshold": 750,
+      "roll": 749,
+      "drops": true
+    },
+    {
+      "threshold": 750,
+      "roll": 750,
+      "drops": false
+    },
+    {
+      "threshold": 750,
+      "roll": 10000,
+      "drops": false
+    },
+    {
+      "threshold": 75,
+      "roll": 0,
+      "drops": true
+    },
+    {
+      "threshold": 75,
+      "roll": 74,
+      "drops": true
+    },
+    {
+      "threshold": 75,
+      "roll": 75,
+      "drops": false
+    },
+    {
+      "threshold": 75,
+      "roll": 10000,
+      "drops": false
+    },
+    {
+      "threshold": 15,
+      "roll": 0,
+      "drops": true
+    },
+    {
+      "threshold": 15,
+      "roll": 14,
+      "drops": true
+    },
+    {
+      "threshold": 15,
+      "roll": 15,
+      "drops": false
+    },
+    {
+      "threshold": 15,
+      "roll": 10000,
+      "drops": false
+    },
+    {
+      "threshold": 7,
+      "roll": 0,
+      "drops": true
+    },
+    {
+      "threshold": 7,
+      "roll": 6,
+      "drops": true
+    },
+    {
+      "threshold": 7,
+      "roll": 7,
+      "drops": false
+    },
+    {
+      "threshold": 7,
+      "roll": 10000,
+      "drops": false
+    },
+    {
+      "threshold": 30,
+      "roll": 0,
+      "drops": true
+    },
+    {
+      "threshold": 30,
+      "roll": 29,
+      "drops": true
+    },
+    {
+      "threshold": 30,
+      "roll": 30,
+      "drops": false
+    },
+    {
+      "threshold": 30,
+      "roll": 10000,
+      "drops": false
+    },
+    {
+      "threshold": 1,
+      "roll": 0,
+      "drops": true
+    },
+    {
+      "threshold": 1,
+      "roll": 0,
+      "drops": true
+    },
+    {
+      "threshold": 1,
+      "roll": 1,
+      "drops": false
+    },
+    {
+      "threshold": 1,
+      "roll": 10000,
+      "drops": false
+    }
+  ]
+}

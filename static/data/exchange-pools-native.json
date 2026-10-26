@@ -1,0 +1,13 @@
+{
+ "source":"Original ARM32 GameLogic::addPayRandomEquip 0x7b4ebc; MainExchangeLayer::onHttpRequestExchange 0x7decc4..0x7decde passes itemid and special.",
+ "selection":"0x7b50b8..0x7b50c4 selects rand() modulo pool length; one item. Counts 4/8 divide the 2^31 random range evenly. Item generation then applies special via makeGemEquip/makeSkinEquip/resetGodValue; base item links do not describe the generated instance.",
+ "pools":{
+  "50":[6025,6119,6219,6319,6419,6519,6619,6719],
+  "60":[6032,6124,6224,6324,6424,6524,6624,6724],
+  "70":[6038,6130,6230,6330,6430,6530,6630,6730],
+  "80":[6043,6135,6235,6335,6435,6535,6635,6735],
+  "90":[6044,6136,6236,6336,6436,6536,6636,6736],
+  "100":[6911,6912,6913,6914],
+  "120":[6046,6138,6238,6338,6438,6538,6638,6738]
+ }
+}

@@ -1,0 +1,434 @@
+{
+  "nativeLibrarySha256": "ebf6eefcc42d9294e0544fd7a824b7d2b6303c5c2556785de1235dca3912d92f",
+  "poolRead": "WarFinishLayer::initUi 0x83d914 reads Copy+0xd8",
+  "skinBranch": "0x83dd82..0x83ded0",
+  "reward": "GameLogic::getSkin(int,true), unlocks unique appearance; not a bag item",
+  "random": "rand()%100000 + 1, strict roll < float32(baseThreshold*rewardMultiplier)",
+  "referenceCopy1014Skin8005": {
+    "mode": 0,
+    "threshold": 30,
+    "multiplier": 1,
+    "successfulRolls": 29,
+    "rollCount": 100000,
+    "nominalPercent": 0.029
+  },
+  "gate": "warType1..6 skip this pool; mode0 and >=7 can enter, with additional outer result conditions",
+  "results": [
+    {
+      "mode": 0,
+      "entersSpecialRewardPool": true
+    },
+    {
+      "mode": 1,
+      "entersSpecialRewardPool": false
+    },
+    {
+      "mode": 2,
+      "entersSpecialRewardPool": false
+    },
+    {
+      "mode": 3,
+      "entersSpecialRewardPool": false
+    },
+    {
+      "mode": 4,
+      "entersSpecialRewardPool": false
+    },
+    {
+      "mode": 5,
+      "entersSpecialRewardPool": false
+    },
+    {
+      "mode": 6,
+      "entersSpecialRewardPool": false
+    },
+    {
+      "mode": 7,
+      "entersSpecialRewardPool": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "roll": 1,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "roll": 4,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "roll": 5,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "roll": 28,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "roll": 29,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "roll": 30,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "roll": 31,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 1,
+      "roll": 100000,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "roll": 1,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "roll": 4,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "roll": 5,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "roll": 28,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "roll": 29,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "roll": 30,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "roll": 31,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.7,
+      "roll": 100000,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "roll": 1,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "roll": 4,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "roll": 5,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "roll": 28,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "roll": 29,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "roll": 30,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "roll": 31,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.5,
+      "roll": 100000,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "roll": 1,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "roll": 4,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "roll": 5,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "roll": 28,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "roll": 29,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "roll": 30,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "roll": 31,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.3,
+      "roll": 100000,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "roll": 1,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "roll": 4,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "roll": 5,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "roll": 28,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "roll": 29,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "roll": 30,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "roll": 31,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.2,
+      "roll": 100000,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "roll": 1,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "roll": 4,
+      "callsGetSkin": true
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "roll": 5,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "roll": 28,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "roll": 29,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "roll": 30,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "roll": 31,
+      "callsGetSkin": false
+    },
+    {
+      "copyId": 1014,
+      "skinId": 8005,
+      "mode": 0,
+      "rewardMultiplier": 0.15,
+      "roll": 100000,
+      "callsGetSkin": false
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Preserve original evidence bytes: tests verify these files with SHA-256.
+static/data/** -text
+src/lib/server/assets/** -text

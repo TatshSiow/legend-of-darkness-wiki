@@ -1,0 +1,74 @@
+{
+  "observedDate": "2026-10-26",
+  "difficulty": 1,
+  "completedWave": 1,
+  "nextWaveCounter": 2,
+  "stage": "Victory screen; enemies read from the live WarLayer five-pointer vector, read-only /proc/PID/mem. Counter already incremented to2. Current trial and numeric-quality code matched original APK byte-for-byte.",
+  "rows": [
+    {
+      "enemyId": 4803,
+      "level": 80,
+      "att": 39747,
+      "hp": 49971,
+      "def": 16286,
+      "hit": 12754,
+      "spo": 3670,
+      "cri": 4507,
+      "crihurt": 30441,
+      "res": 19616,
+      "critResistance": 25
+    },
+    {
+      "enemyId": 4801,
+      "level": 80,
+      "att": 49971,
+      "hp": 39747,
+      "def": 16286,
+      "hit": 12754,
+      "spo": 3670,
+      "cri": 4507,
+      "crihurt": 30441,
+      "res": 19616,
+      "critResistance": 25
+    },
+    {
+      "enemyId": 4802,
+      "level": 80,
+      "att": 47078,
+      "hp": 47078,
+      "def": 17680,
+      "hit": 12754,
+      "spo": 3670,
+      "cri": 4507,
+      "crihurt": 30441,
+      "res": 19616,
+      "critResistance": 30
+    },
+    {
+      "enemyId": 4805,
+      "level": 80,
+      "att": 43360,
+      "hp": 43360,
+      "def": 20469,
+      "hit": 12754,
+      "spo": 3670,
+      "cri": 4507,
+      "crihurt": 30441,
+      "res": 19616,
+      "critResistance": 30
+    },
+    {
+      "enemyId": 4801,
+      "level": 80,
+      "att": 49971,
+      "hp": 39747,
+      "def": 16286,
+      "hit": 12754,
+      "spo": 3670,
+      "cri": 4507,
+      "crihurt": 30441,
+      "res": 19616,
+      "critResistance": 25
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "version": "11.01",
+  "source": "Original ARM32 libcocos2dcpp.so from original APK",
+  "apkSha256": "da5374a1b889a301c54a03acabf6a411cbae0db7e391c4ff4a8a556ceed25de8",
+  "functions": {
+    "Copy::getDrops(float)": "0x76e468; equipment conversion loop 0x76e894..0x76e9c6",
+    "GameEquipment::resetGodValue(int,int,int)": "0x79c5c0; quality guard 0x79c6d8..0x79c6e4; quality setter 0x79c6ec..0x79c6f0"
+  },
+  "rules": {
+    "inputQuality": 5,
+    "outputQuality": 6,
+    "copyTypes": [1,2,3,4,5,6],
+    "excludedFromGeneralConversion": "Badges, legendary gems, skin runes and subtype 9 accessories have separate paths.",
+    "selection": "Main equipment slots 1..8, quality 5, with a positive-rate configured drop in copy types 1..6.",
+    "confirmedItemCount": 155
+  },
+  "limits": [
+    "This confirms availability, not a universal Divine-generation probability.",
+    "Items with only tips, unknown-rate special rewards or unverified acquisition paths remain at their recorded quality.",
+    "Generated stars and additional attributes are not fixed by the base item ID."
+  ]
+}

@@ -1,0 +1,1054 @@
+7bf128 movs r1, #0x17 
+7bf12a lsls r1, r1, #4 
+7bf12c ldr r0, [r0, r1] 
+7bf12e bx lr 
+7bf130 movs r2, #0x17 
+7bf132 lsls r2, r2, #4 
+7bf134 str r1, [r0, r2] 
+7bf136 bx lr 
+7bf138 movs r1, #0x5d 
+7bf13a lsls r1, r1, #2 
+7bf13c ldr r0, [r0, r1] 
+7bf13e bx lr 
+7bf140 movs r2, #0x5d 
+7bf142 lsls r2, r2, #2 
+7bf144 str r1, [r0, r2] 
+7bf146 bx lr 
+7ed930 push {r4, r5, r6, r7, lr} 
+7ed932 sub sp, #0xd4 
+7ed934 add r4, sp, #0x2c 
+7ed936 mov r5, r1 
+7ed938 mov r6, r0 
+7ed93a cmp r2, #2 
+7ed93c beq #0x7ed940 
+7ed93e b #0x7edc8a 
+7ed940 movs r0, #0x29 
+7ed942 lsls r0, r0, #3 
+7ed944 ldr r1, [r5] 
+7ed946 ldr r1, [r1, r0] 
+7ed948 mov r0, r5 
+7ed94a blx r1 
+7ed94c cmp r0, #0 
+7ed94e beq #0x7ed9ea 
+7ed950 cmp r0, #1 
+7ed952 bne #0x7eda0e 
+7ed954 add r0, sp, #0xb8 
+7ed956 movs r1, #0 
+7ed958 bl #0x85209c _ZN6CSJson5ValueC2ENS_9ValueTypeE
+7ed95c ldr r1, [pc, #0x3ec] 
+7ed95e add r1, pc 
+7ed960 ldr r2, [pc, #0x3ec] 
+7ed962 adds r1, r2, r1 
+7ed964 bl #0x8535d4 _ZN6CSJson5ValueixEPKc
+7ed968 mov r5, r0 
+7ed96a bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7ed96e mov r1, r0 
+7ed970 add r0, sp, #0xa8 
+7ed972 bl #0x7b9424 _ZN9GameLogic15getUserMainDataEv
+7ed976 add r1, sp, #0xa8 
+7ed978 mov r0, r5 
+7ed97a bl #0x852312 _ZN6CSJson5ValueaSERKS0_
+7ed97e add r0, sp, #0xa8 
+7ed980 bl #0x85229c _ZN6CSJson5ValueD2Ev
+7ed984 bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7ed988 mov r5, r0 
+7ed98a add r0, sp, #0xa4 
+7ed98c add r1, sp, #0xb8 
+7ed98e bl #0x853b40 _ZNK6CSJson5Value14toStyledStringEv
+7ed992 ldr r0, [pc, #0x3c0] 
+7ed994 add r0, pc 
+7ed996 ldr r1, [pc, #0x3c0] 
+7ed998 adds r1, r1, r0 
+7ed99a add r0, sp, #0xa0 
+7ed99c add r2, sp, #0x9c 
+7ed99e bl #0xa03d58 
+7ed9a2 ldr r0, [pc, #0x3b8] 
+7ed9a4 add r0, pc 
+7ed9a6 ldr r1, [pc, #0x3b8] 
+7ed9a8 adds r0, r1, r0 
+7ed9aa ldr r1, [r0] 
+7ed9ac add r0, sp, #0x8c 
+7ed9ae movs r2, #0 
+7ed9b0 mov r3, r6 
+7ed9b2 bl #0x7eddf8 _ZNSt8functionIFvPN7cocos2d7network10HttpClientEPNS1_12HttpResponseEEEC2ISt5_BindIFSt7_Mem_fnIM13MainMainLayerFvS3_S5_EEPSB_St12_PlaceholderILi1EESG_ILi2EEEEvEET_
+7ed9b6 movs r0, #1 
+7ed9b8 mov r1, sp 
+7ed9ba str r0, [r1] 
+7ed9bc add r1, sp, #0xa4 
+7ed9be add r2, sp, #0xa0 
+7ed9c0 add r3, sp, #0x8c 
+7ed9c2 mov r0, r5 
+7ed9c4 bl #0x7b6764 _ZN9GameLogic20sendDataToServerPostESsSsRKSt8functionIFvPN7cocos2d7network10HttpClientEPNS2_12HttpResponseEEEb
+7ed9c8 add r0, sp, #0x8c 
+7ed9ca bl #0x758836 _ZNSt14_Function_baseD2Ev
+7ed9ce ldr r0, [r4, #0x74] 
+7ed9d0 subs r0, #0xc 
+7ed9d2 add r1, sp, #0xcc 
+7ed9d4 bl #0xa03c08 
+7ed9d8 ldr r0, [r4, #0x78] 
+7ed9da subs r0, #0xc 
+7ed9dc add r1, sp, #0xcc 
+7ed9de bl #0xa03c08 
+7ed9e2 add r0, sp, #0xb8 
+7ed9e4 bl #0x85229c _ZN6CSJson5ValueD2Ev
+7ed9e8 b #0x7edc8a 
+7ed9ea bl #0xa03e68 
+7ed9ee movs r1, #0xf0 
+7ed9f0 ldr r0, [r0, r1] 
+7ed9f2 ldr r1, [r0] 
+7ed9f4 movs r2, #0x13 
+7ed9f6 lsls r2, r2, #4 
+7ed9f8 ldr r3, [r1, r2] 
+7ed9fa ldr r1, [pc, #0x3f4] 
+7ed9fc movs r2, #1 
+7ed9fe blx r3 
+7eda00 movs r0, #0xc3 
+7eda02 lsls r0, r0, #2 
+7eda04 ldr r1, [r6] 
+7eda06 ldr r1, [r1, r0] 
+7eda08 mov r0, r6 
+7eda0a blx r1 
+7eda0c b #0x7edc8a 
+7eda0e cmp r0, #3 
+7eda10 beq #0x7eda14 
+7eda12 b #0x7edc8a 
+7eda14 str r5, [sp, #8] 
+7eda16 movs r0, #0x9d 
+7eda18 lsls r0, r0, #2 
+7eda1a adds r0, r6, r0 
+7eda1c str r0, [sp, #0x14] 
+7eda1e str r6, [sp, #0xc] 
+7eda20 movs r6, #1 
+7eda22 add r7, sp, #0x70 
+7eda24 mov r0, r7 
+7eda26 mov r1, r6 
+7eda28 bl #0xa03de8 
+7eda2c add r0, sp, #0x84 
+7eda2e mov r1, r7 
+7eda30 bl #0xa03df8 
+7eda34 ldr r5, [pc, #0x3bc] 
+7eda36 add r5, pc 
+7eda38 ldr r0, [pc, #0x37c] 
+7eda3a adds r2, r0, r5 
+7eda3c add r0, sp, #0x84 
+7eda3e movs r1, #0 
+7eda40 movs r3, #8 
+7eda42 bl #0xa03e38 
+7eda46 ldr r1, [r0] 
+7eda48 str r1, [r4, #0x5c] 
+7eda4a ldr r1, [pc, #0x370] 
+7eda4c adds r1, r1, r5 
+7eda4e ldr r1, [r1] 
+7eda50 adds r1, #0xc 
+7eda52 str r1, [r0] 
+7eda54 ldr r0, [r4, #0x58] 
+7eda56 subs r0, #0xc 
+7eda58 add r1, sp, #0xcc 
+7eda5a bl #0xa03c08 
+7eda5e add r0, sp, #0x70 
+7eda60 bl #0xa03e28 
+7eda64 movs r0, #0x41 
+7eda66 lsls r2, r0, #2 
+7eda68 str r2, [sp, #0x10] 
+7eda6a ldr r0, [sp, #0x14] 
+7eda6c ldr r0, [r0] 
+7eda6e ldr r1, [r0] 
+7eda70 ldr r2, [r1, r2] 
+7eda72 add r1, sp, #0x88 
+7eda74 blx r2 
+7eda76 mov r7, r0 
+7eda78 movs r0, #0xa7 
+7eda7a lsls r5, r0, #2 
+7eda7c ldr r0, [r7] 
+7eda7e ldr r2, [r0, r5] 
+7eda80 movs r1, #1 
+7eda82 mov r0, r7 
+7eda84 blx r2 
+7eda86 ldr r0, [r7] 
+7eda88 ldr r2, [r0, #0x40] 
+7eda8a ldr r1, [pc, #0x334] 
+7eda8c mov r0, r7 
+7eda8e blx r2 
+7eda90 ldr r0, [r4, #0x5c] 
+7eda92 subs r0, #0xc 
+7eda94 add r1, sp, #0xcc 
+7eda96 bl #0xa03c08 
+7eda9a adds r6, #1 
+7eda9c cmp r6, #4 
+7eda9e blt #0x7eda22 
+7edaa0 ldr r6, [sp, #8] 
+7edaa2 ldr r0, [r6] 
+7edaa4 ldr r2, [r0, r5] 
+7edaa6 movs r1, #0 
+7edaa8 mov r0, r6 
+7edaaa blx r2 
+7edaac ldr r0, [r6] 
+7edaae ldr r2, [r0, #0x40] 
+7edab0 ldr r1, [pc, #0x310] 
+7edab2 mov r0, r6 
+7edab4 blx r2 
+7edab6 movs r0, #0x2d 
+7edab8 lsls r0, r0, #3 
+7edaba ldr r1, [r6] 
+7edabc ldr r1, [r1, r0] 
+7edabe mov r0, r6 
+7edac0 blx r1 
+7edac2 mov r1, r0 
+7edac4 movs r0, #0x27 
+7edac6 lsls r6, r0, #4 
+7edac8 ldr r7, [sp, #0xc] 
+7edaca str r1, [r7, r6] 
+7edacc add r5, sp, #0x58 
+7edace mov r0, r5 
+7edad0 bl #0xa03de8 
+7edad4 adds r0, r7, r6 
+7edad6 str r0, [sp, #8] 
+7edad8 add r0, sp, #0x68 
+7edada mov r1, r5 
+7edadc bl #0xa03df8 
+7edae0 ldr r0, [pc, #0x2e4] 
+7edae2 add r0, pc 
+7edae4 ldr r1, [pc, #0x2e4] 
+7edae6 adds r2, r1, r0 
+7edae8 add r0, sp, #0x68 
+7edaea movs r1, #0 
+7edaec movs r3, #0xe 
+7edaee bl #0xa03e38 
+7edaf2 ldr r1, [r0] 
+7edaf4 str r1, [r4, #0x40] 
+7edaf6 ldr r6, [pc, #0x2d8] 
+7edaf8 add r6, pc 
+7edafa ldr r1, [pc, #0x2c0] 
+7edafc adds r1, r1, r6 
+7edafe ldr r1, [r1] 
+7edb00 adds r1, #0xc 
+7edb02 str r1, [r0] 
+7edb04 ldr r0, [r4, #0x3c] 
+7edb06 mov r7, r4 
+7edb08 subs r0, #0xc 
+7edb0a add r1, sp, #0xcc 
+7edb0c bl #0xa03c08 
+7edb10 add r0, sp, #0x58 
+7edb12 bl #0xa03e28 
+7edb16 ldr r0, [sp, #0x14] 
+7edb18 ldr r5, [r0] 
+7edb1a ldr r0, [r5] 
+7edb1c ldr r1, [sp, #0x10] 
+7edb1e ldr r4, [r0, r1] 
+7edb20 ldr r0, [pc, #0x2b0] 
+7edb22 adds r1, r0, r6 
+7edb24 add r0, sp, #0x54 
+7edb26 add r2, sp, #0x50 
+7edb28 bl #0xa03d58 
+7edb2c add r1, sp, #0x54 
+7edb2e mov r0, r5 
+7edb30 blx r4 
+7edb32 mov r5, r0 
+7edb34 mov r4, r7 
+7edb36 ldr r0, [r4, #0x28] 
+7edb38 subs r0, #0xc 
+7edb3a add r1, sp, #0xcc 
+7edb3c bl #0xa03c08 
+7edb40 add r0, sp, #0x44 
+7edb42 add r1, sp, #0x6c 
+7edb44 bl #0xa03c28 
+7edb48 add r0, sp, #0x48 
+7edb4a add r1, sp, #0x44 
+7edb4c bl #0x77e804 _ZN8GameData13getStrFromXmlESs
+7edb50 add r0, sp, #0x4c 
+7edb52 add r1, sp, #0x48 
+7edb54 bl #0x76864c _ZN9GameUtils10newlineStrESs
+7edb58 add r1, sp, #0x4c 
+7edb5a mov r0, r5 
+7edb5c bl #0xa03dc8 
+7edb60 ldr r0, [r4, #0x20] 
+7edb62 subs r0, #0xc 
+7edb64 add r1, sp, #0xcc 
+7edb66 bl #0xa03c08 
+7edb6a ldr r0, [r4, #0x1c] 
+7edb6c subs r0, #0xc 
+7edb6e add r1, sp, #0xcc 
+7edb70 bl #0xa03c08 
+7edb74 ldr r0, [r4, #0x18] 
+7edb76 subs r0, #0xc 
+7edb78 add r1, sp, #0xcc 
+7edb7a bl #0xa03c08 
+7edb7e bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7edb82 ldr r1, [sp, #8] 
+7edb84 ldr r1, [r1] 
+7edb86 bl #0x7b9784 _ZN9GameLogic20getMaxTrialhardScoreEi
+7edb8a mov r5, r0 
+7edb8c movs r0, #0x9b 
+7edb8e lsls r0, r0, #2 
+7edb90 ldr r1, [sp, #0xc] 
+7edb92 ldr r6, [r1, r0] 
+7edb94 ldr r0, [pc, #0x240] 
+7edb96 add r0, pc 
+7edb98 ldr r1, [pc, #0x240] 
+7edb9a adds r1, r1, r0 
+7edb9c add r0, sp, #0x34 
+7edb9e add r2, sp, #0x30 
+7edba0 bl #0xa03d58 
+7edba4 add r0, sp, #0x38 
+7edba6 add r1, sp, #0x34 
+7edba8 bl #0x77e804 _ZN8GameData13getStrFromXmlESs
+7edbac ldr r0, [pc, #0x230] 
+7edbae add r0, pc 
+7edbb0 ldr r1, [pc, #0x230] 
+7edbb2 adds r1, r1, r0 
+7edbb4 add r0, sp, #0x38 
+7edbb6 movs r2, #1 
+7edbb8 bl #0xa03dd8 
+7edbbc ldr r1, [r0] 
+7edbbe str r1, [r4, #0x10] 
+7edbc0 ldr r1, [pc, #0x224] 
+7edbc2 add r1, pc 
+7edbc4 ldr r2, [pc, #0x1f4] 
+7edbc6 adds r1, r2, r1 
+7edbc8 ldr r1, [r1] 
+7edbca adds r1, #0xc 
+7edbcc str r1, [r0] 
+7edbce add r0, sp, #0x18 
+7edbd0 mov r1, r5 
+7edbd2 bl #0xa03de8 
+7edbd6 add r0, sp, #0x2c 
+7edbd8 add r1, sp, #0x18 
+7edbda bl #0xa03df8 
+7edbde movs r0, #0xb 
+7edbe0 mvns r2, r0 
+7edbe2 mov r3, r4 
+7edbe4 ldr r4, [r3, #0x10] 
+7edbe6 ldr r0, [r4, r2] 
+7edbe8 ldr r1, [r3] 
+7edbea mov r7, r3 
+7edbec ldr r2, [r1, r2] 
+7edbee adds r2, r2, r0 
+7edbf0 movs r3, #7 
+7edbf2 mvns r3, r3 
+7edbf4 ldr r4, [r4, r3] 
+7edbf6 cmp r2, r4 
+7edbf8 bls #0x7edc00 
+7edbfa ldr r1, [r1, r3] 
+7edbfc cmp r2, r1 
+7edbfe bls #0x7edc0a 
+7edc00 add r0, sp, #0x3c 
+7edc02 add r1, sp, #0x2c 
+7edc04 bl #0xa03e08 
+7edc08 b #0x7edc1a 
+7edc0a mov r1, sp 
+7edc0c str r0, [r1] 
+7edc0e add r0, sp, #0x2c 
+7edc10 add r2, sp, #0x3c 
+7edc12 movs r1, #0 
+7edc14 mov r3, r1 
+7edc16 bl #0xa03e18 
+7edc1a ldr r1, [r0] 
+7edc1c mov r4, r7 
+7edc1e str r1, [r4, #0x14] 
+7edc20 ldr r1, [pc, #0x1c8] 
+7edc22 add r1, pc 
+7edc24 ldr r2, [pc, #0x194] 
+7edc26 adds r1, r2, r1 
+7edc28 ldr r1, [r1] 
+7edc2a adds r1, #0xc 
+7edc2c str r1, [r0] 
+7edc2e add r1, sp, #0x40 
+7edc30 mov r0, r6 
+7edc32 bl #0xa03dc8 
+7edc36 ldr r0, [r4, #0x14] 
+7edc38 subs r0, #0xc 
+7edc3a add r1, sp, #0xcc 
+7edc3c bl #0xa03c08 
+7edc40 ldr r0, [r4] 
+7edc42 subs r0, #0xc 
+7edc44 add r1, sp, #0xcc 
+7edc46 bl #0xa03c08 
+7edc4a add r0, sp, #0x18 
+7edc4c bl #0xa03e28 
+7edc50 ldr r0, [r4, #0x10] 
+7edc52 subs r0, #0xc 
+7edc54 add r1, sp, #0xcc 
+7edc56 bl #0xa03c08 
+7edc5a ldr r0, [r4, #0xc] 
+7edc5c subs r0, #0xc 
+7edc5e add r1, sp, #0xcc 
+7edc60 bl #0xa03c08 
+7edc64 ldr r0, [r4, #8] 
+7edc66 subs r0, #0xc 
+7edc68 add r1, sp, #0xcc 
+7edc6a bl #0xa03c08 
+7edc6e bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7edc72 movs r1, #0x61 
+7edc74 lsls r1, r1, #2 
+7edc76 ldr r2, [r0] 
+7edc78 ldr r2, [r2, r1] 
+7edc7a ldr r1, [sp, #8] 
+7edc7c ldr r1, [r1] 
+7edc7e blx r2 
+7edc80 ldr r0, [r4, #0x40] 
+7edc82 subs r0, #0xc 
+7edc84 add r1, sp, #0xcc 
+7edc86 bl #0xa03c08 
+7edc8a add sp, #0xd4 
+7edc8c pop {r4, r5, r6, r7, pc} 
+7edc8e mov r5, r0 
+7edc90 add r0, sp, #0xa8 
+7edc92 bl #0x85229c _ZN6CSJson5ValueD2Ev
+7edc96 b #0x7edcc0 
+7edc98 mov r5, r0 
+7edc9a b #0x7edcc0 
+7edc9c mov r5, r0 
+7edc9e b #0x7edcb6 
+7edca0 mov r5, r0 
+7edca2 b #0x7edcac 
+7edca4 mov r5, r0 
+7edca6 add r0, sp, #0x8c 
+7edca8 bl #0x758836 _ZNSt14_Function_baseD2Ev
+7edcac ldr r0, [r4, #0x74] 
+7edcae subs r0, #0xc 
+7edcb0 add r1, sp, #0xcc 
+7edcb2 bl #0xa03c08 
+7edcb6 ldr r0, [r4, #0x78] 
+7edcb8 subs r0, #0xc 
+7edcba add r1, sp, #0xcc 
+7edcbc bl #0xa03c08 
+7edcc0 add r0, sp, #0xb8 
+7edcc2 bl #0x85229c _ZN6CSJson5ValueD2Ev
+7edcc6 b #0x7eddb0 
+7edcc8 mov r5, r0 
+7edcca b #0x7edcd8 
+7edccc mov r5, r0 
+7edcce ldr r0, [r4, #0x58] 
+7edcd0 subs r0, #0xc 
+7edcd2 add r1, sp, #0xcc 
+7edcd4 bl #0xa03c08 
+7edcd8 add r0, sp, #0x70 
+7edcda b #0x7edcf4 
+7edcdc mov r5, r0 
+7edcde ldr r0, [r4, #0x5c] 
+7edce0 b #0x7edda8 
+7edce2 mov r5, r0 
+7edce4 b #0x7edcf2 
+7edce6 mov r5, r0 
+7edce8 ldr r0, [r4, #0x3c] 
+7edcea subs r0, #0xc 
+7edcec add r1, sp, #0xcc 
+7edcee bl #0xa03c08 
+7edcf2 add r0, sp, #0x58 
+7edcf4 bl #0xa03e28 
+7edcf8 b #0x7eddb0 
+7edcfa mov r5, r0 
+7edcfc b #0x7edda6 
+7edcfe mov r5, r0 
+7edd00 ldr r0, [r7, #0x28] 
+7edd02 b #0x7edd98 
+7edd04 mov r7, r4 
+7edd06 mov r5, r0 
+7edd08 b #0x7edd28 
+7edd0a mov r7, r4 
+7edd0c mov r5, r0 
+7edd0e b #0x7edd1e 
+7edd10 mov r5, r0 
+7edd12 ldr r0, [r4, #0x20] 
+7edd14 mov r7, r4 
+7edd16 subs r0, #0xc 
+7edd18 add r1, sp, #0xcc 
+7edd1a bl #0xa03c08 
+7edd1e ldr r0, [r7, #0x1c] 
+7edd20 subs r0, #0xc 
+7edd22 add r1, sp, #0xcc 
+7edd24 bl #0xa03c08 
+7edd28 ldr r0, [r7, #0x18] 
+7edd2a b #0x7edd98 
+7edd2c b #0x7edda2 
+7edd2e mov r7, r4 
+7edd30 mov r5, r0 
+7edd32 b #0x7edd96 
+7edd34 mov r7, r4 
+7edd36 mov r5, r0 
+7edd38 b #0x7edd8c 
+7edd3a mov r7, r4 
+7edd3c mov r5, r0 
+7edd3e b #0x7edd82 
+7edd40 mov r7, r4 
+7edd42 mov r5, r0 
+7edd44 b #0x7edd7c 
+7edd46 mov r5, r0 
+7edd48 b #0x7edd72 
+7edd4a mov r8, r8 
+7edd4c movs r1, #0x12 
+7edd4e lsls r7, r4, #2 
+7edd50 ldrb r6, [r1, #7] 
+7edd52 vshr.u64 q9, q6, #0x14 
+7edd56 lsls r7, r4, #2 
+7edd58 ldm r6, {r0, r2, r5, r6, r7} 
+7edd5a vmla.i32 q9, q14, d12[0] 
+7edd5e lsls r7, r4, #2 
+7edd60 bvc #0x7edcbc 
+7edd62 .byte 0xff, 0xff 
+7edd64 mov r5, r0 
+7edd66 ldr r0, [r4, #0x14] 
+7edd68 mov r7, r4 
+7edd6a subs r0, #0xc 
+7edd6c add r1, sp, #0xcc 
+7edd6e bl #0xa03c08 
+7edd72 ldr r0, [r7] 
+7edd74 subs r0, #0xc 
+7edd76 add r1, sp, #0xcc 
+7edd78 bl #0xa03c08 
+7edd7c add r0, sp, #0x18 
+7edd7e bl #0xa03e28 
+7edd82 ldr r0, [r7, #0x10] 
+7edd84 subs r0, #0xc 
+7edd86 add r1, sp, #0xcc 
+7edd88 bl #0xa03c08 
+7edd8c ldr r0, [r7, #0xc] 
+7edd8e subs r0, #0xc 
+7edd90 add r1, sp, #0xcc 
+7edd92 bl #0xa03c08 
+7edd96 ldr r0, [r7, #8] 
+7edd98 subs r0, #0xc 
+7edd9a add r1, sp, #0xcc 
+7edd9c bl #0xa03c08 
+7edda0 b #0x7edda6 
+7edda2 mov r7, r4 
+7edda4 mov r5, r0 
+7edda6 ldr r0, [r7, #0x40] 
+7edda8 subs r0, #0xc 
+7eddaa add r1, sp, #0xcc 
+7eddac bl #0xa03c08 
+7eddb0 mov r0, r5 
+7eddb2 bl #0xa03ba8 
+7eddb6 mov r8, r8 
+7eddb8 stm r5!, {r0, r4, r6} 
+7eddba vsra.u64 d29, d20, #0x14 
+7eddbe .byte 0xff, 0xff 
+7eddc0 str r6, [r4, #0x64] 
+7eddc2 subs r7, #0x66 
+7eddc4 str r6, [r4, #0x64] 
+7eddc6 subs r7, #0x86 
+7eddc8 subs r6, r1, #6 
+7eddca lsls r7, r4, #2 
+7eddcc stm r5!, {r3, r5, r6} 
+7eddce .byte 0xec, 0xff 
+7eddd0 subs r0, r7, #5 
+7eddd2 lsls r7, r4, #2 
+7eddd4 ldr r1, [sp, #0x39c] 
+7eddd6 .byte 0xec, 0xff 
+7eddd8 subs r2, r3, #3 
+7eddda lsls r7, r4, #2 
+7edddc ldm r6, {r1, r4, r6, r7} 
+7eddde .byte 0xec, 0xff 
+7edde0 subs r2, r0, #3 
+7edde2 lsls r7, r4, #2 
+7edde4 ldrb r6, [r5] 
+7edde6 .byte 0xec, 0xff 
+7edde8 subs r6, r5, #2 
+7eddea lsls r7, r4, #2 
+7eddec subs r6, r1, #1 
+7eddee lsls r7, r4, #2 
+7eddf0 lsls r3, r1, #0x11 
+7eddf2 movs r0, r0 
+7eddf4 movs r0, #0x3a 
+7eddf6 lsls r7, r4, #2 
+7ede4c push {r4, r5, r6, r7, lr} 
+7ede4e sub sp, #0xbc 
+7ede50 add r4, sp, #0xa8 
+7ede52 add r6, sp, #0x1c 
+7ede54 mov r5, r2 
+7ede56 mov r7, r0 
+7ede58 bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7ede5c movs r1, #0 
+7ede5e bl #0x7b247c _ZN9GameLogic14setLoadingViewEb
+7ede62 movs r1, #1 
+7ede64 mov r0, r5 
+7ede66 bl #0x75f8ac _ZN9GameUtils15netErrorRespondEPN7cocos2d7network12HttpResponseEb
+7ede6a cmp r0, #0 
+7ede6c bne #0x7ede70 
+7ede6e b #0x7edfb4 
+7ede70 adds r5, #0x1c 
+7ede72 add r0, sp, #0xb0 
+7ede74 mov r1, r5 
+7ede76 bl #0x75f9c8 _ZN9GameUtils13netDataFormatEPSt6vectorIcSaIcEE
+7ede7a add r0, sp, #0x40 
+7ede7c bl #0x84f698 _ZN6CSJson6ReaderC2Ev
+7ede80 add r0, sp, #0x30 
+7ede82 movs r1, #0 
+7ede84 bl #0x85209c _ZN6CSJson5ValueC2ENS_9ValueTypeE
+7ede88 ldr r1, [r4, #8] 
+7ede8a add r0, sp, #0x2c 
+7ede8c add r2, sp, #0x28 
+7ede8e bl #0xa03d58 
+7ede92 str r4, [sp, #0x10] 
+7ede94 add r0, sp, #0x40 
+7ede96 add r1, sp, #0x2c 
+7ede98 add r2, sp, #0x30 
+7ede9a movs r3, #0 
+7ede9c bl #0x84f7a4 _ZN6CSJson6Reader5parseERKSsRNS_5ValueEb
+7edea0 mov r5, r0 
+7edea2 ldr r0, [r6, #0x10] 
+7edea4 str r6, [sp, #0x14] 
+7edea6 subs r0, #0xc 
+7edea8 add r1, sp, #0xb4 
+7edeaa bl #0xa03c08 
+7edeae cmp r5, #1 
+7edeb0 bne #0x7edf70 
+7edeb2 ldr r0, [pc, #0x32c] 
+7edeb4 add r0, pc 
+7edeb6 ldr r1, [pc, #0x32c] 
+7edeb8 adds r1, r1, r0 
+7edeba add r0, sp, #0x30 
+7edebc bl #0x8535d4 _ZN6CSJson5ValueixEPKc
+7edec0 bl #0x852704 _ZNK6CSJson5Value5asIntEv
+7edec4 ldr r0, [pc, #0x320] 
+7edec6 add r0, pc 
+7edec8 ldr r1, [pc, #0x320] 
+7edeca adds r1, r1, r0 
+7edecc add r0, sp, #0x30 
+7edece bl #0x8535d4 _ZN6CSJson5ValueixEPKc
+7eded2 bl #0x852704 _ZNK6CSJson5Value5asIntEv
+7eded6 mov r6, r0 
+7eded8 ldr r0, [pc, #0x314] 
+7ededa add r0, pc 
+7ededc ldr r1, [pc, #0x314] 
+7edede adds r1, r1, r0 
+7edee0 add r0, sp, #0x30 
+7edee2 bl #0x8535d4 _ZN6CSJson5ValueixEPKc
+7edee6 bl #0x852704 _ZNK6CSJson5Value5asIntEv
+7edeea ldr r0, [pc, #0x30c] 
+7edeec add r0, pc 
+7edeee ldr r1, [pc, #0x30c] 
+7edef0 adds r1, r1, r0 
+7edef2 add r0, sp, #0x30 
+7edef4 bl #0x8535d4 _ZN6CSJson5ValueixEPKc
+7edef8 bl #0x852704 _ZNK6CSJson5Value5asIntEv
+7edefc bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7edf00 ldr r1, [pc, #0x2fc] 
+7edf02 movs r4, #0 
+7edf04 mov r2, r4 
+7edf06 bl #0x7b5a02 _ZN9GameLogic22setSpecialDataSaveCopyEii
+7edf0a subs r6, #0x6a 
+7edf0c cmp r6, #7 
+7edf0e bhi #0x7edf7c 
+7edf10 lsls r0, r6, #2 
+7edf12 adr r1, #8 
+7edf14 adds r0, r0, r1 
+7edf16 ldr r0, [r0] 
+7edf18 adds r0, r0, r1 
+7edf1a mov pc, r0 
+7edf1c movs r0, r4 
+7edf1e movs r0, r0 
+7edf20 lsls r0, r4, #1 
+7edf22 movs r0, r0 
+7edf24 lsls r0, r4, #1 
+7edf26 movs r0, r0 
+7edf28 lsls r0, r4, #1 
+7edf2a movs r0, r0 
+7edf2c lsls r4, r3, #2 
+7edf2e movs r0, r0 
+7edf30 lsls r0, r4, #1 
+7edf32 movs r0, r0 
+7edf34 lsls r2, r5, #2 
+7edf36 movs r0, r0 
+7edf38 lsls r6, r3, #6 
+7edf3a movs r0, r0 
+7edf3c ldr r0, [pc, #0x2f4] 
+7edf3e add r0, pc 
+7edf40 ldr r1, [pc, #0x2f4] 
+7edf42 adds r1, r1, r0 
+7edf44 add r0, sp, #0x24 
+7edf46 add r2, sp, #0x20 
+7edf48 bl #0xa03d58 
+7edf4c ldr r0, [pc, #0x2ec] 
+7edf4e add r0, pc 
+7edf50 ldr r1, [pc, #0x2dc] 
+7edf52 adds r0, r1, r0 
+7edf54 ldr r0, [r0] 
+7edf56 ldrb r1, [r0] 
+7edf58 ldrb r2, [r0, #1] 
+7edf5a lsls r2, r2, #8 
+7edf5c orrs r2, r1 
+7edf5e ldrb r0, [r0, #2] 
+7edf60 lsls r1, r0, #0x10 
+7edf62 orrs r1, r2 
+7edf64 add r0, sp, #0x24 
+7edf66 ldr r5, [sp, #0x14] 
+7edf68 bl #0x75c2cc _ZN9GameUtils8showTipsESsN7cocos2d7Color3BE
+7edf6c ldr r0, [r5, #8] 
+7edf6e b #0x7ee0ec 
+7edf70 ldr r0, [pc, #0x264] 
+7edf72 add r0, pc 
+7edf74 ldr r1, [pc, #0x264] 
+7edf76 adds r0, r1, r0 
+7edf78 bl #0xa04028 
+7edf7c add r0, sp, #0x30 
+7edf7e bl #0x85229c _ZN6CSJson5ValueD2Ev
+7edf82 ldr r0, [sp, #0xa8] 
+7edf84 subs r0, #0xc 
+7edf86 add r1, sp, #0xb4 
+7edf88 bl #0xa03c08 
+7edf8c ldr r0, [sp, #0x14] 
+7edf8e ldr r0, [r0, #0x74] 
+7edf90 subs r0, #0xc 
+7edf92 add r1, sp, #0xb4 
+7edf94 bl #0xa03c08 
+7edf98 add r4, sp, #0x40 
+7edf9a mov r0, r4 
+7edf9c adds r0, #0x28 
+7edf9e bl #0x760708 _ZNSt5dequeIN6CSJson6Reader9ErrorInfoESaIS2_EED2Ev
+7edfa2 mov r0, r4 
+7edfa4 bl #0x76074e _ZNSt11_Deque_baseIPN6CSJson5ValueESaIS2_EED2Ev
+7edfa8 ldr r0, [sp, #0x10] 
+7edfaa ldr r0, [r0, #8] 
+7edfac subs r0, #0xc 
+7edfae add r1, sp, #0x40 
+7edfb0 bl #0xa03c08 
+7edfb4 add sp, #0xbc 
+7edfb6 pop {r4, r5, r6, r7, pc} 
+7edfb8 bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7edfbc ldr r1, [pc, #0x240] 
+7edfbe movs r2, #1 
+7edfc0 bl #0x7b5a02 _ZN9GameLogic22setSpecialDataSaveCopyEii
+7edfc4 b #0x7edf7c 
+7edfc6 bl #0xa03e68 
+7edfca movs r1, #0xf0 
+7edfcc ldr r0, [r0, r1] 
+7edfce ldr r1, [r0] 
+7edfd0 movs r2, #0x13 
+7edfd2 lsls r2, r2, #4 
+7edfd4 ldr r3, [r1, r2] 
+7edfd6 ldr r1, [pc, #0x22c] 
+7edfd8 movs r2, #1 
+7edfda blx r3 
+7edfdc bl #0x7754b0 _ZN8GameData11getInstanceEv
+7edfe0 ldr r1, [pc, #0x224] 
+7edfe2 bl #0x779d14 _ZN8GameData15getBaseCopyByIdEi
+7edfe6 cmp r0, #0 
+7edfe8 bne #0x7edfec 
+7edfea b #0x7ee154 
+7edfec bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7edff0 movs r1, #0x23 
+7edff2 movs r6, #1 
+7edff4 mov r2, r6 
+7edff6 bl #0x7b1770 _ZN9GameLogic14addAchievementEii
+7edffa bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7edffe movs r1, #0x27 
+7ee000 lsls r1, r1, #4 
+7ee002 ldr r1, [r7, r1] 
+7ee004 movs r2, #0x61 
+7ee006 lsls r2, r2, #2 
+7ee008 ldr r3, [r0] 
+7ee00a ldr r2, [r3, r2] 
+7ee00c blx r2 
+7ee00e bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7ee012 mov r5, r0 
+7ee014 bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7ee018 movs r1, #3 
+7ee01a str r1, [sp, #8] 
+7ee01c lsls r1, r1, #7 
+7ee01e ldr r2, [r0] 
+7ee020 ldr r1, [r2, r1] 
+7ee022 blx r1 
+7ee024 mov r1, r0 
+7ee026 mov r0, r5 
+7ee028 bl #0x7b9784 _ZN9GameLogic20getMaxTrialhardScoreEi
+7ee02c ldr r2, [pc, #0x1dc] 
+7ee02e movs r1, #0x19 
+7ee030 cmp r0, r2 
+7ee032 bgt #0x7ee036 
+7ee034 mov r1, r6 
+7ee036 ldr r3, [pc, #0x1d8] 
+7ee038 movs r2, #0x26 
+7ee03a cmp r0, r3 
+7ee03c bgt #0x7ee040 
+7ee03e mov r2, r1 
+7ee040 ldr r1, [pc, #0x1d0] 
+7ee042 movs r3, #0x30 
+7ee044 cmp r0, r1 
+7ee046 bgt #0x7ee04a 
+7ee048 mov r3, r2 
+7ee04a subs r0, r3, #1 
+7ee04c str r0, [sp, #0xc] 
+7ee04e cmp r0, #0 
+7ee050 beq #0x7ee0f6 
+7ee052 str r3, [sp, #4] 
+7ee054 mov r5, r4 
+7ee056 bl #0xa040e8 
+7ee05a mov r7, r0 
+7ee05c bl #0xa040e8 
+7ee060 mov r6, r0 
+7ee062 movs r1, #5 
+7ee064 mov r0, r7 
+7ee066 bl #0xa04138 
+7ee06a mov r7, r0 
+7ee06c adds r7, #8 
+7ee06e movs r1, #0xb 
+7ee070 mov r0, r6 
+7ee072 bl #0xa04138 
+7ee076 muls r7, r4, r7 
+7ee078 adds r6, r0, r7 
+7ee07a adds r6, #0x46 
+7ee07c bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7ee080 movs r1, #0x43 
+7ee082 lsls r1, r1, #4 
+7ee084 ldr r0, [r0, #0x18] 
+7ee086 ldr r1, [r0, r1] 
+7ee088 ldr r2, [pc, #0x18c] 
+7ee08a ldr r0, [r0, r2] 
+7ee08c eors r0, r1 
+7ee08e cmp r0, #1 
+7ee090 blt #0x7ee0a4 
+7ee092 mov r0, r6 
+7ee094 bl #0xa040a8 
+7ee098 ldr r1, [pc, #0x180] 
+7ee09a bl #0xa03e88 
+7ee09e bl #0xa040b8 
+7ee0a2 mov r6, r0 
+7ee0a4 movs r0, #0x7d 
+7ee0a6 lsls r0, r0, #2 
+7ee0a8 cmp r6, r0 
+7ee0aa bgt #0x7ee0ae 
+7ee0ac mov r0, r6 
+7ee0ae adds r5, r0, r5 
+7ee0b0 adds r4, #1 
+7ee0b2 ldr r0, [sp, #0xc] 
+7ee0b4 cmp r4, r0 
+7ee0b6 blo #0x7ee056 
+7ee0b8 b #0x7ee0fa 
+7ee0ba ldr r0, [pc, #0x168] 
+7ee0bc add r0, pc 
+7ee0be ldr r1, [pc, #0x168] 
+7ee0c0 adds r1, r1, r0 
+7ee0c2 add r0, sp, #0x1c 
+7ee0c4 add r2, sp, #0x18 
+7ee0c6 bl #0xa03d58 
+7ee0ca ldr r0, [pc, #0x160] 
+7ee0cc add r0, pc 
+7ee0ce ldr r1, [pc, #0x160] 
+7ee0d0 adds r0, r1, r0 
+7ee0d2 ldr r0, [r0] 
+7ee0d4 ldrb r1, [r0] 
+7ee0d6 ldrb r2, [r0, #1] 
+7ee0d8 lsls r2, r2, #8 
+7ee0da orrs r2, r1 
+7ee0dc ldrb r0, [r0, #2] 
+7ee0de lsls r1, r0, #0x10 
+7ee0e0 orrs r1, r2 
+7ee0e2 add r0, sp, #0x1c 
+7ee0e4 ldr r5, [sp, #0x14] 
+7ee0e6 bl #0x75c2cc _ZN9GameUtils8showTipsESsN7cocos2d7Color3BE
+7ee0ea ldr r0, [r5] 
+7ee0ec subs r0, #0xc 
+7ee0ee add r1, sp, #0xb4 
+7ee0f0 bl #0xa03c08 
+7ee0f4 b #0x7edf7c 
+7ee0f6 str r3, [sp, #4] 
+7ee0f8 mov r5, r4 
+7ee0fa bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7ee0fe movs r1, #0x63 
+7ee100 lsls r1, r1, #2 
+7ee102 ldr r2, [r0] 
+7ee104 ldr r2, [r2, r1] 
+7ee106 ldr r1, [sp, #4] 
+7ee108 blx r2 
+7ee10a bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7ee10e mov r4, r0 
+7ee110 movs r0, #0x2f 
+7ee112 lsls r0, r0, #3 
+7ee114 str r5, [r4, r0] 
+7ee116 adds r5, r4, r0 
+7ee118 bl #0xa040e8 
+7ee11c bl #0xa040a8 
+7ee120 ldr r1, [sp, #8] 
+7ee122 lsls r1, r1, #0x1c 
+7ee124 bl #0xa03e88 
+7ee128 ldr r1, [pc, #0xf4] 
+7ee12a bl #0xa03e88 
+7ee12e bl #0xa040b8 
+7ee132 movs r1, #0x5f 
+7ee134 lsls r1, r1, #2 
+7ee136 str r0, [r4, r1] 
+7ee138 ldr r1, [r5] 
+7ee13a eors r1, r0 
+7ee13c str r1, [r5] 
+7ee13e bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+7ee142 ldr r1, [pc, #0xc4] 
+7ee144 movs r2, #6 
+7ee146 movs r3, #0 
+7ee148 bl #0x7b2960 _ZN9GameLogic5goWarEi7WarTypei
+7ee14c bl #0x7754b0 _ZN8GameData11getInstanceEv
+7ee150 bl #0x77f230 _ZN8GameData4saveEv
+7ee154 bl #0x7754b0 _ZN8GameData11getInstanceEv
+7ee158 bl #0x77f230 _ZN8GameData4saveEv
+7ee15c b #0x7edf7c 
+7ee15e b #0x7ee186 
+7ee160 str r4, [sp, #0x10] 
+7ee162 mov r4, r0 
+7ee164 b #0x7ee1c4 
+7ee166 str r6, [sp, #0x14] 
+7ee168 str r4, [sp, #0x10] 
+7ee16a mov r4, r0 
+7ee16c b #0x7ee19c 
+7ee16e str r6, [sp, #0x14] 
+7ee170 str r4, [sp, #0x10] 
+7ee172 b #0x7ee186 
+7ee174 mov r4, r0 
+7ee176 ldr r0, [r6, #0x10] 
+7ee178 str r6, [sp, #0x14] 
+7ee17a b #0x7ee18e 
+7ee17c b #0x7ee186 
+7ee17e mov r4, r0 
+7ee180 ldr r0, [r5, #8] 
+7ee182 b #0x7ee18e 
+7ee184 b #0x7ee186 
+7ee186 mov r4, r0 
+7ee188 b #0x7ee196 
+7ee18a mov r4, r0 
+7ee18c ldr r0, [r5] 
+7ee18e subs r0, #0xc 
+7ee190 add r1, sp, #0xb4 
+7ee192 bl #0xa03c08 
+7ee196 add r0, sp, #0x30 
+7ee198 bl #0x85229c _ZN6CSJson5ValueD2Ev
+7ee19c ldr r0, [sp, #0x10] 
+7ee19e ldr r0, [r0] 
+7ee1a0 subs r0, #0xc 
+7ee1a2 add r1, sp, #0xb4 
+7ee1a4 bl #0xa03c08 
+7ee1a8 ldr r0, [sp, #0x14] 
+7ee1aa ldr r0, [r0, #0x74] 
+7ee1ac subs r0, #0xc 
+7ee1ae add r1, sp, #0xb4 
+7ee1b0 bl #0xa03c08 
+7ee1b4 add r5, sp, #0x40 
+7ee1b6 mov r0, r5 
+7ee1b8 adds r0, #0x28 
+7ee1ba bl #0x760708 _ZNSt5dequeIN6CSJson6Reader9ErrorInfoESaIS2_EED2Ev
+7ee1be mov r0, r5 
+7ee1c0 bl #0x76074e _ZNSt11_Deque_baseIPN6CSJson5ValueESaIS2_EED2Ev
+7ee1c4 ldr r0, [sp, #0x10] 
+7ee1c6 ldr r0, [r0, #8] 
+7ee1c8 subs r0, #0xc 
+7ee1ca add r1, sp, #0xb4 
+7ee1cc bl #0xa03c08 
+7ee1d0 mov r0, r4 
+7ee1d2 bl #0xa03ba8 
+7ee1d6 mov r8, r8 
+7ee1d8 subs r6, r7, r3 
+7ee1da lsls r7, r4, #2 
+7ee1dc ldrb r5, [r4, #0x18] 
+7ee1de .byte 0xec, 0xff 
+7ee1e0 subs r4, r7, r6 
+7ee1e2 lsls r7, r4, #2 
+7ee1e4 ldrb r7, [r5, #0x16] 
+7ee1e6 .byte 0xec, 0xff 
+7ee1e8 subs r2, r5, r6 
+7ee1ea lsls r7, r4, #2 
+7ee1ec ldrb r0, [r7, #0x16] 
+7ee1ee .byte 0xec, 0xff 
+7ee1f0 subs r6, r2, r6 
+7ee1f2 lsls r7, r4, #2 
+7ee1f4 ldm r6, {r0, r1, r2, r3, r5, r6, r7} 
+7ee1f6 .byte 0xec, 0xff 
+7ee1f8 subs r4, r0, r6 
+7ee1fa lsls r7, r4, #2 
+7ee1fc add r5, sp, #0x150 
+7ee1fe .byte 0xec, 0xff 
+7ee200 adds r2, #0xca 
+7ee202 movs r0, r0 
+7ee204 lsls r3, r1, #0x11 
+7ee206 movs r0, r0 
+7ee208 lsrs r5, r3, #0x10 
+7ee20a movs r0, r0 
+7ee20c movs r7, #0x10 
+7ee20e movs r0, r0 
+7ee210 subs r2, #0x98 
+7ee212 movs r0, r0 
+7ee214 ldr r6, [pc, #0x80] 
+7ee216 movs r0, r0 
+7ee218 lsls r4, r6, #0x10 
+7ee21a movs r0, r0 
+7ee21c ldm r4!, {r0, r2, r3, r6, r7} 
+7ee21e subs r7, #0x8c 
+7ee220 movs r0, r0 
+7ee222 add r2, pc 
+7ee224 adds r4, r6, r6 
+7ee226 lsls r7, r4, #2 
+7ee228 cbz r4, #0x7ee266 
+7ee22a .byte 0xec, 0xff 
+7ee22c adds r4, r4, r6 
+7ee22e lsls r7, r4, #2 
+7ee230 bne #0x7ee1fc 
+7ee232 .byte 0xff, 0xff 
+7ee234 subs r2, r6, r4 
+7ee236 lsls r7, r4, #2 
+7ee238 ldrb r2, [r3, #0x17] 
+7ee23a .byte 0xec, 0xff 
+7ee23c subs r2, r4, r4 
+7ee23e lsls r7, r4, #2 
+84176c bl #0xa03e88 
+841770 bl #0xa040b8 
+841774 ldr r1, [sp, #0x54] 
+841776 str r0, [r6, r1] 
+841778 ldr r1, [r7] 
+84177a eors r1, r0 
+84177c str r1, [r7] 
+84177e bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+841782 mov r6, r0 
+841784 movs r0, #0x63 
+841786 lsls r0, r0, #2 
+841788 ldr r1, [r6] 
+84178a ldr r7, [r1, r0] 
+84178c bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+841790 ldr r1, [sp, #0x4c] 
+841792 lsls r1, r1, #3 
+841794 ldr r2, [r0] 
+841796 ldr r1, [r2, r1] 
+841798 blx r1 
+84179a adds r1, r0, #1 
+84179c mov r0, r6 
+84179e blx r7 
+8417a0 bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+8417a4 mov r6, r0 
+8417a6 bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+8417aa lsls r1, r5, #7 
+8417ac ldr r2, [r0] 
+8417ae ldr r1, [r2, r1] 
+8417b0 blx r1 
+8466f6 movs r0, #0x31 
+8466f8 lsls r4, r0, #3 
+8466fa bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+8466fe ldr r1, [r0] 
+846700 ldr r1, [r1, r4] 
+846702 blx r1 
+846704 mov r4, r0 
+846706 movs r5, #3 
+846708 lsls r6, r5, #7 
+84670a str r6, [sp, #0x3c] 
+84670c bl #0x7b00d8 _ZN9GameLogic11getInstanceEv
+846710 ldr r1, [r0] 
+846712 ldr r1, [r1, r6] 
+846714 blx r1 
+846716 movs r1, #0x29 
+846718 str r1, [sp, #0x38] 
+84671a lsls r6, r1, #4 
+84671c ldr r1, [r7, r6] 
+84671e movs r2, #0xa5 
+846720 lsls r2, r2, #2 
+846722 str r2, [sp, #0x2c] 
+846724 ldr r2, [r7, r2] 
+846726 eors r2, r1 
+846728 ldr r1, [sp, #0x28] 
+84672a muls r4, r1, r4 
+84672c movs r1, #5 
+84672e str r1, [sp, #0x30] 
+846730 muls r0, r1, r0 
+846732 adds r0, r4, r0 
+846734 subs r0, #5 
+846736 str r0, [sp, #0x4c] 
+846738 movs r1, #0x96 
+84673a muls r1, r0, r1 
+84673c str r1, [sp, #0x34] 
+84673e adds r0, r2, r1 
+846740 str r0, [r7, r6] 
+846742 bl #0xa040e8 

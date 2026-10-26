@@ -1,0 +1,9 @@
+{
+ "version":"11.01",
+ "source":"Original ARM32 libcocos2dcpp.so and exchange.json",
+ "tierPurchase":"MainExchangeLayer::onHttpRequestExchange 0x7deebc..0x7deef6: type9; getSpecialTagData2(400+special), increment by one, cap8, setSpecialTagData2.",
+ "tierEligibility":"MainExchangeLayer::refreshView 0x7e0280..0x7e02d2: type9; current stage must equal num-1; reject current stage>7.",
+ "skinUnlock":"MainExchangeLayer::onHttpRequestExchange 0x7dedd6..0x7dede4: getSkin(itemid,true). refreshView 0x7dfeec getBaseSkinById; 0x7e00cc isHasThisSkin.",
+ "tierEffects":"Each series uses exchange.special as its group and exchange.num as stage. Per-stage effect is taken from original exchange.desc; displayed cumulative effect is stage times the per-stage increment. Displayed effect excludes base capacity/speed.",
+ "costs":"point is the price of this stage; totalPoints sums configured prices through that stage. Series have 8/8/8/7/7/2 configured stages; do not invent missing stages based on native cap8."
+}

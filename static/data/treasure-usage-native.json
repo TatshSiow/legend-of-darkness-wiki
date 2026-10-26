@@ -1,0 +1,10 @@
+{
+ "version":"11.01",
+ "source":"Original ARM32 libcocos2dcpp.so; original data/treasure.json",
+ "luckyChest":{"item":5012,"pool":1,"caller":"GameItemDetailLayer::showGoodsUseEffect 0x7a02ba..0x7a02c0 calls getTreasureById(1)","probability":"Existing verified native sampler rand()%(sumWeights+1), inclusive cumulative boundary; first row gets the additional boundary outcome."},
+ "normalLottery":{"caller":"ChouJiangLayer constructor 0x76cdfa..0x76ce82; initUi 0x76dbbc getTreasuresById","poolRule":"Default3; level>=30 uses min(8,floor(level/10)+1); level>=80 and paragon>=100 switches to9; an additional external condition switches to10.","limit":"Name/meaning of pool10 extra external condition not decoded."},
+ "activeLottery":{"pool":200,"caller":"ChouJiangActiveLayer constructor 0x76afcc..0x76afd2; initUi 0x76c38e getTreasuresById","limit":"Activity availability and schedule not confirmed."},
+ "battleTreasure":{"caller":"WarFinishLayer::showTreasureDialog 0x8422c0..0x842338","poolRule":"Default60; levels61..80 use min(8,floor(level/10)+1)*10; level80 and paragon>=100 uses90."},
+ "mapTreasure":{"pool":90,"caller":"SubMapLayer::showTreasureDialog 0x835342..0x83534e"},
+ "limits":["Only pool1 uses the verified lucky chest probability formula here. Other pools show original weights, not percentages.","Reward itemtype3 resolves to pet data; itemtype1 and2 resolve to item data.","Reading a candidate pool does not prove that every reward is granted at once or that all pools share a selection algorithm."]
+}

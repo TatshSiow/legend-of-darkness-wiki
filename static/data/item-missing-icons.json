@@ -1,0 +1,191 @@
+{
+  "version": "11.01",
+  "source": "Original APK ZIP file inventory versus item.icon and extracted icon manifest",
+  "count": 26,
+  "items": [
+    {
+      "id": 5013,
+      "name": "\u666e\u901a\u7684\u7ea2\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5013.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5014,
+      "name": "\u7cbe\u81f4\u7684\u7ea2\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5014.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5015,
+      "name": "\u5b8c\u7f8e\u7684\u7ea2\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5015.png",
+      "otherSameFilename": [
+        "assets/ui/icon/5015.png"
+      ],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5016,
+      "name": "\u666e\u901a\u7684\u9ec4\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5016.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5017,
+      "name": "\u7cbe\u81f4\u7684\u9ec4\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5017.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5018,
+      "name": "\u5b8c\u7f8e\u7684\u9ec4\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5018.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5019,
+      "name": "\u666e\u901a\u7684\u84dd\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5019.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5020,
+      "name": "\u7cbe\u81f4\u7684\u84dd\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5020.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5021,
+      "name": "\u5b8c\u7f8e\u7684\u84dd\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5021.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5022,
+      "name": "\u666e\u901a\u7684\u7eff\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5022.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5023,
+      "name": "\u7cbe\u81f4\u7684\u7eff\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5023.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5024,
+      "name": "\u5b8c\u7f8e\u7684\u7eff\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5024.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5025,
+      "name": "\u666e\u901a\u7684\u7d2b\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5025.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5026,
+      "name": "\u7cbe\u81f4\u7684\u7d2b\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5026.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5027,
+      "name": "\u5b8c\u7f8e\u7684\u7d2b\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5027.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5028,
+      "name": "\u666e\u901a\u7684\u9ed1\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5028.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5029,
+      "name": "\u7cbe\u81f4\u7684\u9ed1\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5029.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5030,
+      "name": "\u5b8c\u7f8e\u7684\u9ed1\u5b9d\u77f3",
+      "expectedPath": "assets/icon/item/5030.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5031,
+      "name": "\u666e\u901a\u7684\u84dd\u6c34\u6676",
+      "expectedPath": "assets/icon/item/5031.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5032,
+      "name": "\u7cbe\u81f4\u7684\u84dd\u6c34\u6676",
+      "expectedPath": "assets/icon/item/5032.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5033,
+      "name": "\u5b8c\u7f8e\u7684\u84dd\u6c34\u6676",
+      "expectedPath": "assets/icon/item/5033.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5034,
+      "name": "\u666e\u901a\u7684\u9ec4\u6c34\u6676",
+      "expectedPath": "assets/icon/item/5034.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5035,
+      "name": "\u7cbe\u81f4\u7684\u9ec4\u6c34\u6676",
+      "expectedPath": "assets/icon/item/5035.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5036,
+      "name": "\u5b8c\u7f8e\u7684\u9ec4\u6c34\u6676",
+      "expectedPath": "assets/icon/item/5036.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5037,
+      "name": "\u5e78\u8fd0\u4e4b\u77f3",
+      "expectedPath": "assets/icon/item/5037.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    },
+    {
+      "id": 5154,
+      "name": "\u5e78\u8fd0\u4e4b\u77f3",
+      "expectedPath": "assets/icon/item/5232.png",
+      "otherSameFilename": [],
+      "reason": "The configured item PNG is absent in original APK. Other directories with same filename are not verified replacements."
+    }
+  ]
+}

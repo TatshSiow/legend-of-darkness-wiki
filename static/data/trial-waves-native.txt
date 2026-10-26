@@ -1,0 +1,30 @@
+試煉波次追查 — 2026-10-26
+來源：原版 game.apk，SHA256 da5374a1b889a301c54a03acabf6a411cbae0db7e391c4ff4a8a556ceed25de8
+唯讀分析 libcocos2dcpp.so ARM32 Thumb，不使用手機／存檔。
+
+上限補查（2026-10-26）：getCurrentTrialLevel 0x7bf138..0x7bf13e 直接讀取 GameLogic+0x174；setCurrentTrialLevel 0x7bf140..0x7bf146 直接寫入32位元欄位，沒有 clamp 或上限比較。勝利 0x84179a 為 adds r1,r0,#1，0x84179e 呼叫 setter，沒有飽和／終點檢查。入口回應 0x7ee02c..0x7ee108 根據最高積分選起始波1/25/38/48，這是起始波選擇，不是最後一波。相關原版反組譯保存在 trial-limit-disassembly.txt（含 literal pool，不能把末段資料誤認成指令）。
+另以既有 Unicorn 流程執行原版數值分支，沒有改寫既有375案例檔：4801／青銅／普通品質，100000波攻擊825037184、生命825027904；300000波攻擊2475037184、生命2475027840；600000波攻擊655069888、生命655060608。高波數已出現32位元回繞，不能把未設終點等同於正常數值可無限成長。以上是局部原版指令模擬，並非手機實際打到這些波數，也未驗證後端是否另設限制。結論：已追查的客戶端入口、波數讀寫、勝敗流程未設固定終點；不能保證完整遊戲無上限。
+
+1. WarFinishLayer::dialogTrialTouchEvent 0x844914：0x844966 讀取 Copy 3101；0x844974..0x84497a 呼叫 goWar(3101, WarType6, 0)。
+2. Copy 3101 的 enemyid1..5 為 4801..4805：屍王、獅鷲、水龍、巨型蜘蛛、銀甲飛龍。
+3. WarLayer::initWarData 在 0x8466a8 比對 WarType6，走 0x8466ae..0x8469e2 試煉分支。
+4. 0x8466c2..0x8466e8：rand()%候選數量，依抽中索引取 enemy ID；每次重新抽選，不移除已抽中的候選。0x8469d8..0x8469e0 重複 5 次，因此每波 5 隻，可出現重複種類。
+5. GameLogic vtable 0x1226800，物件 vptr=表頭+8；槽位 0x180=getCurrentTrialhard (0x7bf128)，0x188=getCurrentTrialLevel (0x7bf138)，0x18c=setCurrentTrialLevel (0x7bf140)。欄位分別 GameLogic+0x170、+0x174。
+6. 0x8466f6..0x846734：成長參數 G=55*wave+5*hard-5。波數、難度從上述 getter 讀取。
+7. 0x846738..0x846926：在敵人原始整數屬性加上 G*係數：att/hp=150、def=68、hit=109、spo=33、cri=41、crihurt=116、res=75。level 沒有被改動，該池皆 Lv80。
+8. 0x84698c..0x8469b6：rand()%101，0=普通、1..69=精英、70..100=變異，再呼叫 resetAttByQuality。其數值階段 0x773f88..0x77407c 對 att/hp 作 float32 的 1/1.1/1.2 倍及整數截斷；抗暴覆寫為 quality*5+15。
+9. 0x846928..0x84697c 原先依 hard 設定 20/40/60（還保留第4分支80），但後續品質階段覆寫。不可將原版介面文字的20/40/60直接當作最後初始化值；實際戰鬥仍待交叉驗證。
+10. WarFinishLayer::showTrialDialog 勝利分支 0x84177e..0x84179e 讀取當前波數後直接 +1，未見終點比較；失敗分支 0x8418e4..0x8418f2 設回1。這是已查分支未設固定終點的證據，不保證整個遊戲無其他限制，更不表示可超過整數範圍。
+
+驗證：scripts/export-trial-native.py 在 Unicorn 執行原版波次成長指令與品質數值階段；略過名稱/UI工作。5 種敵人 × 3 難度 × 5 波次(1/2/10/100/1000) × 5 個品質邊界隨機值 = 375 案例。trial-native.json 保存結果，test/trial.test.mjs 逐欄比對 TypeScript 計算。
+網站每次展示12列波次比較表，同品質的攻擊／生命範圍取五種候選怪物的最小至最大值；共用候選怪物清單只顯示一次，點波次查看完整數值。分數獎勵另設分頁，依難度及積分篩選並標記本難度新增項目。可直接查詢1..100000，這是工具計算範圍，不是遊戲波次上限。未憑隨機規則捏造每波固定怪物名單，也未把trial.json的91個分數獎勵當作91波。
+
+三難度獎勵追查：GameData::getTrialItems 0x77c068。
+- 0x77c114 解析 score，存 sp+0x18（呼叫參數）及 r4（獎勵所需積分）；0x77c100 解析 hard，存 sp+0x20（所需難度），sp+4 是所選難度。
+- 0x77c1e6..0x77c1ea：所需積分 > 目前積分則跳過。
+- 0x77c1ec..0x77c1f2：所需難度 > 所選難度則跳過；不是只取難度相等的資料。因此青銅候選30筆、白銀累積61筆、黃金累積91筆，還需篩選各自積分門檻。
+- 0x77c1f4..0x77c234：仍有 rand()%100 與門檻比較，達標不代表全部必得。itemweight 是此流程的輸入，不能未核對便當成每個道具最終百分比。
+- 0x77c236..0x77c25a：itemid=0 時從 items 陣列隨機選一項，不能把整個 items 陣列當作一次全部獲得。
+
+伺服器上限補查：已唯讀檢查原版入口請求、回應及下一波流程，反組譯為 trial-network-disassembly.txt。0x7ed962 入口請求的 JSON key 為 basevalue，內容來自 getUserMainData；0x7ed998 endpoint 為 trial.php，0x7ed9c4 呼叫 sendDataToServerPost。回應 handler 0x7ede4c 讀 currtime、server_returncode、trial、bantype；trial 經 asInt 後沒有存入波數或上限欄位，不能因名稱就解讀為最高波數。0x7edf0a..0x7edf1a 依 returncode 106..113 分派，所查 handler 沒有最高波數比較。下一波按鈕 0x844974..0x84497a 呼叫 goWar(3101,6,0)；WarType6 在 0x7b296c..0x7b2982 進直接建戰鬥分支，0x7b299a..0x7b29ae 建 WarLayer、initWarData、startWar，沒有逐波 HTTP gate。showTrialDialog 內亦未見直接 HTTP 呼叫。結論僅為所查客戶端流程未見伺服器波數上限介面；無伺服器程式碼或實際回應／日誌，無法證明後端無上限或取得確切數字。本次沒有發送請求、消耗試煉次數或修改存檔。
+2026-10-26 Live check: user explicitly authorized consuming daily attempt. Bronze wave1 completed normally. Read active WarLayer+0x250 vector (5 pointers) via /proc/PID/mem without memory writes. Enemies4803/4801/4802/4805/4801; all50 level/stat fields match trialEnemyStats at wave1, difficulty1, quality inferred from resistance25/30. Counter already2 on victory screen, so do not mislabel retained enemies as wave2. Values stored trial-live-native.json. Confirms duplicate species and final resistance25/30 in this sample. Does not verify every difficulty, all waves or full status-effect/damage processing. Game left at wave1 victory/continue screen, no further wave started.

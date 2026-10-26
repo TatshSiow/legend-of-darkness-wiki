@@ -1,0 +1,33 @@
+{
+  "name": "legend-of-darkness-svelte",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5174",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "build": "vite build && pagefind --site build --glob \"data/**/row-*/index.html\" && node scripts/seo.mjs",
+    "preview": "vite preview --config vite.preview.config.ts",
+    "test": "node --test test/*.test.mjs",
+    "test:browser": "node test/browser.mjs",
+    "test:build": "node test/build.mjs"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "4.0.0",
+    "@sveltejs/kit": "3.1.0",
+    "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "@types/node": "^22.0.0",
+    "pagefind": "1.5.2",
+    "playwright": "1.64.1",
+    "svelte": "5.57.2",
+    "svelte-check": "^4.0.0",
+    "typescript": "^6.0.0",
+    "vite": "8.3.5"
+  },
+  "imports": {
+    "#lib/*": "./src/lib/*"
+  }
+}

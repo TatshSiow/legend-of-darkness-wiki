@@ -1,0 +1,34 @@
+import {createRequire} from 'node:module';
+import assert from 'node:assert/strict';
+const require=createRequire(import.meta.url);
+const {chromium}=require('playwright');
+const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_EXECUTABLE});
+try{
+ const page=await browser.newPage(),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('http://127.0.0.1:5174/trial/1/');await page.waitForLoadState('networkidle');
+ const table=page.locator('.trial-wave-list'),header=table.locator('thead th').first();
+ await header.getByRole('button').click();await header.getByRole('button').click();
+ assert.equal(await header.getAttribute('aria-sort'),'descending');
+ assert.match(await table.locator('tbody tr').first().innerText(),/第 12 波/);
+ await page.getByLabel('比較品質').selectOption('1');
+ await page.waitForFunction(()=>document.querySelector('.trial-wave-list th:nth-child(3)')?.textContent.includes('普通'));
+ assert.match(await table.locator('tbody tr').first().innerText(),/第 12 波/);
+ await table.locator('tbody a').first().click();await page.waitForSelector('.trial-enemies');
+ await page.locator('.trial-enemies thead th').nth(2).getByRole('button').click();
+ assert.equal(await page.locator('.trial-enemies thead th[aria-sort=ascending]').count(),1);
+ await page.goto('http://127.0.0.1:5174/data/item/');await page.waitForLoadState('networkidle');
+ const catalog=page.locator('table[data-managed-sort]');
+ await catalog.getByRole('button',{name:'等級',exact:true}).click();
+ assert.equal(await page.getByLabel('排序欄位').inputValue(),'level');
+ await catalog.getByRole('button',{name:'等級',exact:true}).click();
+ assert.equal(await catalog.locator('thead th[aria-sort=descending]').count(),1);
+ await page.goto('http://127.0.0.1:5174/data/exchange/');await page.waitForLoadState('networkidle');
+ await page.getByRole('tab',{name:'隨機裝備',exact:true}).click();
+ await page.waitForSelector('.exchange-pool .table-sort',{state:'attached'});
+ await page.locator('details').first().locator('summary').click();
+ await page.locator('.exchange-pool').first().getByRole('button',{name:'候選裝備',exact:true}).click();
+ assert.equal(await page.locator('.exchange-pool').first().locator('tbody tr').count(),8);
+ assert.deepEqual(errors,[]);
+ console.log('Table headers: numeric direction, reactive updates, SPA, paginated catalog and nested pools passed.');
+}finally{await browser.close();}

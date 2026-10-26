@@ -1,0 +1,22 @@
+{
+ "version":"11.01",
+ "source":"Original APK ARM32 libcocos2dcpp.so and make.json",
+ "accessoryUpgrade":{
+  "function":"SpecialUpdateLayer::showEquipDetail",
+  "address":"0x83266c..0x8326b0",
+  "formula":"7001 + quality * 10 + currentStrength",
+  "baseConstant":"0x8329fc = 7001",
+  "qualityRead":"Equipment vtable +0x48",
+  "strengthRead":"object +0xf0 XOR object +0xf4",
+  "keys":{"3":[7031,7032,7033,7034,7035],"4":[7041,7042,7043,7044,7045],"5":[7051,7052,7053,7054,7055],"6":[7061,7062,7063,7064,7065]},
+  "meaning":"Costs for existing special accessory upgrades +0 to +1 through +4 to +5, not new item IDs."
+ },
+ "specialEnchant":{
+  "key":7201,
+  "function":"GameEquipEnchantLayer::showEquipSpecialEnchant",
+  "address":"0x78e9c2..0x78e9dc",
+  "literal":"0x78edc4 = 7201",
+  "meaning":"The function copies GameData Make map and looks up key 7201; original row name is special equipment enchanting. Not a missing output item."
+ },
+ "limits":"Read-only static code verification. No upgrade/enchant performed; operation currency and effects not newly verified here."
+}

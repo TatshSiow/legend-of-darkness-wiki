@@ -1,0 +1,38 @@
+原版 APK 保留系統追查（2026-10-25）
+
+來源：game-backups/legend-of-darkness-20261021/game.apk
+SHA256：da5374a1b889a301c54a03acabf6a411cbae0db7e391c4ff4a8a556ceed25de8
+分析對象：lib/armeabi/libcocos2dcpp.so，ARM32 Thumb，以下為 ELF 虛擬位址。
+未修改 APK、手機、存檔；此報告描述靜態程式證據。
+
+一、level.json：13 筆舊關卡事件設定
+- GameData::initData 0x775508，長度 1032 bytes，解碼其 PIC 字串及 initJsonData 呼叫。
+- 載入 item、skill、achievement、task、god、copy、enemy、pet、skin、exchange、chapter、transmit、droptip、treasure、explored、trial、teach；另呼叫 achievement/task/shop/drop/make/exchange 專用初始化。
+- native 全部位元組中沒有 level.json 或 data/level 字串；也未找到 GameLevel 或關卡 level 表 getter。
+- MainMapLayer::refreshView 0x7eea00，在 0x7eeb4c 呼叫 getBaseChapterById。
+- 名稱容易誤導的 SubMapEventLayer::showLevelEvent 0x7d7bfc，在 0x7d7c2a 呼叫 getBaseCopyById，並非讀取 level.json。
+- 結論：保留舊資料，沒有目前正常載入／觸發的證據，不應當作現行事件攻略。不能用同 ID 的 copy 推定它仍有效。
+
+二、god.json：12 個獨立神器的保留系統
+- GameData::initData 在 0x7755c2 組出 data/god.json，0x7755d4 呼叫 initJsonData，確實載入。
+- GameData::getBaseGodById 0x779888 建立圖鑑物件；MainGodAllLayer::initUi 在 0x7e5db0、0x7e60d4 呼叫它。
+- 主介面 assets/ui/main_main_layer.json 保留 btn_god，設定 x=784、positionPercentX=1.225；僅憑 JSON visible=true 不能判定玩家可操作，仍須核對初始化程式。
+- MainMainLayer::initUi 0x7eafd8：0x7eba24 查找 btn_god；先設定事件識別值 12 並綁定 touchEvent；隨後 0x7eba6e..0x7eba7c 以 r1=0 呼叫該按鈕虛擬表位移 0x29c。
+- Button vtable 0x1239b38，物件 vptr 指向表頭+8；槽位 +0x29c 解析為 cocos2d::ui::Widget::setTouchEnabled(bool) 0x964380。因此原版初始化明確停用神器按鈕點擊，並非僅未找到入口。
+- MainMainLayer::touchEvent 保留 0x7e9868 -> MainGodLayer::create 0x7ea9a8 的處理分支；處理分支存在不等於正常 UI 可觸發。
+- MainGodGetLayer::refreshView 在 0x7e5394..0x7e53a0 複製 GameLogic+0x198 的 Vector<GameGod*>；它列出已持有清單，不能把 Get 名稱解讀成取得功能。
+- GameGodDetailLayer::touchEvent 在 0x79a452 呼叫 changePlayerGod 0x7b1674，後者會更新玩家屬性；Player::refreshPlayerAttribute 在 0x828d4a 呼叫 getGodInBagById。裝備／屬性程式確實保留。
+- GameData::getGod 0x779808 可建立帶等級／成長值的物件；掃描 .text 的直接 Thumb BL，未找到它的呼叫點。GameGod::create 的直接呼叫只有 getBaseGodById 內的 0x7798ee。
+- 此呼叫掃描不涵蓋所有間接／虛擬／ARM 呼叫，不能以零直接呼叫斷言不存在任何隱藏取得方式。
+- from 的「BOSS掉落」「鑄造」「未知」「黑市」是 JSON 文字；尚無對應現行掉落或購買流程的證據，不能據此提供取得攻略。
+
+界線：確認了舊事件表未見載入、神器入口點擊被停用、神器圖鑑與持有後處理仍保留。未進行手機操作、未嘗試解鎖或注入獨立神器，未證明所有平台／版本都相同。
+
+後續：依使用者要求，level、god 不再公開為分類、搜尋條目或資料下載；內部原始資料仍保留。chapter 統一重導至地區圖鑑，ID 100 對應祕境 rift。
+
+掉落頁面追查：
+- drop.json 25 表，每表最多 6 槽；droptip.json 31 提示，每筆最多 8 個道具。公開頁面現完整解析所有有效槽位，不再只列前幾個原始欄位。
+- 逐表掃描全部原始資料，沒有其他表的 dropid 欄位引用這 25 個 drop ID。
+- DropManeger::getDrops 0x773898 在 0x7738a8、0x7738b2 呼叫 getGoodsDrops 0x773914、getEquipDrops 0x773a08；.text 直接 Thumb BL 掃描沒有找到 getDrops 的外部呼叫。這不能排除間接呼叫，因此只標記現行用途未確認，不宣稱所有舊掉落程式必定不可達。
+- 現行 Copy 掉落使用 percent300 等陣列，不能把舊 drop 表的 pro/1001 機率套過去。
+- droptip 由 copy.droptipid 明確引用，頁面列出全部引用戰鬥及依精確 enemy ID 解析的怪物與等級。提示本身沒有掉率及數量欄位，不能臆造機率。
