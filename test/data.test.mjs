@@ -117,11 +117,15 @@ test('all items are classified and acquisition claims distinguish drops from clu
   const data=detail('item',item.key);
   assert.equal(data.availability.status,item.values.availability);
   assert.equal(data.availability.copies.length>0,item.availability.status==='有掉落設定');
+  assert.equal(data.availability.sources.includes('打怪掉落'),data.availability.copies.length>0);
+  assert.equal(new Set(data.availability.sources).size,data.availability.sources.length);
  }
  assert(items.find(item=>item.id===5124).availability.methods.includes('合成配方'));
  assert.equal(items.find(item=>item.id===6901).itemGroup,'翅膀');
  assert(items.find(item=>item.id===6901).availability.methods.some(method=>method.includes('翅膀頁面購買')));
  assert(items.find(item=>item.id===6911).availability.methods.includes('積分隨機裝備池'));
+ assert(items.find(item=>item.id===5002).availability.sources.includes('商店購買'));
+ assert(items.find(item=>item.id===5002).availability.sources.includes('幸運寶箱（隨機）'));
 });
 
 test('unverified gem records are excluded from catalog and search routes while raw evidence remains',()=>{
@@ -432,5 +436,36 @@ test('legacy pagination stays within filtered catalogs and excludes archived gem
  assert.equal(legacyTarget('title','page-6'),'/data/title/page/3/');
  for(const route of legacyEntries()){
   if(route.legacy==='item'&&'entry' in route&&route.entry.startsWith('row-'))assert(entries('item').some(row=>row.entry===route.entry));
+ }
+});
+
+test('pet adventure rewards are included in item acquisition sources',()=>{
+ for(const reward of tables.explored){
+  const data=detail('item',entryFor('item',reward.itemid));
+  assert(data.availability.sources.includes('\u5bf5\u7269\u63a2\u96aa'));
+ }
+ assert(!detail('item',entryFor('item',5001)).availability.sources.includes('\u5bf5\u7269\u63a2\u96aa'));
+});
+
+test('triggered hidden encounters stay in their originating adventure regions',()=>{
+ for(const [regionKey,copyIds] of [['chapter-1',[3001,3003]],['chapter-2',[3002,3004]]]){
+  const region=regions.find(r=>r.key===regionKey);
+  for(const copyId of copyIds){
+   assert(region.copyIds.includes(copyId));
+   const copy=tables.copy.find(c=>c.id===copyId);
+   assert(regionDetails(regionKey).enemies.find(e=>e.id===copy.enemyid1).hiddenEncounter);
+   assert(!regions.some(r=>r.key==='copy-'+copyId));
+  }
+ }
+ assert(!regionDetails('chapter-1').enemies.find(e=>e.id===4001).hiddenEncounter);
+});
+
+test('hidden encounter battle names are not presented as standalone regions',()=>{
+ const fireCopies=tables.copy.filter(c=>c.type===4&&c.name.includes('\u706b\u9f99'));
+ assert(fireCopies.length>0);
+ for(const copy of fireCopies){
+  assert(!regions.some(r=>r.key==='copy-'+copy.id));
+  const rewards=detail('enemy',entryFor('enemy',copy.enemyid1)).rewards;
+  assert(rewards.every(reward=>reward.locations.every(location=>location.href!=='/regions/copy-'+copy.id+'/')));
  }
 });

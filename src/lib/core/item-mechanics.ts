@@ -42,6 +42,26 @@ export function randomAttributeRange(descriptor:number[],level:number,paragon:nu
  return {min:at(ancient?10:1),max:at(20)};
 }
 export function specialAttributes(row:GameRecord){return Array.from({length:12},(_,i)=>({type:Number(row[`spetype${i+1}`]),value:Number(row[`spevalue${i+1}`])})).filter(a=>a.type>0&&Number.isFinite(a.value)&&a.value!==0);}
+export function fixedEquipmentAttributes(row:GameRecord){
+ const keys=['att','def','hp','hit','spo','cri','crihit','res'];
+ const percentages:[string,number][]=[['attper',12],['defper',13],['hpper',14],['hurtper',16],['subhurtper',17],['moneyper',19],['dropper',9],['expper',10],['rehp',11],['absorbhp',15]];
+ return [...keys.map((key,i)=>({type:i+1,value:Number(row[key])})),...percentages.map(([key,type])=>({type,value:Number(row[key])})),...specialAttributes(row)].filter(a=>Number.isFinite(a.value)&&a.value!==0);
+}
+export function equipmentAffixes(row:GameRecord,pool:number[][]){
+ const fixed=fixedEquipmentAttributes(row),randomCount=row.paragon?Math.max(0,5-fixed.length):0;
+ const candidates=randomCount?pool.filter(a=>!fixed.some(f=>f.type===a[0])):[];
+ return {fixed,randomCount,candidates,slotRate:candidates.length?100/candidates.length:0,itemRate:candidates.length?100*randomCount/candidates.length:0};
+}
+export function socketCost(opened:number){integer(opened,0,2);return opened+1;}
+export function gemInsertionCost(occupied:number){integer(occupied,0,2);return (occupied+1)*100;}
+export function gemRemovalCost(occupied:number){integer(occupied,1,3);return (occupied+1)*20;}
+export const enchantRanks=['D','C','B','A','S','SS','SSS'];
+const enchantMultipliers=[0.44999998807907104,0.5299999713897705,0.6000000238418579,0.7200000286102295,0.8399999737739563,1,1.1799999475479126];
+const enchantCoefficients=[25.500000000000004,11.56,25.500000000000004,18.53,5.61,6.970000000000001,19.720000000000002,12.750000000000002];
+export function enchantValue(type:number,rank:number,level:number){
+ integer(type,1,8);integer(rank,1,7);integer(level,1,80);
+ return t(f(f(f(t((level+1)*enchantCoefficients[type-1]))*enchantMultipliers[rank-1])*f(1.1)));
+}
 export function refineCost(kind:string,level:number,quality:number,paragon:number,refines:number,discount:boolean){
  integer(level,1,80);integer(quality,1,6);integer(paragon,0,1500);integer(refines,0,999);
  const rune=kind==='rune',effective=t(f(level+f(paragon/6)));

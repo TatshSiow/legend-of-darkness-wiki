@@ -15,7 +15,7 @@ const tables:WikiData['tables']={...sourceTables,title:sourceTables.achievement}
 export const categories: Record<string,string> = {
  enemy:'敵人圖鑑',item:'物品與裝備',skill:'技能',skillte:'技能效果',pet:'寵物',skin:'幻化',
  achievement:'成就',title:'稱號',
- explored:'寵物探索',trial:'試煉獎勵',task:'任務',
+ explored:'寵物探險',trial:'試煉獎勵',task:'任務',
  treasure:'寶箱與寶藏獎勵池',
  make:'合成配方',shop:'商店',exchange:'積分兌換'
 };
@@ -108,6 +108,7 @@ function itemAvailability(row:GameRecord){
  const id=Number(row.id),drops=allDrops.filter(drop=>drop.itemId===id&&!drop.reward);
  const positive=drops.filter(drop=>drop.rate!==null&&drop.rate>0),clues=drops.some(drop=>drop.rate===null);
  const methods=[
+  ...(tables.explored.some(reward=>reward.itemtype!==3&&reward.itemid===id&&Number(reward.itemweight)>0)?['寵物探險']:[]),
   ...(tables.make.some(recipe=>recipe.itemid===id)?['合成配方']:[]),
   ...(tables.shop.some(offer=>offer.itemid===id)?['商店設定']:[]),
   ...(tables.exchange.some(offer=>exchangeTarget(offer)?.category==='item'&&offer.itemid===id)?['積分兌換']:[]),
@@ -119,7 +120,22 @@ function itemAvailability(row:GameRecord){
   ...(tables.trial.some(reward=>trialHasItem(reward,id))?['試煉結算獎勵池（符合條件後仍需抽選）']:[]),
   ...(tables.treasure.some(pool=>pool.id!==1&&Array.isArray(pool.items)&&pool.items.some(item=>item.itemtype!==3&&item.itemid===id))?['抽獎／寶藏獎勵池候選（入口及條件見獎勵池）']:[])
  ];
+ const sources=[
+  ...(positive.length?['打怪掉落']:clues?['打怪掉落（待確認）']:[]),
+  ...methods.filter(method=>method!=='幸運寶箱獎勵池').map(method=>({'合成配方':'合成','商店設定':'商店購買','積分隨機裝備池':'積分兌換（隨機裝備）','翅膀頁面購買（需符合VIP及魔石條件）':'翅膀購買（VIP、魔石條件）'}[method]??method)),
+  ...(tables.trial.some(reward=>trialHasItem(reward,id))?['試煉結算（達到難度、分數條件後隨機取得）']:[]),
+  ...tables.treasure.filter(pool=>Array.isArray(pool.items)&&pool.items.some(item=>item.itemtype!==3&&item.itemid===id&&Number(item.itemweight)>0)).map(pool=>{
+   const poolId=Number(pool.id),name=treasureContext(poolId).name.replace('：','（');
+   if(poolId===1)return '幸運寶箱（隨機）';
+   if(poolId===9)return '抽獎（Lv. 80、巔峰100以上）';
+   if(poolId===10)return '進階抽獎（額外條件待確認）';
+   if(poolId===90)return '寶藏（Lv. 80、巔峰100以上／地圖寶藏）';
+   if(poolId===200)return '活動抽獎（開放條件待確認）';
+   return name+(name.includes('（')?'）':'（入口待確認）');
+  })
+ ];
  return {status:positive.length?'有掉落設定':clues?'僅有掉落線索':'未找到掉落設定',methods,candidates,
+  sources:[...new Set(sources)],
   copies:[...new Set(positive.map(drop=>drop.copyId))],
   note:positive.length?'已核對原版抽選分支；仍受模式、進度、巔峰等條件限制，詳見掉落表。':clues?'只有提示或特殊獎勵欄位，尚不能確認會經由打怪掉落。':'目前已核對的戰鬥掉落設定未列出此物品；不代表遊戲中絕對無法取得。'};
 }
@@ -197,6 +213,7 @@ export function regionDetails(key: string) {
  const ids = enemyIdsInCopies(tables.copy.filter(c => region.copyIds.includes(Number(c.id))));
  return {region:regionSummary(region),dropHints:dropHints(tables.copy.filter(copy=>region.copyIds.includes(Number(copy.id)))),
   enemies:tables.enemy.flatMap((row,index) => ids.has(Number(row.id)) ? [{...summary('enemy',index),
+   hiddenEncounter:enemyIdsInCopies(tables.copy.filter(c=>region.encounterCopyIds?.includes(Number(c.id)))).has(Number(row.id)),
    minDifficulty:region.hiddenCopyId && enemyIdsInCopies(tables.copy.filter(c=>c.id===region.hiddenCopyId)).has(Number(row.id)) ? 5 : 1}] : []),
   randomFive:region.copyIds.length === 1 && region.copyIds[0] >= 2060 && region.copyIds[0] <= 2070};
 }
@@ -312,7 +329,7 @@ function rewardDetails(category: string,row: GameRecord) {
   const probabilities = d.rate === null ? [] : dropQuantityProbabilities(group);
   return {item:reference('item',d.itemId) ?? reference('skin',d.itemId) ?? reference('pet',d.itemId),
    enemies:enemiesByCopy.get(d.copyId)!,
-   locations:regions.filter(region=>region.copyIds.includes(d.copyId)).map(region=>({href:`/regions/${region.key}/`,name:region.copyType===5?`深淵 · ${region.name}`:region.adventure?`冒險地圖 · ${region.name}`:`${mapCategories.find(category=>category.key===region.dungeonCategory)?.name??'區域'} · ${region.name}`})),
+   locations:regions.filter(region=>region.copyIds.includes(d.copyId)).map(region=>({href:`/regions/${region.key}/`,name:region.key==='hidden-encounters'?region.name:region.copyType===5?`深淵 · ${region.name}`:region.adventure?`冒險地圖 · ${region.name}`:`${mapCategories.find(category=>category.key===region.dungeonCategory)?.name??'區域'} · ${region.name}`})),
    itemId:d.itemId,copy:reference('copy',d.copyId),copyLevel:Number(copy?.level) || 1,
    condition:[regions.some(r=>r.hiddenCopyId===d.copyId)?'隱藏首領：巔峰300起，需符合章節進度':'',d.condition].filter(Boolean).join('；'),unlock:d.reward === 'skin-unlock',
    unlockRate:d.reward === 'skin-unlock' ? skinUnlockRate(d.copyId,1,d.copyId === 1163) : null,
@@ -340,7 +357,7 @@ function itemProgression(row:GameRecord){
   return {step,gold:Number(recipe?.price)||0,recipe:recipe?reference('make',recipe.itemid):null,
    materials:recipe?Array.from({length:6},(_,i)=>({id:Number(recipe[`matid${i+1}`]),quantity:Number(recipe[`matnum${i+1}`])})).filter(m=>m.id>0&&m.quantity>0):[]};
  }):kind==='wing'?mechanics.wingCosts.map(r=>({...r,recipe:null})):[];
- const ids=new Set([5003,5086,5004,5118,5218,...recipes.flatMap(r=>r.materials.map(m=>m.id))]);
+ const ids=new Set([5003,5086,5004,5118,5218,5200,...recipes.flatMap(r=>r.materials.map(m=>m.id))]);
  const qualities=kind==='equipment'&&row.quality===5&&divineDropItems.has(Number(row.id))?[5,6]:[Number(row.quality)||1];
  return {kind,qualities,recipes,materials:[...ids].map(id=>({id,record:reference('item',id)})),
   multipliers:kind==='equipment'?mechanics.strengthMultipliers:kind==='accessory'?mechanics.accessoryMultipliers:kind==='wing'?mechanics.wingMultipliers:[],

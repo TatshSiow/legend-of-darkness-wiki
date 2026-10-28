@@ -8,18 +8,30 @@
  import DifficultyTable from '#lib/components/DifficultyTable.svelte';
  import ItemProgression from '#lib/components/ItemProgression.svelte';
  import SkinProgression from '#lib/components/SkinProgression.svelte';
- import {labels,attributeRows,isValue} from '#lib/core/fields.ts';
+ import {labels,attributeRows,isValue,fieldValue,fieldLabel} from '#lib/core/fields.ts';
  import {percent,trialRewardRate} from '#lib/core/rewards.ts';
  import type {PageData} from './$types';
  let {data}:{data:PageData}=$props();
- let attributes=$derived(attributeRows(data.record.category,data.row).filter(a=>!(["shop","exchange"].includes(data.record.category)&&a.label==="數量")));
+ let attributes=$derived.by(()=>{
+  const displayed=data.record.category==='item'?['level','quality','type','subtype','price','ishas','smelt'].map(key=>fieldLabel(key,'item')):[];
+  return attributeRows(data.record.category,data.row).filter(a=>!displayed.includes(a.label)&&!(["shop","exchange"].includes(data.record.category)&&a.label==="數量"));
+ });
 </script>
 <svelte:head><title>{data.record.name} · 黑暗傳說 Wiki</title><meta name="description" content={`${data.record.name} ${data.record.english}：查看遊戲屬性、技能、掉落與相關資料。`}/><meta property="og:title" content={`${data.record.name} · 黑暗傳說 Wiki`}/><meta property="og:description" content={`${data.record.name}：查看遊戲屬性、技能、掉落與相關資料。`}/></svelte:head>
 <a class="region-entry" href={`/data/${data.record.category}/`}>← 返回{data.categoryName}</a>
 <article data-pagefind-body data-pagefind-filter={`category:${data.categoryName}`}>
- <div class="detailhead"><Icon src={data.record.icon} large quantity={data.record.stackable?data.record.quantity:undefined}/><span class="tag">{data.categoryName}</span>{#if data.record.category==='enemy'}<span class="tag monster-level" data-pagefind-meta="level">{data.record.level!==null&&data.record.level>0?`Lv. ${data.record.level}`:'等級待核對'}</span>{/if}<h1 data-pagefind-meta="title">{data.record.name}</h1><p>{data.record.english}</p></div>
+ {#if data.progression&&['equipment','accessory','wing','badge'].includes(data.progression.kind)}<ItemProgression row={data.row} progression={data.progression} record={data.record}/>{:else if data.record.category==='item'}
+ <section class="goods-tooltip detailhead" data-item-quality={data.record.quality}>
+  <div class="goods-heading"><div><h1 class="item-name" data-pagefind-meta="title">{data.record.name}</h1><p class="goods-level">等級：<span>{String(data.row.level??0)}</span></p></div><div class="goods-identity"><Icon src={data.record.icon} large eager/><span>{fieldValue('item','subtype',data.row.subtype,data.row)}</span></div></div>
+  {#if isValue(data.row.describe)}<p class="goods-description">{String(data.row.describe)}</p>{/if}
+  {#if isValue(data.row.describe_en)}<p class="goods-english">{String(data.row.describe_en)}</p>{/if}
+  {#if Number(data.row.price)>0}<footer><small>出售價格</small><Currency kind="gold" value={Number(data.row.price)}/></footer>{/if}
+ </section>
+ {:else}
+ <div class="detailhead" data-item-quality={data.record.category==='item'?data.record.quality:undefined}><Icon src={data.record.icon} quality={data.record.category==='item'&&data.row.type===2?data.record.quality:undefined} large quantity={data.record.stackable?data.record.quantity:undefined}/><span class="tag">{data.categoryName}</span>{#if data.record.category==='enemy'}<span class="tag monster-level" data-pagefind-meta="level">{data.record.level!==null&&data.record.level>0?`Lv. ${data.record.level}`:'等級待核對'}</span>{/if}<h1 class="item-name" data-pagefind-meta="title">{data.record.name}</h1><p>{data.record.english}</p></div>
+ {/if}
  {#if data.categoryDescription}<p class="notice">{data.categoryDescription}</p>{/if}
- {#each [data.row.describe,data.row.describe_en,data.row.desc].filter(isValue) as text}<p>{String(text)}</p>{/each}
+ {#each (data.record.category==='item'&&data.row.type!==2?[data.row.desc]:[data.row.describe,data.row.describe_en,data.row.desc]).filter(isValue) as text}<p>{String(text)}</p>{/each}
  {#if data.titleUnlock}
   <h3>稱號取得方式</h3>
   {#if data.titleUnlock.condition}<p>{data.titleUnlock.condition}。</p>{/if}
@@ -34,9 +46,8 @@
  {/if}
  {#if data.record.category==='item'}
   {#if data.row.type===1&&data.row.subtype===4&&Number(data.row.id)>=5013&&Number(data.row.id)<=5036}<p class="notice">這批寶石的原始描述與目前共用的效果代碼名稱有差異，效果依原文列出；尚未確認現行取得入口及實際鑲嵌效果。請勿只憑同名寶石判斷效果相同。</p>{/if}
-  <details><summary>物品欄位怎麼看</summary><p>固定攻擊、生命等數值與特殊屬性分開列出。「主屬性參數」「副屬性參數」「生成參數」是裝備生成及成長計算的輸入，不能直接當成最終角色加成；各等級與品質結果請看下方的成長表。</p><p>「特殊參數」依物品用途使用不同規則，不能跨物品比較大小；「內部資料標記」尚未完成程式用途核對，不代表能否掉落或取得。成長型、巔峰參數亦不是角色目前的等級。</p><p>特殊屬性名稱已對照原版語言檔；有名稱不代表已驗證全部觸發條件或戰鬥公式。</p><a href="/data/item-attribute-language.json" download>下載原版屬性名稱對照</a></details>
  {/if}
- {#if data.record.category==='item'&&!data.record.icon}<p class="notice">原圖缺失：此物品指定的圖示檔不在原版 APK 的物品圖示目錄中，目前以備用圖示顯示；未用其他同名物品的圖代替。</p>{/if}{#if data.availability}<h3>取得方式查核</h3><p><strong>{data.availability.status}</strong>：{data.availability.note}</p><p>其他取得設定：{data.availability.methods.join('、')||'尚未找到已核對的取得設定'}。</p>{#if data.availability.candidates.length}<p>獎勵候選線索：{data.availability.candidates.join('、')}。列入候選不代表保證取得，機率及適用條件尚須核對。</p>{/if}<p class="data-note">來源為原版戰鬥掉落、合成、商店、積分兌換及幸運寶箱設定；未核對的活動、伺服器獎勵與舊版掉落表，不當作已確認掉落。</p>{/if}
+ {#if data.record.category==='item'&&!data.record.icon}<p class="notice">原圖缺失：此物品指定的圖示檔不在原版 APK 的物品圖示目錄中，目前以備用圖示顯示；未用其他同名物品的圖代替。</p>{/if}{#if data.availability}<p class="acquisition-summary"><strong>取得方式：</strong>{data.availability.sources.join('、')||'尚未確認'}</p>{/if}
  {#if data.record.category==='make'}
   {#if data.makeOperation}<h3>{data.makeOperation.group}</h3><p>{data.makeOperation.description}</p>{:else}<h3>合成產物</h3><EntryLink record={data.product} id={data.row.itemid}/>{/if}
   <h3>所需材料</h3><div class="relations">{#each data.materials as material}<span><EntryLink record={material.item} id={material.id} quantity={String(material.quantity)}/></span>{/each}</div>
@@ -59,10 +70,10 @@
   <p>試煉失敗結算時，本次分數至少 {String(data.row.score)} 分、挑戰難度達{['青銅','白銀','黃金'][Number(data.row.hard)-1]}以上，此列才參與抽選；抽中機率為 {trialRewardRate(Number(data.row.itemweight),Number(data.row.hard))}%。</p>
   <p>每列獨立判定，跨過分數不會直接發獎。此列有多個候選時，抽中後再隨機選一項；不是全部取得。<a href="/data/trial/">查看完整結算獎勵池 →</a></p>
  {:else if data.exchange}<ExchangeDetails info={data.exchange} stage={data.exchange.boost?data.exchange.stage:undefined}/>
- {:else if !['treasure','drop','droptip'].includes(data.record.category)}
+ {:else if !data.progression&&attributes.length&&!['treasure','drop','droptip'].includes(data.record.category)}
   <h3>屬性資料</h3><div class="tablewrap"><table class="attribute-table"><thead><tr><th>屬性</th><th>數值</th></tr></thead><tbody>{#each attributes as attribute}<tr><th scope="row">{attribute.label}</th><td>{#if attribute.currency}<Currency kind={attribute.currency} value={attribute.value}/>{:else}{attribute.value}{/if}</td></tr>{/each}</tbody></table></div>
  {/if}
- {#if data.progression}<ItemProgression row={data.row} progression={data.progression}/>{/if}
+ {#if data.progression&&!['equipment','accessory','wing','badge'].includes(data.progression.kind)}<ItemProgression row={data.row} progression={data.progression} record={data.record}/>{/if}
  {#if data.skinProgression}<SkinProgression data={data.skinProgression}/>{/if}
  <Rewards rewards={data.rewards}/>
  <DropHints hints={data.dropHints}/>
@@ -71,3 +82,8 @@
  <details class="technical-info"><summary>資料來源與技術資訊</summary><p class="entry-id" data-pagefind-weight="0.1">資料 ID：{data.record.id}</p><p class="source" data-pagefind-ignore>來源：{data.source} · 遊戲 {data.version} · <a href="/sources/">來源與驗證</a></p><h3 data-pagefind-ignore>全部原始欄位（含未解讀代碼）</h3><pre data-pagefind-ignore>{JSON.stringify(data.row,null,2)}</pre></details>
 </article>
 
+
+<style>
+.goods-tooltip{display:block;max-width:480px;box-sizing:border-box;margin:18px 0;padding:18px;border:1px solid #756953;border-radius:6px;background:linear-gradient(135deg,#171211ed,#060506f5 65%);box-shadow:inset 0 0 0 2px #050405}
+.goods-heading{display:grid;grid-template-columns:minmax(0,1fr) 68px;gap:18px}.goods-tooltip h1{font-size:22px;line-height:1.35;margin:0 0 16px;letter-spacing:0;color:var(--item-color)}.goods-level{font-size:18px;color:#f0ede6;margin:0}.goods-level span{color:#6fda64}.goods-identity{display:flex;flex-direction:column;align-items:center;gap:5px;color:#f0ede6}.goods-identity :global(.game-icon.large){width:64px;height:64px;flex-basis:auto}.goods-description{font-size:18px;line-height:1.55;color:#6fda64;margin:14px 0}.goods-english{font-size:12px;color:#a8999a;line-height:1.5}.goods-tooltip footer{display:flex;align-items:center;gap:12px;margin-top:22px}.goods-tooltip footer small{color:#a8999a;font-size:11px}.goods-tooltip footer :global(.currency){font-size:24px;font-weight:700;font-style:italic;color:#ffd165}
+</style>

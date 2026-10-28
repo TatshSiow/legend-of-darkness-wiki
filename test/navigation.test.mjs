@@ -8,5 +8,5 @@ test('navigation groups cover every published category exactly once',()=>{
  assert.equal(new Set(keys).size,keys.length);
  assert.deepEqual([...keys].sort(),Object.keys(categories).sort());
  assert.deepEqual(navigationGroups.find(group=>group.name==='寵物養成').categories,['pet','explored']);
- assert.equal(categories.explored,'寵物探索');
+ assert.equal(categories.explored,'寵物探險');
 });

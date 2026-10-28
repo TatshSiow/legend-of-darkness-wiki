@@ -1,0 +1,160 @@
+{
+  "version": "11.01",
+  "source": "Original ARM32 APK, read-only isolated instruction checks",
+  "subStatUnlock": [
+    {
+      "strength": 0,
+      "unlocked": false
+    },
+    {
+      "strength": 11,
+      "unlocked": false
+    },
+    {
+      "strength": 12,
+      "unlocked": true
+    },
+    {
+      "strength": 18,
+      "unlocked": true
+    }
+  ],
+  "maxParagonSockets": 3,
+  "affixCount": 5,
+  "affixTypes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    12,
+    13,
+    14,
+    42,
+    45,
+    46,
+    44,
+    47,
+    52
+  ],
+  "functions": {
+    "unlock": "GameItemDetailLayer::showEquipDetail 0x7a99f0..0x7a9a2a",
+    "paragonGeneration": "GameEquipment::makeEquipParagon 0x79c978",
+    "affixSelection": "GameEquipment::getParagonExtraAttrNotHave 0x79cd04",
+    "qualityColor": "GameUtils::setLabelColor 0x7bfa6c",
+    "gemInsertionCost": "GameEquipInlayLayer::refreshView 0x794e76..0x794e8e",
+    "socketCost": "GameEquipInlayLayer::refreshView 0x794b3c..0x794b58; touchEvent 0x793efa..0x793f2e",
+    "gemRemovalCost": "refreshView 0x794d7a..0x794da0; touchEvent 0x793eac..0x793ec6, 0x7940f4..0x7941aa"
+  },
+  "limits": [
+    "Affix rates approximate uniform integer-modulo selection; previously selected and fixed types are rejected.",
+    "Secondary-stat experience growth not simulated."
+  ],
+  "qualityColors": [
+    {
+      "quality": 1,
+      "rgb": [
+        144,
+        144,
+        144
+      ]
+    },
+    {
+      "quality": 2,
+      "rgb": [
+        0,
+        170,
+        56
+      ]
+    },
+    {
+      "quality": 3,
+      "rgb": [
+        6,
+        116,
+        255
+      ]
+    },
+    {
+      "quality": 4,
+      "rgb": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "quality": 5,
+      "rgb": [
+        255,
+        145,
+        37
+      ]
+    },
+    {
+      "quality": 6,
+      "rgb": [
+        255,
+        0,
+        0
+      ]
+    }
+  ],
+  "socketMaterial": {
+    "id": 5200,
+    "status": "Confirmed UI quantity and matching inventory deduction",
+    "quantities": [
+      1,
+      2,
+      3
+    ]
+  },
+  "gemInsertionCosts": [
+    {
+      "opened": 0,
+      "money": 100
+    },
+    {
+      "opened": 1,
+      "money": 200
+    },
+    {
+      "opened": 2,
+      "money": 300
+    }
+  ],
+  "socketCosts": [
+    {
+      "opened": 0,
+      "itemId": 5200,
+      "quantity": 1
+    },
+    {
+      "opened": 1,
+      "itemId": 5200,
+      "quantity": 2
+    },
+    {
+      "opened": 2,
+      "itemId": 5200,
+      "quantity": 3
+    }
+  ],
+  "gemRemovalCosts": [
+    {
+      "occupied": 1,
+      "money": 40
+    },
+    {
+      "occupied": 2,
+      "money": 60
+    },
+    {
+      "occupied": 3,
+      "money": 80
+    }
+  ]
+}

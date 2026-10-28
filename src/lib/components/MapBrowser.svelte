@@ -18,6 +18,7 @@
   {#if data.activeCategory==='portal'}
    {#each data.portals as portal}<details id={portal.key} class="portal-group"><summary>{portal.name}<small>{portal.regions.length} 個關卡</small></summary><RegionCards regions={portal.regions}/></details>{/each}
   {:else}<RegionCards regions={data.regions}/>{/if}
+  {#if data.activeCategory==='adventure'}<p><a class="region-entry" href="/regions/hidden-encounters/">隱藏遭遇 →</a></p>{/if}
  </section>
  {#if data.extras.length}<details class="region-section other-battles"><summary>其他戰鬥資料（非上述副本選單）</summary><RegionCards regions={data.extras}/></details>{/if}
 </div>

@@ -1,10 +1,38 @@
+import enchantNative from '../static/data/enchant-native.json' with {type:'json'};
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import native from '../src/lib/server/assets/item-mechanics-native.json' with {type:'json'};
-import {equipmentCosts,strengthCost,equipmentStat,chestRates,randomAttributeRange,refineCost} from '../src/lib/core/item-mechanics.ts';
+import {equipmentCosts,strengthCost,equipmentStat,chestRates,randomAttributeRange,refineCost,fixedEquipmentAttributes,equipmentAffixes,socketCost,gemInsertionCost,gemRemovalCost,enchantValue} from '../src/lib/core/item-mechanics.ts';
+import uiNative from '../static/data/equipment-ui-native.json' with {type:'json'};
 import {abyssBrowser,regionDetails,detail} from '../src/lib/server/data.ts';
 import raw from '../src/lib/server/assets/wiki.json' with {type:'json'};
 const item=id=>detail('item',`row-${raw.tables.item.findIndex(r=>r.id===id)}`);
+
+test('fixed gear affixes match screenshot items and exclude generation parameters',()=>{
+ const row=id=>raw.tables.item.find(r=>r.id===id);
+ assert.deepEqual(fixedEquipmentAttributes(row(6333)),[{type:4,value:265},{type:5,value:81},{type:7,value:283}]);
+ assert.deepEqual(fixedEquipmentAttributes(row(6045)),[{type:9,value:8}]);
+ assert.deepEqual(fixedEquipmentAttributes(row(6046)),[{type:47,value:6}]);
+ assert.deepEqual(fixedEquipmentAttributes(row(6136)),[]);
+ assert.deepEqual(fixedEquipmentAttributes(row(6536)),[]);
+ assert.deepEqual(fixedEquipmentAttributes({attper:12,hpper:8,tematt:900}),[{type:12,value:12},{type:14,value:8}]);
+});
+test('paragon affix slots preserve fixed types and select remaining types without replacement',()=>{
+ const pool=Object.values(native.attributePools.equipment),row=id=>raw.tables.item.find(r=>r.id===id);
+ assert.deepEqual(pool.map(a=>a[0]).sort((a,b)=>a-b),[...uiNative.affixTypes].sort((a,b)=>a-b));
+ const arcane=equipmentAffixes(row(6046),pool);
+ assert.equal(arcane.fixed.length,1);assert.equal(arcane.randomCount,4);
+ assert.equal(arcane.candidates.length,16);assert(!arcane.candidates.some(a=>a[0]===47));
+ assert.equal(arcane.slotRate,6.25);assert.equal(arcane.itemRate,25);
+ const dark=equipmentAffixes(row(6136),pool);assert.equal(dark.randomCount,5);assert.equal(dark.candidates.length,17);
+ const lucky=equipmentAffixes(row(6045),pool);assert.equal(lucky.randomCount,4);assert.equal(lucky.candidates.length,17);
+ assert.equal(equipmentAffixes(row(6333),pool).randomCount,0);
+ for(const row of raw.tables.item.filter(r=>r.type===2&&r.subtype<=8&&r.paragon)){
+  const a=equipmentAffixes(row,pool);assert.equal(a.fixed.length+a.randomCount,5);assert(a.candidates.length>=a.randomCount);
+ }
+ for(const row of uiNative.socketCosts)assert.equal(socketCost(row.opened),row.quantity);
+ assert.throws(()=>socketCost(3),RangeError);
+});
 
 test('Divine variants require epic main gear and a verified drop source',()=>{
  assert.deepEqual(item(6007).progression.qualities,[5,6]);
@@ -58,4 +86,23 @@ test('upgrade systems keep their own caps, recipes and material links',()=>{
 test('abyss is divided into twelve-layer pages and returns to its correct tab',()=>{
  for(let start=1;start<=133;start+=12){const data=abyssBrowser(start);assert.equal(data.regions.length,12);assert.equal(data.tabs.length,12);for(const region of data.regions)assert.equal(regionDetails(region.key).region.backHref,start===1?'/abyss/':`/abyss/range/${start}/`);}
  assert.equal(abyssBrowser(2),null);assert.equal(abyssBrowser(145),null);
+});
+
+test('gem insertion and removal charge by current occupied count',()=>{
+ for(const row of uiNative.gemInsertionCosts)assert.equal(gemInsertionCost(row.opened),row.money);
+ for(const row of uiNative.gemRemovalCosts){
+  assert.equal(gemRemovalCost(row.occupied),row.money);
+  assert.equal((Math.imul(row.occupied*3,0x5555555c)+20)>>>0,row.money);
+ }
+ assert.throws(()=>gemInsertionCost(3),RangeError);
+ assert.throws(()=>gemRemovalCost(0),RangeError);
+ assert.throws(()=>gemRemovalCost(4),RangeError);
+ assert.equal([1,2,3].reduce((sum,n)=>sum+gemRemovalCost(n),0),180);
+});
+
+test('all eight enchant attributes and seven ranks match native ARM samples',()=>{
+ for(const row of enchantNative.samples)for(let rank=1;rank<=7;rank++)assert.equal(enchantValue(row.type,rank,row.level),row.values[rank-1],JSON.stringify({level:row.level,type:row.type,rank}));
+ assert.throws(()=>enchantValue(0,1,80),RangeError);
+ assert.throws(()=>enchantValue(1,8,80),RangeError);
+ assert.throws(()=>enchantValue(1,1,81),RangeError);
 });

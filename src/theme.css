@@ -1,4 +1,9 @@
 /* Original-game palette and restrained stone/metal framing. */
+/* GameUtils::setLabelColor: the item namespace has six quality colors. */
+[data-item-quality="1"]{--item-color:#909090}[data-item-quality="2"]{--item-color:#00aa38}[data-item-quality="3"]{--item-color:#0674ff}[data-item-quality="4"]{--item-color:#ff00ff}[data-item-quality="5"]{--item-color:#ff9125}[data-item-quality="6"]{--item-color:#ff0000}
+.entry-identity[data-item-quality]>.item-name,.detailhead[data-item-quality]>.item-name,.item-name[data-item-quality]{color:var(--item-color)}
+.detailhead>.game-icon.item-frame.large{width:108px;height:108px;border:0;background:#090609;box-shadow:none}.tablewrap .game-icon.item-frame{border:0}
+@media(max-width:520px){.detailhead>.game-icon.item-frame.large{width:80px;height:80px}}
 :root{--bg:#12100f;--panel:#1c1815;--line:#44392b;--muted:#a8999a;--text:#e7ded0;--gold:#fcdb9b;--red:#af4839}
 html{background:#12100f!important}body{background:radial-gradient(ellipse at 75% 0,#6a42251c,transparent 55%),#12100f;color:var(--text);font-size:14px}
 body:before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#12100ff5,#12100fdc),url('/art/main.jpg') center/cover;opacity:.7}

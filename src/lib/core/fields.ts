@@ -17,7 +17,7 @@ Object.assign(labels, {quality:'品質',type:'類型',subtype:'分類',type1:'�
  maintype:'主屬性類型',mainvalue:'主屬性參數',subvalue:'副屬性參數',
  tematt:'攻擊生成參數',temhp:'生命生成參數',temdef:'防禦生成參數',
  moneyper:'金幣加成（%）',dropper:'掉落加成（%）',expper:'經驗加成（%）',rehp:'每回合回復生命',absorbhp:'吸血',
- special:'特殊參數',tem2:'附加屬性類型',tem3:'附加屬性數值',explored:'探索能力',drop:'掉落能力',money:'魔石能力',
+ special:'特殊參數',tem2:'附加屬性類型',tem3:'附加屬性數值',explored:'探險能力',drop:'掉落能力',money:'魔石能力',
  unlocknum:'解鎖需求數量',growvalue:'成長數值',basetype:'基礎屬性類型',basevalue:'基礎屬性數值'});
 Object.assign(labels,{needcount:'需求次數',awardspecial:'特殊獎勵參數',awardmoney:'魔石獎勵',isshow:'顯示設定',isspecial:'特殊設定',
  minid:'起始關卡 ID',maxid:'結束關卡 ID',minlevel:'最低等級',maxlevel:'最高等級',levelnum:'關卡數量',hideboss:'隱藏首領關卡',

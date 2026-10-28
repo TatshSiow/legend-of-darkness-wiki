@@ -1,5 +1,5 @@
 import type { GameRecord } from './types';
-export interface Region { key: string; name: string; englishName: string; copyIds: number[]; hiddenCopyId?: number; chapterIndex?: number; copyType?: number; dungeonCategory?: string; copyIndex?: number; adventure: boolean; levelRange?: string }
+export interface Region { key: string; name: string; englishName: string; copyIds: number[]; hiddenCopyId?: number; encounterCopyIds?: number[]; chapterIndex?: number; copyType?: number; dungeonCategory?: string; copyIndex?: number; adventure: boolean; levelRange?: string }
 export const difficulties = [
   {id:0,name:'基礎資料'}, {id:1,name:'簡單'}, {id:2,name:'困難'}, {id:3,name:'噩夢'},
   {id:4,name:'巔峰100'}, {id:5,name:'巔峰300'}, {id:6,name:'巔峰500'},
@@ -21,13 +21,17 @@ export function buildRegions(chapters: GameRecord[], copies: GameRecord[]): Regi
     const hiddenCopyId = Number(chapter.hideboss) || undefined;
     // SubMapLayer::refreshView 0x836f4a: hideboss appears at hard >= 5 (巔峰300).
     if (hiddenCopyId && copies.some(copy=>copy.id===hiddenCopyId)) copyIds.push(hiddenCopyId);
+    const encounterCopyIds=[...new Set(copies.filter(copy=>copyIds.includes(Number(copy.id))).flatMap(copy=>Object.entries(copy).filter(([key,value])=>/^hideid\d*$/.test(key)&&Number(value)>0&&copies.some(target=>target.id===value)).map(([,value])=>Number(value))))];
+    copyIds.push(...encounterCopyIds.filter(id=>!copyIds.includes(id)));
     copyIds.forEach(id => assigned.add(id));
-    regions.push({ key:`chapter-${chapter.id}`, name:chapter.name || `地區 ${chapter.id}`, englishName:chapter.name_en || '', copyIds, hiddenCopyId, chapterIndex, adventure:true, levelRange:`Lv. ${chapter.minlevel}～${chapter.maxlevel}` });
+    regions.push({ key:`chapter-${chapter.id}`, name:chapter.name || `地區 ${chapter.id}`, englishName:chapter.name_en || '', copyIds, hiddenCopyId, encounterCopyIds, chapterIndex, adventure:true, levelRange:`Lv. ${chapter.minlevel}～${chapter.maxlevel}` });
   }
   const extra = copies.filter(copy => copy.type === 1 && typeof copy.id === 'number' && !assigned.has(copy.id)).map(copy => copy.id!);
   if (extra.length) regions.push({key:'extra-adventure',name:'未分類冒險與活動關卡',englishName:'尚未確認所屬遊戲入口',copyIds:extra,dungeonCategory:'other-battles',adventure:false});
+  const hiddenEncounters=copies.filter(copy=>copy.type===4&&!assigned.has(Number(copy.id))).map(copy=>Number(copy.id));
+  if(hiddenEncounters.length)regions.push({key:'hidden-encounters',name:'隱藏遭遇（觸發區域待核對）',englishName:'Hidden encounters',copyIds:hiddenEncounters,encounterCopyIds:hiddenEncounters,dungeonCategory:'other-battles',adventure:false});
   for (const [copyIndex,copy] of copies.entries()) {
-    if (copy.type===1 || typeof copy.id!=='number') continue;
+    if (copy.type===1 ||copy.type===4|| typeof copy.id!=='number'||assigned.has(copy.id)) continue;
     regions.push({key:`copy-${copy.id}`,name:copy.name||`副本 ${copy.id}`,englishName:copy.name_en||'',copyIds:[copy.id],copyType:Number(copy.type),copyIndex,dungeonCategory:copy.type===5?'abyss':copy.id>=2001&&copy.id<=2018?'normal':copy.id>=2101&&copy.id<=2112?'challenge':copy.id>=2060&&copy.id<=2066?'daily':copy.id===2070?'ancient':copy.id>=2050&&copy.id<=2054?'random':copy.id>=2201&&copy.id<=2253?'portal':'other-battles',adventure:false});
   }
   for (const region of regions.filter(region => !region.adventure)) {

@@ -27,7 +27,7 @@ try{
  assert.notEqual(await page.locator('.trial-enemies tbody tr').first().innerText(),first);
  await page.getByRole('link',{name:'黃金難度',exact:true}).click();await page.waitForURL('**/trial/3/?wave=100&view=wave');
  await page.getByLabel('怪物品質').selectOption('3');await page.waitForFunction(()=>document.querySelector('.trial-enemies tbody tr')?.textContent.includes('30%'));
- await page.getByRole('link',{name:'結算獎勵池',exact:true}).click();await page.waitForSelector('#trial-score');
+ await page.getByRole('link',{name:'結算獎勵池',exact:true}).click();await page.waitForSelector('#trial-score');assert.equal(new URL(page.url()).pathname,'/data/trial/');
  assert.equal(await page.locator('.trial-rewards .reward-candidates').count(),91);
  await page.getByLabel('本次結算分數').fill('1000');
  const count=trialBattle(3).rewards.filter(r=>r.score<=1000).length;
@@ -39,13 +39,16 @@ try{
  await page.screenshot({path:'artifacts/trial-rewards.png',fullPage:true});
  await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.screenshot({path:'artifacts/trial-rewards-mobile.png',fullPage:true});
- await page.getByRole('link',{name:'關卡與怪物',exact:true}).click();await page.waitForSelector('.trial-wave-list');
+ await page.goBack();await page.waitForSelector('.trial-enemies');
+ await page.locator('.map-subtabs a').first().click();await page.waitForSelector('.trial-wave-list');
  assert((await page.locator('.trial-wave-list tbody tr').first().innerText()).includes('97'));
  assert.equal(await page.locator('.trial-wave-list tbody tr').count(),12);
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await page.screenshot({path:'artifacts/trial-wave-table-mobile.png',fullPage:true});
  await page.getByRole('link',{name:'後 12 波 →',exact:true}).click();await page.waitForFunction(()=>document.querySelector('.trial-wave-list tbody tr')?.textContent.includes('109'));
- assert.equal(documents,1);assert.deepEqual(errors,[]);
- assert.equal(await page.locator('.trial-difficulties a').count(),3);
+ assert.equal(documents,1);
+ await page.goto((process.env.BASE_URL||'http://127.0.0.1:5174')+'/trial/1/?wave=1&view=rewards');await page.waitForURL('**/data/trial/');await page.waitForSelector('#trial-score');
+ assert.deepEqual(errors,[]);
+
  console.log('Trial comparison tables, quality ranges, detail, cumulative score rewards, icons, invalid targets, SPA, mobile: passed.');
 }finally{await browser.close();}
