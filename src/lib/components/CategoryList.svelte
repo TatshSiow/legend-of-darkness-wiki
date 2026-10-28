@@ -30,7 +30,7 @@
   (event.currentTarget as HTMLElement).parentElement?.querySelectorAll<HTMLButtonElement>('[role=tab]')[next]?.focus();
  }
 </script>
-{#if data.exchangeGroups}<ExchangeCatalog groups={data.exchangeGroups}/>{:else if data.trialRewards}<div data-pagefind-ignore="all"><Hero title={data.name} eyebrow="THE TRIAL" description="比較三個難度的分數獎勵與抽選候選。"/><a class="region-entry" href="/trial/">查看試煉關卡與怪物 →</a><TrialRewards rewards={data.trialRewards}/></div>{:else}
+{#if data.exchangeGroups}<ExchangeCatalog groups={data.exchangeGroups}/>{:else if data.trialRewards}<div data-pagefind-ignore="all"><Hero title={data.name} eyebrow="THE TRIAL" description="查看試煉失敗結算時，各難度的獎勵池、抽中率與分數條件。"/><a class="region-entry" href="/trial/">查看試煉關卡與怪物 →</a><TrialRewards rewards={data.trialRewards}/></div>{:else}
 <div data-pagefind-ignore="all"><Hero title={data.name} eyebrow="THE DATABASE" description={data.categoryDescription??`收錄 ${data.records.length} 筆條目，點擊名稱查看詳細資料。`}/>
 {#if ['make','item'].includes(data.category)}<div class="recipe-tabs" role="group" aria-label={`${data.name}分類`}>{#each ['',...recipeGroups] as group}<button type="button" class:active={recipeGroup===group} aria-pressed={recipeGroup===group} onclick={()=>{recipeGroup=group;current=0}}>{group||'全部'}<small>{data.records.filter(r=>!group||(r.recipeGroup??r.itemGroup)===group).length}</small></button>{/each}</div>{#if recipeGroup==='成品待核對'}<p class="data-note">這些配方的成品 ID 在目前物品資料中沒有對應記錄，暫不推定分類或可用性。</p>{/if}{/if}
 <div class="toolbar"><span class="count">找到 <b>{rows.length}</b> 筆</span>
@@ -47,7 +47,6 @@
 {#if data.category==='enemy'}<p class="data-note">品質為原始設定；實際品質依戰鬥模式覆寫。點擊怪物查看各難度數值。異常抗性 res 並非抗暴百分比，<a href="/formulas/">查看抗暴計算</a>。</p>{/if}
 {#if data.category==='item'}<p class="data-note">掉落查核以原版戰鬥抽選設定為依據；「未找到掉落設定」不等於無法取得，物品可能來自合成、兌換或其他功能。點進物品查看取得方式與條件；神器變體不另算一種物品。</p>{/if}
 {#if data.category==='treasure'}<p class="data-note">獎勵池是各玩法可抽出的獎勵清單，不是另一種背包道具。點擊名稱查看道具／寵物圖示、數量及抽選資料；不同玩法不共用同一套機率算法。</p>{/if}
-{#if data.category==='trial'}<p class="notice">以下 91 筆是分數獎勵設定，不是 91 波怪物。<a href="/trial/">查看試煉三難度與各波怪物 →</a></p>{/if}
 {#if data.category==='pet'}
 <p class="data-note">依基礎品質分類；神獸與遠古神獸為進化後品質，請點入查看寵物資料。</p>
 {#if petGroups.length}<div class="pet-tabs" role="tablist" aria-label="寵物品質">{#each petGroups as group,i}<button type="button" role="tab" id={`pet-tab-${group.quality}`} aria-controls={`pet-panel-${group.quality}`} aria-selected={activePet===group.quality} tabindex={activePet===group.quality?0:-1} data-quality={group.quality} class:active={activePet===group.quality} onclick={()=>selectedPet=group.quality} onkeydown={event=>movePetTab(event,i)}>{fieldValue('pet','quality',group.quality)}<small>{group.records.length} 種</small></button>{/each}</div>{/if}

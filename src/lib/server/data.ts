@@ -3,6 +3,7 @@ import images from './assets/icons.json' with {type:'json'};
 import mechanics from './assets/item-mechanics-native.json' with {type:'json'};
 import exchangePools from './assets/exchange-pools-native.json' with {type:'json'};
 import {chestRates} from '#lib/core/item-mechanics.ts';
+import {trialRewardRate} from '#lib/core/rewards.ts';
 import type { WikiData, GameRecord, JsonValue } from '#lib/core/types.ts';
 import { isValue,isReferenceField } from '#lib/core/fields.ts';
 import {mapCategories,mapCategoryHref,otherMapTabs} from '#lib/core/region-navigation.ts';
@@ -115,7 +116,7 @@ function itemAvailability(row:GameRecord){
   ...(tables.treasure.find(pool=>pool.id===1)?.items?.some(item=>item.itemid===id&&Number(item.itemweight)>0)?['幸運寶箱獎勵池']:[])
  ];
  const candidates=[
-  ...(tables.trial.some(reward=>trialHasItem(reward,id))?['試煉分數獎勵候選（仍需抽選）']:[]),
+  ...(tables.trial.some(reward=>trialHasItem(reward,id))?['試煉結算獎勵池（符合條件後仍需抽選）']:[]),
   ...(tables.treasure.some(pool=>pool.id!==1&&Array.isArray(pool.items)&&pool.items.some(item=>item.itemtype!==3&&item.itemid===id))?['抽獎／寶藏獎勵池候選（入口及條件見獎勵池）']:[])
  ];
  return {status:positive.length?'有掉落設定':clues?'僅有掉落線索':'未找到掉落設定',methods,candidates,
@@ -220,7 +221,7 @@ export function trialBattle(difficulty:number){
   rewards:tables.trial.filter(r=>Number(r.hard)<=difficulty).map(r=>{
    const ids=Number(r.itemid)>0?[Number(r.itemid)]:JSON.parse(String(r.items)) as number[];
    const category=r.itemtype===3?'pet':'item';
-   return {id:Number(r.id),requiredDifficulty:Number(r.hard),score:Number(r.score),quantity:Number(r.itemnum),candidates:ids.map(id=>({id,record:reference(category,id),conflictingItem:category==='pet'&&!reference(category,id)?reference('item',id):null,kind:category==='pet'?'寵物':'物品'}))};
+   return {id:Number(r.id),requiredDifficulty:Number(r.hard),score:Number(r.score),rate:trialRewardRate(Number(r.itemweight),Number(r.hard)),quantity:Number(r.itemnum),candidates:ids.map(id=>({id,record:reference(category,id),conflictingItem:category==='pet'&&!reference(category,id)?reference('item',id):null,kind:category==='pet'?'寵物':'物品'}))};
   }).sort((a,b)=>a.score-b.score||a.id-b.id),
   enemies:[...enemyIdsInCopies([copy])].map(id=>({record:reference('enemy',id)!,row:tables.enemy[indexes.enemy.get(String(id))!]}))};
 }

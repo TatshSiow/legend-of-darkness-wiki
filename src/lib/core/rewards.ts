@@ -11,3 +11,7 @@ export const skinLevelBands = [
  {min:40,max:null,multiplier:.15,label:'高出40級以上'}
 ];
 export const percent = (value:number) => value.toFixed(4).replace(/\.?0+$/,'')+'%';
+export function trialRewardRate(weight:number,requiredDifficulty:number):number {
+ const multiplier=Math.fround(1+Math.fround((requiredDifficulty-1)*Math.fround(.2)));
+ return Math.max(0,Math.min(100,Math.trunc(Math.fround(weight*multiplier))));
+}

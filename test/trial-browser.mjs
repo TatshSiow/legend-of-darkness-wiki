@@ -27,14 +27,14 @@ try{
  assert.notEqual(await page.locator('.trial-enemies tbody tr').first().innerText(),first);
  await page.getByRole('link',{name:'黃金難度',exact:true}).click();await page.waitForURL('**/trial/3/?wave=100&view=wave');
  await page.getByLabel('怪物品質').selectOption('3');await page.waitForFunction(()=>document.querySelector('.trial-enemies tbody tr')?.textContent.includes('30%'));
- await page.getByRole('link',{name:'分數獎勵',exact:true}).click();await page.waitForSelector('#trial-score');
+ await page.getByRole('link',{name:'結算獎勵池',exact:true}).click();await page.waitForSelector('#trial-score');
  assert.equal(await page.locator('.trial-rewards .reward-candidates').count(),91);
- await page.getByLabel('目前積分').fill('1000');
+ await page.getByLabel('本次結算分數').fill('1000');
  const count=trialBattle(3).rewards.filter(r=>r.score<=1000).length;
  await page.waitForFunction(n=>document.querySelectorAll('.trial-rewards .reward-candidates').length===n,count);
  assert(await page.locator('.trial-rewards .reward-threshold').count()>0);
  assert(!(await page.locator('.trial-rewards').innerText()).includes('[object Object]'));
- await page.getByLabel('目前積分').fill('30000');await page.waitForFunction(()=>document.querySelectorAll('.trial-rewards .reward-candidates').length===91);
+ await page.getByLabel('本次結算分數').fill('30000');await page.waitForFunction(()=>document.querySelectorAll('.trial-rewards .reward-candidates').length===91);
  assert((await page.locator('.trial-rewards').innerText()).includes('類型衝突'));
  await page.screenshot({path:'artifacts/trial-rewards.png',fullPage:true});
  await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));

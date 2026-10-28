@@ -33,6 +33,8 @@ export function fieldCurrency(category:string,key:string):'gold'|'money'|undefin
  return undefined;
 }
 export function fieldLabel(key: string,category=''): string {
+ if(category==='trial'&&key==='score')return '結算入池分數條件';
+ if(category==='trial'&&key==='hard')return '獎勵來源難度';
  if(['drop','droptip'].includes(category)){
   if(key==='rewardCount')return '道具種類';
   if(key==='usage')return '適用狀態';

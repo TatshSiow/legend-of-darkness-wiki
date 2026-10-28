@@ -3,6 +3,19 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {trialBattle} from '../src/lib/server/data.ts';
 import {trialEnemyStats} from '../src/lib/core/enemy-stats.ts';
+import {trialRewardRate} from '../src/lib/core/rewards.ts';
+
+test('trial settlement rates match all 29 native weight/difficulty combinations',()=>{
+ const fixture=JSON.parse(readFileSync(new URL('../static/data/trial-reward-native.json',import.meta.url),'utf8'));
+ assert.equal(fixture.cases.length,29);
+ for(const row of fixture.cases){
+  assert.equal(trialRewardRate(row.weight,row.requiredDifficulty),row.rate);
+  assert.deepEqual(row.successfulResidues,Array.from({length:row.rate},(_,i)=>i));
+ }
+ assert.equal(trialRewardRate(8,2),9);
+ assert.equal(trialRewardRate(3,3),4);
+ for(const difficulty of [1,2,3])assert.equal(trialBattle(difficulty).rewards.find(r=>r.id===1).rate,60);
+});
 test('trial formula matches five live monsters after bronze wave one',()=>{
  const live=JSON.parse(readFileSync(new URL('../static/data/trial-live-native.json',import.meta.url),'utf8'));
  assert.equal(live.rows.length,5);

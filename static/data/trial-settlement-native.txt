@@ -1,0 +1,26 @@
+試煉結算與獎勵池補查 — 2026-10-28
+來源：既有原版 game.apk 的 lib/armeabi/libcocos2dcpp.so，雜湊見 trial-reward-native.json。
+唯讀分析與局部原版指令模擬，沒有連接手機、發送請求、消耗試煉次數或修改存檔。
+
+結算時機：WarFinishLayer::showTrialDialog 0x841054。
+0x8416ce..0x8416d4 依結果分支；結果為 1 時走勝利分支，否則跳至 0x8418cc。
+勝利分支 0x8416d6..0x84177c 計算並累加本次分數，0x84177e..0x84179e 將波數 +1；之後 0x841870 跳至共用 UI 收尾 0x841dee，未走下方 getTrialItems 呼叫。
+失敗分支 0x8418cc 起，0x8418e4..0x8418f2 將波數設回 1；0x841932..0x841946 取本次分數顯示，0x841b4c..0x841b76 以目前難度與本次分數呼叫 GameData::getTrialItems。
+因此不是跨過分數就發道具，也不是每波勝利直接領取整張分數表。其他離場操作是否另有結算入口，本次未追查。
+
+獎勵池：GameData::getTrialItems 0x77c068。
+0x77c1e6..0x77c1f2：排除分數條件未滿足、來源難度高於本次難度的列。
+0x77c1f4..0x77c234：每列重新取 rand()%100，與該列機率門檻比較；達分只取得本列抽選資格。
+機率門檻 = trunc(float32(itemweight × float32(1 + float32((row.hard − 1) × float32(0.2)))))。
+使用的是原始列的 hard，不是玩家所選難度；高難度會納入較低難度的列，但不會再放大同一列的機率。
+0xa03e88 跳至 __mulsf3；0xa03e98 跳至 __addsf3；0xa040a8 跳至 __floatsisf；0xa040b8 跳至 __fixsfsi；0xa04138 跳至 __modsi3。
+0x77c232 比較隨機值與門檻，0x77c234 在隨機值 >= 門檻時跳過。現行表的門檻均落於 0..100 內。
+0x77c236..0x77c25a：固定 itemid 直接使用；itemid 為 0 時再以 rand()%items.size 隨機選一項。
+0x77c2e2..0x77c2e6 加入獎勵結果；0x77c2fe..0x77c308 回到下一列。沒有在抽中一列後終止整個池，因此可以同時抽中多列，相同道具分列也可累加。
+
+驗證：scripts/export-trial-reward-native.py 執行原版 0x77c1e6..0x77c234 與原版浮點輔助函數，將 rand 控制為 0..99 全部餘數；涵蓋現行表全部 29 種 hard/itemweight 組合，共 2,900 次判定，另驗證分數及難度不足會跳過。
+例如 hard=2、weight=8 的門檻是 9（9%），並非顯示小數 9.6%；hard=3、weight=3 的門檻是 4（4%）。
+trial-reward-native.json 保存每組門檻及成功餘數；單元測試核對 TypeScript 計算與原版結果。
+此驗證只證實抽選判定分支，沒有模擬物品建立、品質生成、入背包或伺服器發獎。原始資料中的寵物／物品型別衝突仍標示未確認。
+
+本補查取代 trial-waves-native.txt 中「抽選率未完整核對」的舊狀態；波數與戰鬥屬性結論不變。

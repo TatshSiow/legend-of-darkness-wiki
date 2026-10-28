@@ -26,7 +26,7 @@
 <svelte:head><title>{names[data.difficulty-1]}試煉關卡 · 黑暗傳說 Wiki</title><meta name="description" content="查詢試煉三種難度、各波候選怪物、品質與原版數值成長規則。每波隨機抽出5隻怪物。"/></svelte:head>
 <Hero title="試煉關卡" eyebrow="THE TRIAL" description="依青銅、白銀、黃金難度與波數查詢。每波隨機抽出 5 隻怪物，可重複抽中同一種。"/>
 <nav class="map-tabs trial-difficulties" aria-label="試煉難度">{#each names as name,i}<a href={`/trial/${i+1}/?wave=${wave}${viewingWave?'&view=wave':viewingRewards?'&view=rewards':''}`} aria-current={data.difficulty===i+1?'page':undefined} class:active={data.difficulty===i+1}>{name}難度</a>{/each}</nav>
-<nav class="map-subtabs" aria-label="試煉內容"><a class:active={!viewingRewards} aria-current={!viewingRewards?'page':undefined} href={`?wave=${wave}`}>關卡與怪物</a><a class:active={viewingRewards} aria-current={viewingRewards?'page':undefined} href={`?wave=${wave}&view=rewards`}>分數獎勵</a></nav>
+<nav class="map-subtabs" aria-label="試煉內容"><a class:active={!viewingRewards} aria-current={!viewingRewards?'page':undefined} href={`?wave=${wave}`}>關卡與怪物</a><a class:active={viewingRewards} aria-current={viewingRewards?'page':undefined} href={`?wave=${wave}&view=rewards`}>結算獎勵池</a></nav>
 {#if viewingRewards}
 <TrialRewards rewards={data.rewards}/>
 {:else}

@@ -9,7 +9,7 @@
  import ItemProgression from '#lib/components/ItemProgression.svelte';
  import SkinProgression from '#lib/components/SkinProgression.svelte';
  import {labels,attributeRows,isValue} from '#lib/core/fields.ts';
- import {percent} from '#lib/core/rewards.ts';
+ import {percent,trialRewardRate} from '#lib/core/rewards.ts';
  import type {PageData} from './$types';
  let {data}:{data:PageData}=$props();
  let attributes=$derived(attributeRows(data.record.category,data.row).filter(a=>!(["shop","exchange"].includes(data.record.category)&&a.label==="數量")));
@@ -54,6 +54,10 @@
    <h3>{data.abyssOnly?'深淵敵人屬性':'敵人屬性設定'}</h3><p class="notice">{data.abyssOnly?'以下為此深淵敵人的原始設定，尚未包含品質及深淵戰鬥調整，不套用冒險難度計算。':'此敵人未確認適用一般冒險縮放，以下保留原始屬性，不套用冒險公式。'}</p>
    <div class="tablewrap"><table class="enemy-attributes"><thead><tr><th>屬性</th><th>設定值</th></tr></thead><tbody>{#each ['level','att','hp','def','hit','spo','cri','crihurt','res','burn','lightning','poison','vertigo'] as key}<tr><th scope="row">{labels[key]}</th><td>{String(data.row[key]??0)}</td></tr>{/each}</tbody></table></div>
   {/if}
+ {:else if data.record.category==='trial'}
+  <h3>結算抽選條件</h3>
+  <p>試煉失敗結算時，本次分數至少 {String(data.row.score)} 分、挑戰難度達{['青銅','白銀','黃金'][Number(data.row.hard)-1]}以上，此列才參與抽選；抽中機率為 {trialRewardRate(Number(data.row.itemweight),Number(data.row.hard))}%。</p>
+  <p>每列獨立判定，跨過分數不會直接發獎。此列有多個候選時，抽中後再隨機選一項；不是全部取得。<a href="/data/trial/">查看完整結算獎勵池 →</a></p>
  {:else if data.exchange}<ExchangeDetails info={data.exchange} stage={data.exchange.boost?data.exchange.stage:undefined}/>
  {:else if !['treasure','drop','droptip'].includes(data.record.category)}
   <h3>屬性資料</h3><div class="tablewrap"><table class="attribute-table"><thead><tr><th>屬性</th><th>數值</th></tr></thead><tbody>{#each attributes as attribute}<tr><th scope="row">{attribute.label}</th><td>{#if attribute.currency}<Currency kind={attribute.currency} value={attribute.value}/>{:else}{attribute.value}{/if}</td></tr>{/each}</tbody></table></div>
